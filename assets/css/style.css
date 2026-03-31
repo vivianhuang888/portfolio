@@ -19,22 +19,24 @@ body {
 
 /* Layout primitives */
 .container { width: min(1120px, 92vw); margin: 0 auto; }
-.page-stack { padding: 3rem 0 4rem; }
+.page-stack { padding: 2.4rem 0 4rem; }
 
 /* Header / nav */
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: rgb(245 242 239 / 92%);
-  backdrop-filter: blur(8px);
+  background: var(--bg);
   border-bottom: 1px solid var(--line);
+}
+.banner-shell {
+  padding-top: 1.25rem;
+  padding-bottom: 2.75rem;
 }
 .nav-wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+}
+.banner-spacer {
+  height: 0;
 }
 .brand {
   text-decoration: none;
@@ -134,6 +136,12 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
 
 /* About + contact panels */
 .page-header { margin-bottom: 1rem; }
+
+.page-header.compact {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .panel {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -185,11 +193,12 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
 
 /* Responsive nav + layout */
 @media (max-width: 860px) {
-  .menu-btn { display: inline-block; }
+    .menu-btn { display: inline-block; }
+  .banner-shell { padding-top: 1rem; padding-bottom: 1.8rem; }
   .nav-menu {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 52px;
     right: 4vw;
     background: var(--surface);
     border: 1px solid var(--line);
