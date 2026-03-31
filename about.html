@@ -1,105 +1,82 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>About</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About | WeiAn Huang</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <header id="main_menu" class="header">
-      <div class="main_menu_bg">
-        <nav class="navbar" id="navmenu">
-          <a class="navbar-brand" href="index.html">WeiAn Huang</a>
-          <button class="menu-btn" type="button">☰</button>
-          <ul class="nav-menu">
-            <li><a href="about.html">about me</a></li>
-            <li><a href="projects.html">projects</a></li>
-            <li><a href="contact.html">contact</a></li>
-          </ul>
-        </nav>
-      </div>
+    <!-- Global navigation -->
+    <header class="site-header">
+      <nav class="nav-wrap container">
+        <a class="brand" href="index.html">WeiAn Huang</a>
+        <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        <ul class="nav-menu">
+          <li><a href="about.html">about me</a></li>
+          <li><a href="projects.html">projects</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <section id="service" class="service sections">
-      <div class="container">
-        <div class="head_title text-center">
-          <h1>more about me</h1>
-          <h5>WeiAn Huang</h5>
+    <main class="container page-stack">
+      <!-- Page header -->
+      <section class="page-header reveal">
+        <p class="eyebrow">about</p>
+        <h1>Data analytics candidate with healthcare focus</h1>
+      </section>
+
+      <!-- Experience section -->
+      <section class="panel reveal">
+        <h2>experience</h2>
+        <article class="entry-card">
+          <h3>ProcDNA — Analytics Intern</h3>
+          <p class="meta">Life-science analytics · 2025</p>
+          <p>
+            Worked on provider/HCP data validation and KPI logic checks, helping improve trust in downstream
+            analytics deliverables and client-facing reporting.
+          </p>
+        </article>
+
+        <article class="entry-card">
+          <h3>Healthcare &amp; Operations Analytics Projects</h3>
+          <p class="meta">Academic + applied analytics projects</p>
+          <p>
+            Built models and analyses for ICU demand forecasting and ED operations, translating findings into
+            decision-ready recommendations for non-technical audiences.
+          </p>
+        </article>
+      </section>
+
+      <!-- Education section -->
+      <section class="panel reveal">
+        <h2>education</h2>
+        <article class="entry-card">
+          <h3>Boston University</h3>
+          <p class="meta">M.S. in Business Analytics</p>
+          <p>Focused on data-driven problem solving, statistical modeling, and practical analytics communication.</p>
+        </article>
+      </section>
+
+      <!-- Skills section -->
+      <section class="panel reveal">
+        <h2>skills</h2>
+        <div class="skill-chips">
+          <span>SQL</span>
+          <span>Python</span>
+          <span>Tableau</span>
+          <span>Data Cleaning</span>
+          <span>Predictive Modeling</span>
+          <span>Analytics Storytelling</span>
         </div>
+      </section>
+    </main>
 
-        <div class="main_service_area">
-          <article class="single_service_area">
-            <div class="project-row">
-              <div class="signle_service_left">
-                <div class="fake-image"></div>
-                <div class="fake-image"></div>
-              </div>
-              <div class="single_service">
-                <h2>internship</h2>
-                <h3>experience</h3>
-                <div class="separator2"></div>
+    <footer class="site-footer">
+      <p>let's connect @ <a href="https://www.linkedin.com/in/weian-huang/" target="_blank" rel="noopener noreferrer">weian-huang</a></p>
+    </footer>
 
-                <div class="entry-block">
-                  <h5><b>ProcDNA</b></h5>
-                  <h6>Analytics Intern · 2025</h6>
-                  <ul>
-                    <li>Validated HCP/provider datasets and strengthened quality checks.</li>
-                    <li>Supported KPI reporting and analytics outputs for life-science projects.</li>
-                    <li>Collaborated across teams to map business questions into measurable definitions.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="single_service_area margin-top-80">
-            <div class="project-row reverse">
-              <div class="signle_service_left"><div class="fake-image"></div></div>
-              <div class="single_service">
-                <h2>education</h2>
-                <div class="separator2"></div>
-                <div class="entry-block">
-                  <h5><b>Business / Information Analytics Graduate Training</b></h5>
-                  <h6>Master's-level coursework and projects</h6>
-                  <h6>Recent</h6>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="single_service_area margin-top-80">
-            <div class="project-row">
-              <div class="signle_service_left">
-                <div class="fake-image"></div>
-                <div class="fake-image"></div>
-              </div>
-              <div class="single_service">
-                <h2>leadership</h2>
-                <h3>&amp; involvement</h3>
-                <div class="separator2"></div>
-
-                <div class="entry-block">
-                  <h5><b>Project Lead / Analyst</b></h5>
-                  <h6>Healthcare &amp; Operations Analytics Projects</h6>
-                  <ul>
-                    <li>Led analytic framing and model evaluation for ICU and ED-focused projects.</li>
-                    <li>Synthesized findings for non-technical stakeholders and recommended actions.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <div class="text-center margin-top-60">
-            <a href="projects.html" class="btn">learn about my projects</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer id="footer" class="footer">let's connect @ <a href="https://www.linkedin.com/in/weian-huang/">weian-huang</a></footer>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

@@ -1,78 +1,95 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WeiAn Huang | Portfolio</title>
+    <meta
+      name="description"
+      content="WeiAn Huang portfolio — data analytics and healthcare analytics projects, experience, and contact."
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <header id="main_menu" class="header">
-      <div class="main_menu_bg">
-        <nav class="navbar" id="navmenu">
-          <a class="navbar-brand" href="index.html">WeiAn Huang</a>
-          <button class="menu-btn" type="button">☰</button>
-          <ul class="nav-menu">
-            <li><a href="about.html">about me</a></li>
-            <li><a href="projects.html">projects</a></li>
-            <li><a href="contact.html">contact</a></li>
-          </ul>
-        </nav>
-      </div>
+    <!-- Global navigation -->
+    <header class="site-header">
+      <nav class="nav-wrap container">
+        <a class="brand" href="index.html">WeiAn Huang</a>
+        <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        <ul class="nav-menu">
+          <li><a href="about.html">about me</a></li>
+          <li><a href="projects.html">projects</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <section class="sections">
-      <div class="container">
-        <div class="head_title">
-          <h1>WeiAn Huang</h1>
-          <h5>Business Analytics | Healthcare Analytics | Data-Driven Problem Solving</h5>
-        </div>
+    <main>
+      <!-- Hero: personal brand statement -->
+      <section class="hero container reveal">
+        <p class="eyebrow">portfolio</p>
+        <h1>Business Analytics &amp; Healthcare Analytics</h1>
+        <p class="hero-subtitle">
+          I turn complex healthcare and business data into decisions teams can trust — with clear analysis,
+          thoughtful storytelling, and practical recommendations.
+        </p>
+      </section>
 
-        <div class="single_service_area">
-          <div class="row">
-            <div class="signle_service_left"><div class="fake-image"></div></div>
-            <div class="single_service">
-              <h2>passionate about</h2>
-              <h3>data analytics &amp; healthcare insights</h3>
-              <div class="separator2"></div>
-              <p>Turning complex healthcare and business data into decisions teams can trust and execute.</p>
-            </div>
-          </div>
-        </div>
+      <!-- Narrative section inspired by "me in a nutshell" -->
+      <section class="container section-intro reveal">
+        <h2>me in a nutshell</h2>
+      </section>
 
-        <div class="single_service_area">
-          <div class="row">
-            <div class="signle_service_left"><div class="fake-image"></div></div>
-            <div class="single_service">
-              <h2>areas of</h2>
-              <h3>expertise</h3>
-              <div class="separator2"></div>
-              <p>SQL, Python, Tableau, predictive modeling, and stakeholder communication.</p>
-            </div>
-          </div>
-        </div>
+      <!-- Alternating image/text sections -->
+      <section class="container split-grid reveal">
+        <div class="media-block warm-a" aria-hidden="true"></div>
+        <article class="text-block">
+          <p class="eyebrow">passionate about</p>
+          <h3>healthcare + operations impact</h3>
+          <p>
+            My work sits at the intersection of analytics and real-world outcomes: patient flow, operational
+            bottlenecks, and decisions that improve quality of care.
+          </p>
+        </article>
+      </section>
 
-        <div class="single_service_area">
-          <div class="row">
-            <div class="signle_service_left"><div class="fake-image"></div></div>
-            <div class="single_service">
-              <h2>focused on</h2>
-              <h3>real-world impact</h3>
-              <div class="separator2"></div>
-              <p>Seeking healthcare and life-science analytics roles where data informs meaningful outcomes.</p>
-            </div>
-          </div>
-        </div>
+      <section class="container split-grid reverse reveal">
+        <div class="media-block warm-b" aria-hidden="true"></div>
+        <article class="text-block">
+          <p class="eyebrow">areas of expertise</p>
+          <h3>SQL, Python, Tableau</h3>
+          <p>
+            From data preprocessing and modeling to dashboard design, I build end-to-end analytics workflows that
+            are rigorous, readable, and stakeholder-ready.
+          </p>
+        </article>
+      </section>
 
-        <div class="text-center">
-          <a href="about.html" class="btn">learn more about me</a>
-        </div>
-      </div>
-    </section>
+      <section class="container split-grid reveal">
+        <div class="media-block warm-c" aria-hidden="true"></div>
+        <article class="text-block">
+          <p class="eyebrow">currently focused on</p>
+          <h3>analytics roles in healthcare and life sciences</h3>
+          <p>
+            I’m excited by roles where data can shape better clinical, commercial, and operational decisions — and
+            where cross-functional collaboration is part of the process.
+          </p>
+        </article>
+      </section>
 
-    <footer id="footer" class="footer">
-      let's connect @ <a href="https://www.linkedin.com/in/weian-huang/">weian-huang</a>
+      <!-- Elegant call-to-action -->
+      <section class="container cta-panel reveal">
+        <h3>Want to see how I approach projects end-to-end?</h3>
+        <p>
+          <a class="btn" href="projects.html">explore my projects</a>
+          <a class="btn ghost" href="about.html">learn more about me</a>
+        </p>
+      </section>
+    </main>
+
+    <!-- Minimal social footer -->
+    <footer class="site-footer">
+      <p>let's connect @ <a href="https://www.linkedin.com/in/weian-huang/" target="_blank" rel="noopener noreferrer">weian-huang</a></p>
     </footer>
 
     <script src="assets/js/main.js"></script>
