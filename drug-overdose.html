@@ -1,196 +1,12 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Project - Drug Overdose Analysis</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-      .case-study-page {
-        --case-text: #555;
-        --case-heading: #1f1f1f;
-        --case-surface: #f8f9fb;
-      }
-
-      .case-study-page .case-hero-banner {
-        width: 100%;
-        padding: 4.5rem 1.25rem;
-        background: linear-gradient(180deg, #f7f9fc 0%, #fcfdff 100%);
-      }
-
-      .case-study-page .case-hero-inner {
-        max-width: 760px;
-        margin: 0 auto;
-      }
-
-      .case-study-page .case-study-shell {
-        max-width: 760px;
-        margin: 0 auto;
-        padding: 2.75rem 1.25rem 4rem;
-      }
-
-      .case-study-page .case-nav {
-        margin-bottom: 1.2rem;
-      }
-
-      .case-study-page .case-back-link {
-        font-size: 0.9rem;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        color: #6a6a6a;
-        transition: color 0.25s ease, transform 0.25s ease;
-      }
-
-      .case-study-page .case-back-link:hover,
-      .case-study-page .case-back-link:focus-visible {
-        color: #1f1f1f;
-        transform: translateX(-3px);
-      }
-
-      .case-study-page .case-hero {
-        margin-bottom: 0;
-      }
-
-      .case-study-page .case-label {
-        margin-bottom: 0.85rem;
-        font-size: 0.82rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: #7d7d7d;
-      }
-
-      .case-study-page .case-title {
-        margin: 0 0 1rem;
-        font-size: clamp(2rem, 5vw, 3.1rem);
-        line-height: 1.15;
-        color: var(--case-heading);
-      }
-
-      .case-study-page .case-subtitle {
-        margin: 0 0 1.25rem;
-        font-size: clamp(1.12rem, 2.2vw, 1.35rem);
-        font-weight: 500;
-        color: #3f3f3f;
-      }
-
-      .case-study-page .case-summary {
-        margin: 0;
-        max-width: 64ch;
-        color: var(--case-text);
-        line-height: 1.8;
-      }
-
-      .case-study-page .hero-load {
-        opacity: 0;
-        transform: translateY(8px);
-        animation: heroFade 0.7s ease forwards;
-      }
-
-      @keyframes heroFade {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .case-study-page .case-meta {
-        margin-top: 1.35rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-      }
-
-      .case-study-page .case-chip {
-        padding: 0.38rem 0.75rem;
-        font-size: 0.83rem;
-        border-radius: 999px;
-        background: var(--case-surface);
-        color: #5a5a5a;
-      }
-
-      .case-study-page .case-section {
-        margin: 0 0 3.3rem;
-      }
-
-      .case-study-page .case-section:last-of-type {
-        margin-bottom: 2.5rem;
-      }
-
-      .case-study-page .case-section h2 {
-        margin: 0 0 1rem;
-        font-size: clamp(1.45rem, 2.8vw, 1.85rem);
-        line-height: 1.3;
-        color: var(--case-heading);
-      }
-
-      .case-study-page .case-section p,
-      .case-study-page .case-section li {
-        color: var(--case-text);
-        font-size: 1rem;
-        line-height: 1.8;
-      }
-
-      .case-study-page .case-section p {
-        margin: 0 0 0.95rem;
-      }
-
-      .case-study-page .case-section ul {
-        margin: 0;
-        padding-left: 1.15rem;
-      }
-
-      .case-study-page .case-section li {
-        margin-bottom: 0.6rem;
-      }
-
-      .case-study-page .case-figure {
-        margin-top: 1.35rem;
-        padding: 1.6rem 1.2rem;
-        border: 1px dashed #d3d7de;
-        border-radius: 12px;
-        background: #fbfcff;
-      }
-
-      .case-study-page .case-figure p {
-        margin: 0;
-        font-size: 0.95rem;
-        color: #6a6a6a;
-      }
-
-      .case-study-page .fade-in {
-        opacity: 0;
-        transform: translateY(18px);
-        transition: opacity 0.7s ease, transform 0.7s ease;
-      }
-
-      .case-study-page .fade-in.is-visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .case-study-page .case-nav-footer {
-        margin-top: 2rem;
-        padding-top: 1.25rem;
-        border-top: 1px solid #eceff4;
-      }
-
-      @media (max-width: 767px) {
-        .case-study-page .case-hero-banner {
-          padding: 3.6rem 1.1rem;
-        }
-
-        .case-study-page .case-study-shell {
-          padding-top: 2.25rem;
-        }
-
-        .case-study-page .case-section {
-          margin-bottom: 2.8rem;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body class="case-study-page">
+  <body>
     <header class="site-header">
       <div class="container banner-shell">
         <nav class="nav-wrap">
@@ -206,34 +22,21 @@
       </div>
     </header>
 
-    <section class="case-hero-banner hero-load">
-      <div class="case-hero-inner">
-        <nav class="case-nav" aria-label="Project navigation">
-          <a href="projects.html" class="case-back-link">&larr; Back to Projects</a>
-        </nav>
+    <main class="container page-stack">
+      <section class="page-header compact">
+        <p class="eyebrow">case study</p>
+        <h1>U.S. Drug Overdose Analysis</h1>
+        <p class="meta">Uncovering pattern shifts in overdose deaths across demographic groups and drug types.</p>
+        <p class="meta"><strong>Duration:</strong> May 2024</p>
+        <div class="skill-chips" aria-label="Project skills">
+          <span>Python</span>
+          <span>Regression Analysis</span>
+          <span>Tableau</span>
+          <span>Data Storytelling</span>
+        </div>
+      </section>
 
-        <section class="case-hero page-header compact">
-          <p class="case-label">Case Study • May 2024</p>
-          <h1 class="case-title">U.S. Drug Overdose Analysis</h1>
-          <p class="case-subtitle">Uncovering pattern shifts in overdose deaths across demographic groups and drug types.</p>
-          <p class="case-summary">
-            This project explored national overdose mortality trends to identify where risk concentrated, how patterns shifted over time,
-            and what those shifts imply for targeted public-health response. The work combined statistical analysis with visual
-            storytelling to translate complex trends into practical insight.
-          </p>
-          <div class="case-meta" aria-label="Project metadata">
-            <span class="case-chip">Python</span>
-            <span class="case-chip">Regression Analysis</span>
-            <span class="case-chip">Tableau</span>
-            <span class="case-chip">Data Storytelling</span>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <main class="case-study-shell">
-
-      <section class="case-section fade-in" id="overview">
+      <section class="panel reveal" id="overview">
         <h2>Overview</h2>
         <p>
           The United States overdose crisis has evolved rapidly over the last decade, with notable shifts by age, race, gender,
@@ -246,7 +49,7 @@
         </p>
       </section>
 
-      <section class="case-section fade-in" id="problem">
+      <section class="panel reveal" id="problem">
         <h2>Problem / Motivation</h2>
         <p>
           National overdose data is high-volume and multidimensional, which makes emerging risk signals easy to miss. Static
@@ -259,7 +62,7 @@
         </ul>
       </section>
 
-      <section class="case-section fade-in" id="methodology">
+      <section class="panel reveal" id="methodology">
         <h2>Data / Methodology</h2>
         <p>
           The workflow combined data preparation, statistical modeling, and visualization to move from raw records to interpretable
@@ -270,12 +73,10 @@
           <li><strong>Modeling:</strong> applied regression analysis to test demographic associations with overdose death rates.</li>
           <li><strong>Visualization:</strong> built Tableau views to compare trend trajectories across age, gender, race, and drug type.</li>
         </ul>
-        <div class="case-figure" role="img" aria-label="Placeholder for project dashboard or chart output">
-          <p>Placeholder: Tableau dashboard or key chart can be embedded here.</p>
-        </div>
+        <p class="meta">Placeholder: Tableau dashboard or key chart can be embedded here.</p>
       </section>
 
-      <section class="case-section fade-in" id="findings">
+      <section class="panel reveal" id="findings">
         <h2>Key Findings</h2>
         <ul>
           <li>Overdose mortality shows strong association with specific demographic segments rather than uniform national change.</li>
@@ -284,7 +85,7 @@
         </ul>
       </section>
 
-      <section class="case-section fade-in" id="impact">
+      <section class="panel reveal" id="impact">
         <h2>Insights / Impact</h2>
         <p>
           This case study reframes overdose data from isolated statistics into a cohesive story of evolving public-health risk.
@@ -297,9 +98,9 @@
         </p>
       </section>
 
-      <nav class="case-nav-footer fade-in" aria-label="Project navigation footer">
-        <a href="projects.html" class="case-back-link">&larr; Back to Projects</a>
-      </nav>
+      <section class="panel reveal" aria-label="Project navigation footer">
+        <a class="btn" href="projects.html">&larr; Back to Projects</a>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -307,30 +108,5 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
-    <script>
-      (function () {
-        var animatedSections = document.querySelectorAll('.case-study-page .fade-in');
-
-        if (!('IntersectionObserver' in window)) {
-          animatedSections.forEach(function (el) {
-            el.classList.add('is-visible');
-          });
-          return;
-        }
-
-        var observer = new IntersectionObserver(function (entries, io) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              io.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
-
-        animatedSections.forEach(function (el) {
-          observer.observe(el);
-        });
-      }());
-    </script>
   </body>
 </html>
