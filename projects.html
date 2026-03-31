@@ -1,79 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects | WeiAn Huang Portfolio</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-    <header class="site-header">
-      <nav class="navbar">
-        <a href="index.html" class="logo">WeiAn Huang</a>
-        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-        <ul class="nav-links">
-          <li><a href="about.html">about me</a></li>
-          <li><a href="projects.html" class="active">projects</a></li>
-          <li><a href="contact.html">contact</a></li>
-        </ul>
-      </nav>
+    <header id="main_menu" class="header">
+      <div class="main_menu_bg">
+        <nav class="navbar" id="navmenu">
+          <a class="navbar-brand" href="index.html">WeiAn Huang</a>
+          <button class="menu-btn" type="button">☰</button>
+          <ul class="nav-menu">
+            <li><a href="about.html">about me</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main class="projects-page">
-      <section class="page-title">
-        <h1>projects</h1>
-      </section>
+    <section class="sections">
+      <div class="container">
+        <div class="head_title"><h1>projects</h1></div>
 
-      <section class="project-list">
-        <article class="project-card">
-          <div class="project-image placeholder one"></div>
-          <h2>ICU Demand Forecasting</h2>
-          <h5>Predicting ICU admissions and readmissions</h5>
-          <p>Built predictive models using critical-care datasets to support capacity and staffing planning.</p>
-          <a href="#">learn more</a>
-        </article>
+        <div class="project-grid">
+          <article class="project-card"><div class="fake-image"></div><h2>ICU Demand Forecasting</h2><h5>Predicting ICU admissions and readmissions</h5><p>Built predictive models for demand and capacity planning.</p><a href="#">learn more</a></article>
+          <article class="project-card"><div class="fake-image"></div><h2>ProcDNA Analytics Work</h2><h5>Life-science data quality and KPIs</h5><p>Validated provider datasets and supported analytics deliverables.</p><a href="#">learn more</a></article>
+          <article class="project-card"><div class="fake-image"></div><h2>NHIRD Thesis</h2><h5>Population-scale healthcare analysis</h5><p>Analyzed national health data for clinically relevant insights.</p><a href="#">learn more</a></article>
+          <article class="project-card"><div class="fake-image"></div><h2>Yelp / GCP Dashboard</h2><h5>Cloud-enabled BI workflow</h5><p>Combined cloud processing and dashboards for trend monitoring.</p><a href="#">learn more</a></article>
+          <article class="project-card"><div class="fake-image"></div><h2>ED Overcrowding Operations</h2><h5>Throughput and bottleneck analytics</h5><p>Evaluated intervention scenarios for emergency care flow.</p><a href="#">learn more</a></article>
+        </div>
+      </div>
+    </section>
 
-        <article class="project-card">
-          <div class="project-image placeholder two"></div>
-          <h2>ProcDNA Analytics Work</h2>
-          <h5>Life-science data quality and KPI analytics</h5>
-          <p>Validated provider-level data and improved KPI reporting logic for client-facing analytics outputs.</p>
-          <a href="#">learn more</a>
-        </article>
-
-        <article class="project-card">
-          <div class="project-image placeholder three"></div>
-          <h2>NHIRD Thesis</h2>
-          <h5>Population-scale healthcare data analysis</h5>
-          <p>Analyzed national health insurance data to identify meaningful trends and policy-relevant insights.</p>
-          <a href="#">learn more</a>
-        </article>
-
-        <article class="project-card">
-          <div class="project-image placeholder one"></div>
-          <h2>Yelp / GCP Dashboard</h2>
-          <h5>Cloud-based business analytics dashboard</h5>
-          <p>Integrated cloud data workflows and visualization to monitor customer sentiment and business KPIs.</p>
-          <a href="#">learn more</a>
-        </article>
-
-        <article class="project-card">
-          <div class="project-image placeholder two"></div>
-          <h2>ED Overcrowding Operations Project</h2>
-          <h5>Operational analytics for emergency care flow</h5>
-          <p>Modeled demand bottlenecks and evaluated intervention scenarios for throughput improvement.</p>
-          <a href="#">learn more</a>
-        </article>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>
-        let's connect @
-        <a href="https://www.linkedin.com/in/weian-huang/" target="_blank" rel="noopener noreferrer">weian-huang</a>
-      </p>
+    <footer id="footer" class="footer">
+      let's connect @ <a href="https://www.linkedin.com/in/weian-huang/">weian-huang</a>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
