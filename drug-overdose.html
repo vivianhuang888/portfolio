@@ -13,14 +13,26 @@
         --case-surface: #f8f9fb;
       }
 
+      .case-study-page .case-hero-banner {
+        width: 100%;
+        margin-top: 72px;
+        padding: 4.5rem 1.25rem;
+        background: linear-gradient(180deg, #f7f9fc 0%, #fcfdff 100%);
+      }
+
+      .case-study-page .case-hero-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
       .case-study-page .case-study-shell {
         max-width: 760px;
         margin: 0 auto;
-        padding: 5.5rem 1.25rem 4rem;
+        padding: 2.75rem 1.25rem 4rem;
       }
 
       .case-study-page .case-nav {
-        margin-bottom: 2.75rem;
+        margin-bottom: 1.2rem;
       }
 
       .case-study-page .case-back-link {
@@ -38,7 +50,7 @@
       }
 
       .case-study-page .case-hero {
-        margin-bottom: 3.25rem;
+        margin-bottom: 0;
       }
 
       .case-study-page .case-label {
@@ -68,6 +80,19 @@
         max-width: 64ch;
         color: var(--case-text);
         line-height: 1.8;
+      }
+
+      .case-study-page .hero-load {
+        opacity: 0;
+        transform: translateY(8px);
+        animation: heroFade 0.7s ease forwards;
+      }
+
+      @keyframes heroFade {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       .case-study-page .case-meta {
@@ -152,8 +177,13 @@
       }
 
       @media (max-width: 767px) {
+        .case-study-page .case-hero-banner {
+          margin-top: 64px;
+          padding: 3.6rem 1.1rem;
+        }
+
         .case-study-page .case-study-shell {
-          padding-top: 4.5rem;
+          padding-top: 2.25rem;
         }
 
         .case-study-page .case-section {
@@ -177,27 +207,32 @@
       </div>
     </header>
 
-    <main class="case-study-shell">
-      <nav class="case-nav fade-in" aria-label="Project navigation">
-        <a href="projects.html" class="case-back-link">&larr; Back to Projects</a>
-      </nav>
+    <section class="case-hero-banner hero-load">
+      <div class="case-hero-inner">
+        <nav class="case-nav" aria-label="Project navigation">
+          <a href="projects.html" class="case-back-link">&larr; Back to Projects</a>
+        </nav>
 
-      <section class="case-hero fade-in">
-        <p class="case-label">Case Study • May 2024</p>
-        <h1 class="case-title">U.S. Drug Overdose Analysis</h1>
-        <p class="case-subtitle">Uncovering pattern shifts in overdose deaths across demographic groups and drug types.</p>
-        <p class="case-summary">
-          This project explored national overdose mortality trends to identify where risk concentrated, how patterns shifted over time,
-          and what those shifts imply for targeted public-health response. The work combined statistical analysis with visual
-          storytelling to translate complex trends into practical insight.
-        </p>
-        <div class="case-meta" aria-label="Project metadata">
-          <span class="case-chip">Python</span>
-          <span class="case-chip">Regression Analysis</span>
-          <span class="case-chip">Tableau</span>
-          <span class="case-chip">Data Storytelling</span>
-        </div>
-      </section>
+        <section class="case-hero">
+          <p class="case-label">Case Study • May 2024</p>
+          <h1 class="case-title">U.S. Drug Overdose Analysis</h1>
+          <p class="case-subtitle">Uncovering pattern shifts in overdose deaths across demographic groups and drug types.</p>
+          <p class="case-summary">
+            This project explored national overdose mortality trends to identify where risk concentrated, how patterns shifted over time,
+            and what those shifts imply for targeted public-health response. The work combined statistical analysis with visual
+            storytelling to translate complex trends into practical insight.
+          </p>
+          <div class="case-meta" aria-label="Project metadata">
+            <span class="case-chip">Python</span>
+            <span class="case-chip">Regression Analysis</span>
+            <span class="case-chip">Tableau</span>
+            <span class="case-chip">Data Storytelling</span>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <main class="case-study-shell">
 
       <section class="case-section fade-in" id="overview">
         <h2>Overview</h2>
