@@ -55,3 +55,15 @@ a { color: #6b4ce6; text-decoration: none; }
 .content-block h3 { margin-top: 8px; }
 .tableau-placeholder { border: 1px dashed #bbb; border-radius: 10px; padding: 36px; text-align: center; color: #666; margin-top: 12px; }
 .pagination-row { display: flex; justify-content: space-between; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+
+.featured-project { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 28px; align-items: center; }
+.featured-left h2 { font-size: clamp(2rem, 5vw, 4rem); line-height: 1.05; margin: 0 0 8px; }
+.featured-left h5 { margin: 0; color: #1b3c6d; font-size: clamp(1.1rem, 2.2vw, 2rem); font-weight: 500; }
+.featured-right { display: block; border: 1px solid #ddd; border-radius: 14px; padding: 14px; background: #fff; transition: transform .2s ease, box-shadow .2s ease; }
+.featured-right:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+.preview-board { display: grid; gap: 10px; }
+.preview-chart { height: 120px; border-radius: 10px; background: linear-gradient(180deg,#f4f7ff,#e9efff); border: 1px solid #dbe4ff; }
+
+@media (max-width: 860px) {
+  .featured-project { grid-template-columns: 1fr; }
+}
