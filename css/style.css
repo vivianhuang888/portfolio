@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Arial", "Helvetica", sans-serif;
+  color: #1e1e1e;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.site-header {
+  border-bottom: 1px solid #ececec;
+}
+
+.navbar {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 22px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  text-decoration: none;
+  color: #111;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  text-transform: lowercase;
+  color: #333;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #5e3bea;
+}
+
+.menu-toggle {
+  display: none;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 4px 10px;
+}
+
+.hero,
+.page-title {
+  text-align: center;
+  padding: 64px 24px 28px;
+}
+
+.hero h1,
+.page-title h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+}
+
+.subtitle,
+.page-title h5 {
+  margin-top: 10px;
+  color: #666;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.intro,
+.about-page,
+.projects-page,
+.contact-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px 56px;
+}
+
+.intro > h2 {
+  text-transform: lowercase;
+  margin: 4px 0 24px;
+  font-size: 1.35rem;
+}
+
+.feature-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.feature-block.reverse .feature-image {
+  order: 2;
+}
+
+.feature-block.reverse .feature-text {
+  order: 1;
+}
+
+.feature-image,
+.project-image {
+  border-radius: 14px;
+  min-height: 260px;
+}
+
+.placeholder.one {
+  background: linear-gradient(135deg, #c8d9ff, #f1f6ff);
+}
+
+.placeholder.two {
+  background: linear-gradient(135deg, #ffe0cf, #fff3ec);
+}
+
+.placeholder.three {
+  background: linear-gradient(135deg, #d8f5df, #effdf2);
+}
+
+.feature-text h3 {
+  margin: 0;
+  text-transform: lowercase;
+  color: #7a7a7a;
+  font-weight: 600;
+}
+
+.feature-text h2 {
+  margin: 6px 0 12px;
+  text-transform: lowercase;
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+.resume-section {
+  margin: 26px 0 44px;
+}
+
+.section-heading h2,
+.section-heading h3 {
+  margin: 0;
+  text-transform: lowercase;
+  line-height: 1.1;
+}
+
+.section-heading h2 {
+  font-size: 2rem;
+}
+
+.section-heading h3 {
+  font-size: 1.6rem;
+  color: #555;
+}
+
+.entry {
+  border-left: 3px solid #5e3bea;
+  padding-left: 16px;
+  margin-top: 20px;
+}
+
+.entry h5,
+.entry h6 {
+  margin: 0 0 4px;
+}
+
+.entry h5 {
+  font-size: 1.15rem;
+}
+
+.entry h6 {
+  font-size: 0.97rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.project-card {
+  border: 1px solid #e8e8e8;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.project-card h2 {
+  margin: 14px 0 0;
+  font-size: 1.35rem;
+}
+
+.project-card h5 {
+  margin: 6px 0 8px;
+  color: #555;
+  font-size: 0.98rem;
+}
+
+.project-card a,
+.contact-info a,
+.cta-section a,
+.site-footer a {
+  color: #5e3bea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 18px 24px 64px;
+}
+
+.cta-section span {
+  margin: 0 8px;
+  color: #888;
+}
+
+.contact-info {
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+.site-footer {
+  border-top: 1px solid #efefef;
+  padding: 18px 24px;
+  text-align: center;
+  color: #666;
+}
+
+@media (max-width: 860px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    right: 24px;
+    top: 62px;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .feature-block,
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-block.reverse .feature-image,
+  .feature-block.reverse .feature-text {
+    order: initial;
+  }
+}
