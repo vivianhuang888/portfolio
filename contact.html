@@ -5,36 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact | WeiAn Huang</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      .contact-shell {
+        max-width: 560px;
+        margin: 0 auto;
+        padding: clamp(2rem, 6vw, 4rem) 0 1rem;
+        text-align: center;
+      }
+
+      .contact-header {
+        margin-bottom: 1.8rem;
+      }
+
+      .contact-header .eyebrow {
+        margin-bottom: 0.6rem;
+      }
+
+      .contact-title {
+        margin: 0;
+        font-size: clamp(1.9rem, 4vw, 2.6rem);
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        line-height: 1.2;
+      }
+
+      .contact-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .contact-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.7rem;
+        text-decoration: none;
+        color: var(--text);
+        padding: 0.55rem 0.2rem;
+        transition: color 0.2s ease, transform 0.2s ease;
+      }
+
+      .contact-link:hover,
+      .contact-link:focus-visible {
+        color: var(--accent);
+        transform: translateY(-1px);
+      }
+
+      .contact-link svg {
+        width: 1.15rem;
+        height: 1.15rem;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 1.8;
+        transition: transform 0.2s ease;
+      }
+
+      .contact-link:hover svg,
+      .contact-link:focus-visible svg {
+        transform: scale(1.06);
+      }
+
+      .contact-label {
+        font-size: 1.03rem;
+      }
+    </style>
   </head>
   <body>
     <!-- Global navigation -->
     <header class="site-header">
       <div class="container banner-shell">
         <nav class="nav-wrap">
-        <a class="brand" href="index.html">WeiAn Huang</a>
-        <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">☰</button>
-        <ul class="nav-menu">
-          <li><a href="about.html">about me</a></li>
-          <li><a href="projects.html">projects</a></li>
-          <li><a href="contact.html">contact</a></li>
-        </ul>
+          <a class="brand" href="index.html">WeiAn Huang</a>
+          <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+          <ul class="nav-menu">
+            <li><a href="about.html">about me</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
         </nav>
         <div class="banner-spacer" aria-hidden="true"></div>
       </div>
     </header>
 
     <main class="container page-stack">
-      <!-- Clean contact section -->
-      <section class="page-header reveal">
-        <p class="eyebrow">contact</p>
-        <h1>Let’s connect</h1>
-      </section>
+      <section class="contact-shell reveal" aria-labelledby="contact-title">
+        <header class="contact-header">
+          <p class="eyebrow">Contact</p>
+          <h1 id="contact-title" class="contact-title">Let’s connect</h1>
+        </header>
 
-      <section class="panel contact-panel reveal">
-        <p>Boston, MA</p>
-        <p><a href="mailto:weian.huang.analytics@gmail.com">weian.huang.analytics@gmail.com</a></p>
-        <p><a href="https://www.linkedin.com/in/weian-huang/" target="_blank" rel="noopener noreferrer">linkedin.com/in/weian-huang</a></p>
-        <p><a href="resume.pdf">download resume (pdf)</a></p>
+        <ul class="contact-links" aria-label="Contact links">
+          <li>
+            <a class="contact-link" href="mailto:weian.huang.analytics@gmail.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1z" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
+              <span class="contact-label">weian.huang.analytics@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-link" href="https://linkedin.com/in/weian-huang" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="3" />
+                <path d="M8 10v7" />
+                <path d="M8 7.5h.01" />
+                <path d="M12 17v-4a2 2 0 0 1 4 0v4" />
+                <path d="M12 10v7" />
+              </svg>
+              <span class="contact-label">linkedin.com/in/weian-huang</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-link" href="resume.pdf" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
+                <path d="M14 3v5h5" />
+                <path d="M9 13h6" />
+                <path d="M9 17h6" />
+              </svg>
+              <span class="contact-label">Download resume PDF</span>
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
 
