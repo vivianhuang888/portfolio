@@ -3,99 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | WeiAn Huang</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <title>About | WeiAn Huang Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="site-header">
-      <nav class="navbar container" aria-label="Main navigation">
-        <a class="logo" href="index.html">WeiAn Huang</a>
-        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <nav class="navbar">
+        <a href="index.html" class="logo">WeiAn Huang</a>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
         <ul class="nav-links">
-          <li><a class="active" href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html" class="active">about me</a></li>
+          <li><a href="projects.html">projects</a></li>
+          <li><a href="contact.html">contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="container page-main">
+    <main class="about-page">
       <section class="page-title">
-        <p class="eyebrow">About me</p>
-        <h1>WeiAn Huang</h1>
-        <p>
-          Analytics professional with experience across healthcare data, operations insights, and
-          stakeholder communication.
-        </p>
+        <h1>more about me</h1>
+        <h5>WeiAn Huang</h5>
       </section>
 
       <section class="resume-section">
-        <h2>Experience</h2>
-        <article class="entry">
-          <div class="entry-top">
-            <h3>ProcDNA</h3>
-            <p class="date">Analytics Intern · 2025</p>
-          </div>
-          <ul>
-            <li>Validated provider and HCP datasets to improve quality and downstream analytics reliability.</li>
-            <li>Supported KPI reporting and client-facing analytics deliverables in life-science projects.</li>
-            <li>Collaborated with cross-functional teams to turn business questions into data definitions.</li>
-          </ul>
-        </article>
-
-        <article class="entry">
-          <div class="entry-top">
-            <h3>Healthcare & Operations Analytics Projects</h3>
-            <p class="date">Graduate / Applied Projects</p>
-          </div>
-          <ul>
-            <li>Built forecasting and classification models for ICU and emergency-care planning use cases.</li>
-            <li>Designed executive-style dashboards to monitor trends, bottlenecks, and actionable KPIs.</li>
-            <li>Presented findings to non-technical audiences with scenario-based recommendations.</li>
-          </ul>
-        </article>
-      </section>
-
-      <section class="resume-section">
-        <h2>Education</h2>
-        <article class="entry">
-          <div class="entry-top">
-            <h3>Master's-level Business / Information Analytics Training</h3>
-            <p class="date">Recent</p>
-          </div>
-          <p>
-            Focused on applied analytics, healthcare use cases, experimental thinking, and decision support
-            through data products.
-          </p>
-        </article>
-      </section>
-
-      <section class="resume-section">
-        <h2>Skills</h2>
-        <div class="chip-grid">
-          <span class="chip">SQL</span>
-          <span class="chip">Python</span>
-          <span class="chip">Tableau</span>
-          <span class="chip">Data Cleaning</span>
-          <span class="chip">Feature Engineering</span>
-          <span class="chip">Forecasting</span>
-          <span class="chip">A/B Thinking</span>
-          <span class="chip">Stakeholder Communication</span>
+        <div class="section-heading">
+          <h2>internship</h2>
+          <h3>experience</h3>
         </div>
+
+        <div class="entry">
+          <h5>ProcDNA</h5>
+          <h6>Analytics Intern</h6>
+          <h6>2025</h6>
+          <ul>
+            <li>Validated HCP/provider datasets and improved data quality checks for analytics deliverables.</li>
+            <li>Supported KPI reporting and analytics workflows for life-science commercial use cases.</li>
+            <li>Partnered with team members to translate business questions into measurable metrics.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section">
+        <div class="section-heading">
+          <h2>education</h2>
+        </div>
+
+        <div class="entry">
+          <h5>Business / Information Analytics Graduate Training</h5>
+          <h6>Master's-level coursework and projects</h6>
+          <h6>Recent</h6>
+          <ul>
+            <li>Built applied models for healthcare demand forecasting and operational optimization.</li>
+            <li>Delivered stakeholder-ready dashboards and project presentations.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section">
+        <div class="section-heading">
+          <h2>leadership</h2>
+          <h3>&amp; involvement</h3>
+        </div>
+
+        <div class="entry">
+          <h5>Healthcare &amp; Operations Analytics Projects</h5>
+          <h6>Project Lead / Analyst</h6>
+          <h6>Recent</h6>
+          <ul>
+            <li>Led analytic framing and model evaluation for ICU and ED-focused projects.</li>
+            <li>Synthesized insights for non-technical audiences and recommended action plans.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <p><a href="projects.html">learn about my projects</a></p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> WeiAn Huang</p>
-        <a href="projects.html">See project portfolio</a>
-      </div>
+      <p>
+        let's connect @
+        <a href="https://www.linkedin.com/in/weian-huang/" target="_blank" rel="noopener noreferrer">weian-huang</a>
+      </p>
     </footer>
 
     <script src="js/main.js"></script>
