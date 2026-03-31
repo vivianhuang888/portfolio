@@ -15,7 +15,6 @@
 
       .case-study-page .case-hero-banner {
         width: 100%;
-        margin-top: 72px;
         padding: 4.5rem 1.25rem;
         background: linear-gradient(180deg, #f7f9fc 0%, #fcfdff 100%);
       }
@@ -178,7 +177,6 @@
 
       @media (max-width: 767px) {
         .case-study-page .case-hero-banner {
-          margin-top: 64px;
           padding: 3.6rem 1.1rem;
         }
 
@@ -193,17 +191,18 @@
     </style>
   </head>
   <body class="case-study-page">
-    <header id="main_menu" class="header">
-      <div class="main_menu_bg">
-        <nav class="navbar" id="navmenu">
-          <a class="navbar-brand" href="index.html">WeiAn Huang</a>
-          <button class="menu-btn" type="button">☰</button>
+    <header class="site-header">
+      <div class="container banner-shell">
+        <nav class="nav-wrap">
+          <a class="brand" href="index.html">WeiAn Huang</a>
+          <button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
           <ul class="nav-menu">
             <li><a href="about.html">about me</a></li>
             <li><a href="projects.html">projects</a></li>
             <li><a href="contact.html">contact</a></li>
           </ul>
         </nav>
+        <div class="banner-spacer" aria-hidden="true"></div>
       </div>
     </header>
 
@@ -213,7 +212,7 @@
           <a href="projects.html" class="case-back-link">&larr; Back to Projects</a>
         </nav>
 
-        <section class="case-hero">
+        <section class="case-hero page-header compact">
           <p class="case-label">Case Study • May 2024</p>
           <h1 class="case-title">U.S. Drug Overdose Analysis</h1>
           <p class="case-subtitle">Uncovering pattern shifts in overdose deaths across demographic groups and drug types.</p>
@@ -303,7 +302,7 @@
       </nav>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="site-footer">
       let's connect @ <a href="https://www.linkedin.com/in/weian-huang/">weian-huang</a>
     </footer>
 
