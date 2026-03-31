@@ -46,3 +46,12 @@ a { color: #6b4ce6; text-decoration: none; }
   .nav-menu.open { display: flex; }
   .row, .project-grid { grid-template-columns: 1fr; }
 }
+
+.narrow { max-width: 860px; }
+.head_title h4 { margin: 0; font-size: 2rem; }
+.meta-block { margin: 24px 0; color: #555; }
+.meta-block h6 { margin: 0 0 6px; font-size: 0.95rem; }
+.content-block { margin-top: 26px; }
+.content-block h3 { margin-top: 8px; }
+.tableau-placeholder { border: 1px dashed #bbb; border-radius: 10px; padding: 36px; text-align: center; color: #666; margin-top: 12px; }
+.pagination-row { display: flex; justify-content: space-between; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
