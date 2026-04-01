@@ -199,17 +199,17 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
 .about-editorial {
   width: min(920px, 92vw);
   margin: 0 auto;
-  padding: 2rem 0 3rem;
+  padding: 1.8rem 0 3rem;
 }
 
 .about-top {
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.95rem;
 }
 
 .about-kicker {
   margin: 0;
   color: #7e7873;
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.03em;
   text-transform: lowercase;
@@ -217,18 +217,24 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
 
 .about-name {
   margin: 0.05rem 0 0;
-  font-size: clamp(1.5rem, 3.3vw, 2rem);
+  font-size: clamp(1.45rem, 3.1vw, 1.9rem);
   font-weight: 620;
   line-height: 1.2;
 }
 
+.about-intro-images {
+  margin-top: 0.6rem;
+  display: flex;
+  gap: 0.55rem;
+}
+
 .about-section {
-  margin-top: 1.15rem;
+  margin-top: 0.9rem;
 }
 
 .about-section h2 {
-  margin: 0 0 0.75rem;
-  font-size: 0.95rem;
+  margin: 0 0 0.62rem;
+  font-size: 0.93rem;
   font-weight: 550;
   text-transform: lowercase;
   letter-spacing: 0.02em;
@@ -236,57 +242,54 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
 }
 
 .about-entry {
-  margin-bottom: 0.95rem;
+  margin-bottom: 0.82rem;
 }
 
 .about-entry h3 {
   margin: 0;
-  font-size: 1.06rem;
+  font-size: 1.02rem;
   font-weight: 610;
-  line-height: 1.35;
+  line-height: 1.34;
 }
 
 .about-entry h4 {
-  margin: 0.65rem 0 0;
-  font-size: 0.97rem;
-  font-weight: 580;
-  line-height: 1.35;
+  margin: 0.6rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 590;
+  line-height: 1.34;
 }
 
 .entry-date {
-  margin: 0.16rem 0 0.4rem;
-  font-size: 0.86rem;
+  margin: 0.14rem 0 0.34rem;
+  font-size: 0.84rem;
   color: #7e7873;
 }
 
 .about-entry ul {
   margin: 0;
-  padding-left: 1.12rem;
+  padding-left: 1.08rem;
 }
 
 .about-entry li {
-  margin: 0.18rem 0;
-  padding-left: 0.1rem;
+  margin: 0.16rem 0;
   color: #332f2c;
 }
 
 .entry-program {
-  margin: 0.18rem 0 0.62rem;
+  margin: 0.12rem 0 0;
+  color: #332f2c;
 }
 
-.with-inline-image {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 170px;
-  gap: 0.9rem;
-  align-items: start;
+.section-break {
+  margin: 0.25rem 0 0.55rem;
 }
 
-.inline-image {
-  width: 170px;
-  height: 125px;
+.support-image {
+  width: 132px;
+  height: 96px;
   object-fit: cover;
-  border-radius: 10px;
-  opacity: 0.92;
+  border-radius: 8px;
+  display: block;
 }
 
 /* Footer */
@@ -324,13 +327,10 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
   .split-grid.reverse .media-block,
   .split-grid.reverse .text-block { order: initial; }
 
-  .about-editorial { padding: 1.5rem 0 2.5rem; }
-  .with-inline-image {
-    grid-template-columns: 1fr;
-    gap: 0.65rem;
-  }
-  .inline-image {
-    width: 150px;
-    height: 108px;
+  .about-editorial { padding: 1.4rem 0 2.5rem; }
+  .about-intro-images { gap: 0.45rem; }
+  .support-image {
+    width: 118px;
+    height: 88px;
   }
 }
