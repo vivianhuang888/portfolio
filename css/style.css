@@ -61,7 +61,7 @@ body {
 .hero,
 .page-title {
   text-align: center;
-  padding: 64px 24px 28px;
+  padding: 64px 24px 20px;
 }
 
 .hero h1,
@@ -71,11 +71,13 @@ body {
 }
 
 .subtitle,
+.hero-role,
 .page-title h5 {
   margin-top: 10px;
+  margin-bottom: 14px;
   color: #666;
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 1.06rem;
+  font-weight: 500;
 }
 
 .intro,
@@ -89,7 +91,7 @@ body {
 
 .intro > h2 {
   text-transform: lowercase;
-  margin: 4px 0 24px;
+  margin: 0 0 24px;
   font-size: 1.35rem;
 }
 
@@ -216,7 +218,7 @@ body {
 
 .cta-section {
   text-align: center;
-  padding: 18px 24px 64px;
+  padding: 14px 24px 56px;
 }
 
 .cta-section span {
