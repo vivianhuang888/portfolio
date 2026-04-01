@@ -194,6 +194,101 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
 .project-card .media-block { min-height: 220px; }
 .project-card .link { font-weight: 700; text-decoration: none; color: var(--accent); }
 
+
+/* About page — editorial layout */
+.about-editorial {
+  width: min(920px, 92vw);
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.about-top {
+  margin-bottom: 1.1rem;
+}
+
+.about-kicker {
+  margin: 0;
+  color: #7e7873;
+  font-size: 0.84rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: lowercase;
+}
+
+.about-name {
+  margin: 0.05rem 0 0;
+  font-size: clamp(1.5rem, 3.3vw, 2rem);
+  font-weight: 620;
+  line-height: 1.2;
+}
+
+.about-section {
+  margin-top: 1.15rem;
+}
+
+.about-section h2 {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 550;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+  color: #645f5a;
+}
+
+.about-entry {
+  margin-bottom: 0.95rem;
+}
+
+.about-entry h3 {
+  margin: 0;
+  font-size: 1.06rem;
+  font-weight: 610;
+  line-height: 1.35;
+}
+
+.about-entry h4 {
+  margin: 0.65rem 0 0;
+  font-size: 0.97rem;
+  font-weight: 580;
+  line-height: 1.35;
+}
+
+.entry-date {
+  margin: 0.16rem 0 0.4rem;
+  font-size: 0.86rem;
+  color: #7e7873;
+}
+
+.about-entry ul {
+  margin: 0;
+  padding-left: 1.12rem;
+}
+
+.about-entry li {
+  margin: 0.18rem 0;
+  padding-left: 0.1rem;
+  color: #332f2c;
+}
+
+.entry-program {
+  margin: 0.18rem 0 0.62rem;
+}
+
+.with-inline-image {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 170px;
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.inline-image {
+  width: 170px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0.92;
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--line);
@@ -228,4 +323,14 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
   .project-cards { grid-template-columns: 1fr; }
   .split-grid.reverse .media-block,
   .split-grid.reverse .text-block { order: initial; }
+
+  .about-editorial { padding: 1.5rem 0 2.5rem; }
+  .with-inline-image {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+  .inline-image {
+    width: 150px;
+    height: 108px;
+  }
 }
