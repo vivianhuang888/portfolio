@@ -134,10 +134,7 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
 .cta-panel {
   margin: 1.4rem auto 4rem;
   text-align: center;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  padding: 1.7rem 1.1rem;
+  padding: 1.2rem 1.1rem;
 }
 .cta-panel p { margin: 0; }
 .btn {
