@@ -80,17 +80,17 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
 
 /* Hero */
 .hero {
-  padding: 8.5rem 0 5.5rem;
+  padding: 8.5rem 0 3.9rem;
 }
 .hero-role {
-  margin: 1rem 0 1.35rem;
-  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  margin: 1rem 0 1.55rem;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
   line-height: 1.5;
   color: #7e7873;
-  font-weight: 500;
+  font-weight: 560;
 }
 .hero-subtitle { max-width: 760px; font-size: 1.15rem; line-height: 1.9; color: var(--muted); }
-.section-intro { padding: 0.5rem 0 1rem; }
+.section-intro { padding: 0.1rem 0 1rem; }
 
 /* Alternating narrative blocks */
 .split-grid {
@@ -137,7 +137,7 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 22px;
-  padding: 2.2rem 1.1rem;
+  padding: 1.7rem 1.1rem;
 }
 .btn {
   display: inline-block;
