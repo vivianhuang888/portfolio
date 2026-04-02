@@ -25,8 +25,8 @@
     <main class="container page-stack project-detail">
       <section class="page-header compact project-hero reveal">
         <p class="eyebrow">healthcare analytics case study</p>
-        <h1>Forecasting ICU Demand and Readmission Risk with MIMIC-IV</h1>
-        <p class="meta">A unified machine learning framework connecting ED triage risk, ICU discharge safety, and short-term bed demand forecasting.</p>
+        <h1>Bridging the Gap: Forecasting ICU Demand and Readmission Risk</h1>
+        <p class="meta">A unified machine learning framework linking ED triage risk, ICU discharge safety, and short-term bed demand forecasting.</p>
       </section>
 
       <section class="panel project-meta reveal" aria-label="Project metadata">
@@ -37,7 +37,7 @@
           </div>
           <div>
             <dt>Skills</dt>
-            <dd>Python, XGBoost, Clinical Data Analytics (MIMIC-IV), Data Visualization</dd>
+            <dd>Data Preprocessing (Python), Machine Learning (XGBoost), Data Visualization, Clinical Data Analytics (MIMIC-IV)</dd>
           </div>
         </dl>
       </section>
@@ -48,36 +48,39 @@
         </figure>
         <article class="text-block">
           <h2>Overview / Description</h2>
-          <p>ED crowding and ICU strain remain major operational challenges. Patients who appear stable in the ED can deteriorate quickly, while premature ICU discharges can lead to unsafe readmissions.</p>
-          <p>This project links the full patient journey from ED triage to ICU admission, discharge, and potential return using MIMIC-IV EHR data. The goal was to shift planning from reactive bed management to near-term proactive forecasting.</p>
+          <p>Emergency department crowding and ICU strain are major hospital operational challenges. Patients who appear stable in the ED can deteriorate quickly, while patients discharged too early from ICU may face dangerous readmission risk.</p>
+          <p>This project analyzed the MIMIC-IV EHR database across the full patient journey, from ED triage to ICU admission, discharge, and potential readmission, to build a unified framework for real-time ICU bed demand forecasting.</p>
         </article>
       </section>
 
       <section class="panel reveal" id="objective">
         <h2>Objective / Success Metrics</h2>
-        <p>Rather than modeling ED-to-ICU and ICU-to-ward transitions in isolation, this work combines both into one decision-support pipeline:</p>
         <ol>
-          <li><strong>Early deterioration detection:</strong> Predict ICU admission within 12 hours of ED arrival.</li>
-          <li><strong>Safe discharge assessment:</strong> Predict ICU readmission within 72 hours post-discharge.</li>
-          <li><strong>Unified capacity forecasting:</strong> Combine admission and readmission risks with LOS expectations.</li>
+          <li><strong>Early deterioration detection (Phase 1):</strong> Predict ICU admission within 12 hours of ED arrival using early triage data.</li>
+          <li><strong>Safe discharge assessment (Phase 2):</strong> Predict ICU readmission within 72 hours using clinical data prior to ICU discharge.</li>
+          <li><strong>Unified capacity forecasting:</strong> Combine both predictions with length-of-stay estimates to support a dynamic ICU bed demand dashboard.</li>
         </ol>
       </section>
 
       <section class="panel reveal" id="approach">
         <h2>Approach</h2>
-        <h3>1) Data integration &amp; cohort design</h3>
-        <p>Merged MIMIC-IV-ED and MIMIC-IV v3.1 tables using timestamped relational joins across <code>ed_stays</code>, <code>admissions</code>, <code>transfers</code>, and <code>icustays</code> with <code>subject_id</code> and <code>hadm_id</code>.</p>
+        <h3>1) Data integration &amp; cohort selection</h3>
         <ul>
-          <li>Built an upstream cohort for ED-to-ICU prediction.</li>
-          <li>Built a downstream cohort of post-ICU survivors for readmission modeling.</li>
+          <li>Joined records across <code>ed_stays</code>, <code>admissions</code>, <code>transfers</code>, and <code>icustays</code> using <code>subject_id</code> and <code>hadm_id</code>.</li>
+          <li>Built two cohorts: an upstream cohort for ED-to-ICU prediction and a downstream cohort for ICU readmission prediction.</li>
         </ul>
-        <h3>2) Feature engineering</h3>
+
+        <h3>2) Feature engineering &amp; unstructured data handling</h3>
         <ul>
-          <li><strong>Medication normalization:</strong> Converted free-text home meds into structured categories (1,000+ names mapped to 22 classes).</li>
-          <li><strong>Triage standardization:</strong> Parsed pain score strings and normalized top chief complaints into binary indicators.</li>
+          <li>Normalized home medication text and mapped more than 1,000 drug names into 22 pharmacologic categories.</li>
+          <li>Standardized free-text pain scores and transformed the top 25 chief complaints into binary indicators.</li>
         </ul>
+
         <h3>3) Predictive modeling</h3>
-        <p>Used XGBoost with class-imbalance handling via <code>scale_pos_weight</code> and optimized for AUC and Recall to improve high-risk sensitivity.</p>
+        <ul>
+          <li>Used XGBoost with <code>scale_pos_weight</code> to address class imbalance.</li>
+          <li>Prioritized AUC and Recall to improve sensitivity to high-risk patients.</li>
+        </ul>
       </section>
 
       <section class="container split-grid reverse project-split reveal" id="results">
@@ -85,32 +88,32 @@
           <img src="assets/project-icu-2.jpg" alt="Placeholder visual for ICU model performance and dashboard concept" />
         </figure>
         <article class="text-block">
-          <h2>Results / Key Insights</h2>
+          <h2>Results / Key Findings</h2>
 
-          <h3>Model 1: 12-hour ICU admission</h3>
+          <h3>Model 1: 12-Hour ICU Admission</h3>
           <div class="metric-grid" aria-label="12-hour ICU admission model metrics">
             <p class="metric-row"><span class="metric-label">AUC</span><span class="metric-pill">0.96</span></p>
             <p class="metric-row"><span class="metric-label">Recall</span><span class="metric-pill">0.93</span></p>
           </div>
-          <p>The upstream model achieved strong discrimination and high sensitivity for early deterioration risk.</p>
+          <p>The model captured the large majority of patients requiring urgent intensive care using early ED data.</p>
 
-          <h3>Model 2: 72-hour ICU readmission</h3>
+          <h3>Model 2: 72-Hour ICU Readmission</h3>
           <div class="metric-grid" aria-label="72-hour ICU readmission model metrics">
             <p class="metric-row"><span class="metric-label">AUC</span><span class="metric-pill">0.72</span></p>
             <p class="metric-row"><span class="metric-label">Recall</span><span class="metric-pill">0.52</span></p>
           </div>
-          <p>Readmission remained harder to predict, but model performance supported practical early-warning use for borderline discharges.</p>
+          <p>Readmission remained harder to predict, but the model still provided a useful screening signal for discharge risk.</p>
         </article>
       </section>
 
       <section class="panel reveal" id="impact">
-        <h2>Impact / Conclusion / Future Work</h2>
-        <p>The key contribution is system-level forecasting through a proof-of-concept ICU bed demand dashboard updated in 12-hour intervals.</p>
-        <p class="formula">Current ICU beds + predicted ED inflow - expected discharges + predicted readmissions = net ICU bed demand</p>
+        <h2>Impact / Conclusion / Recommendations</h2>
         <ul>
-          <li><strong>Impact:</strong> Provides an operationally practical way to anticipate bed shortages and reduce unsafe early discharge.</li>
-          <li><strong>Future work:</strong> Add a dedicated LOS model and integrate unstructured notes plus physiologic time-series to improve readmission precision.</li>
+          <li>Built a proof-of-concept ICU bed demand dashboard operating at 12-hour intervals.</li>
+          <li>Extended the work from single-patient prediction to system-level capacity forecasting.</li>
+          <li>Provided a practical framework for anticipating near-term bed shortages, prioritizing triage, and reducing unsafe premature discharge.</li>
         </ul>
+        <p><strong>Future direction:</strong> Incorporate a dedicated length-of-stay model, clinical notes, and physiologic time-series data to improve real-time deployment and readmission precision.</p>
       </section>
 
       <section class="panel reveal" aria-label="Project navigation footer">
