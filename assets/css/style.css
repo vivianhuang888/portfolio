@@ -541,3 +541,70 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
     grid-template-columns: 1fr;
   }
 }
+
+/* Project detail template (shared pattern for project pages) */
+.project-detail {
+  width: min(920px, 92vw);
+}
+
+.project-hero .meta {
+  margin-top: 0.8rem;
+}
+
+.project-meta-grid {
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.project-meta-grid dt {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 650;
+}
+
+.project-meta-grid dd {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+}
+
+.project-split {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.project-split .text-block h2 {
+  margin-bottom: 0.65rem;
+}
+
+.metric-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.metric-pill {
+  display: inline-block;
+  border: 1px solid #c9d7f8;
+  background: #edf3ff;
+  color: #233f78;
+  border-radius: 999px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.33rem 0.68rem;
+}
+
+.formula {
+  font-weight: 600;
+  color: #2f2b28;
+}
+
+@media (max-width: 860px) {
+  .project-detail {
+    width: min(1120px, 92vw);
+  }
+}
