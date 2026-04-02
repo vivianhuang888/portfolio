@@ -272,7 +272,7 @@ body {
 }
 
 /* =========================================
-   Project Categories & Tags (Updated for 3 Columns)
+   Project Categories & Tags
    ========================================= */
 
 .project-category {
@@ -288,14 +288,13 @@ body {
   border-bottom: 1px solid #ececec; 
 }
 
-/* 強迫一排顯示 3 個卡片 */
+/* 這裡改成 repeat(3, 1fr) */
 .project-category .project-cards {
   display: grid;
-  gap: 26px; /* 配合你原本網站的間距 */
-  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 強制 3 等份 */
+  gap: 26px; 
+  grid-template-columns: repeat(3, 1fr); 
 }
 
-/* 標籤容器 */
 .project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -303,22 +302,20 @@ body {
   margin: 12px 0 16px 0; 
 }
 
-/* 修復：強制顯示膠囊狀背景 */
 .project-tag {
-  display: inline-block; /* 加上這個才能讓 span 正確顯示背景跟 padding */
+  display: inline-block; 
   font-size: 0.75rem;
   font-weight: 600;
-  color: #1a365d; /* 深藍色字體 */
-  background-color: #e2e8f0; /* 灰藍色背景 */
+  color: #1a365d; 
+  background-color: #e2e8f0; 
   padding: 4px 10px;
   border-radius: 99px;
   letter-spacing: 0.02em;
 }
 
-/* 讓手機版或平板也能響應式 (螢幕變小自動變 2排 或 1排) */
 @media (max-width: 960px) {
   .project-category .project-cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
