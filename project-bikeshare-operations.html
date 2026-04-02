@@ -1,19 +1,122 @@
 <!doctype html>
 <html lang="en">
-  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Project - Capital Bikeshare Operations</title><link rel="stylesheet" href="assets/css/style.css" /></head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project - Capital Bikeshare Operations</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
   <body>
-    <header class="site-header"><div class="container banner-shell"><nav class="nav-wrap"><a class="brand" href="index.html">VivianHuang</a><button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button><ul class="nav-menu"><li><a href="about.html">about me</a></li><li><a href="projects.html">projects</a></li><li><a href="contact.html">contact</a></li></ul></nav><div class="banner-spacer" aria-hidden="true"></div></div></header>
+    <header class="site-header">
+      <div class="container banner-shell">
+        <nav class="nav-wrap">
+          <a class="brand" href="index.html">VivianHuang</a>
+          <button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
+          <ul class="nav-menu">
+            <li><a href="about.html">about me</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </nav>
+        <div class="banner-spacer" aria-hidden="true"></div>
+      </div>
+    </header>
+
     <main class="container page-stack project-detail">
-      <section class="page-header compact project-hero reveal"><p class="eyebrow">operations analytics case study</p><h1>Capital Bikeshare Operations</h1><p class="meta">Demand and rebalancing analysis to improve fleet availability across stations and time windows.</p></section>
-      <section class="panel project-meta reveal"><dl class="project-meta-grid"><div><dt>Duration</dt><dd>2025</dd></div><div><dt>Skills</dt><dd>Spatial-Temporal EDA, Forecasting, Demand Segmentation, Operations Planning</dd></div></dl></section>
-      <section class="panel reveal"><h2>Overview / Description</h2><p>Analyzed station-level trips, temporal demand shifts, and weather effects to identify where shortages and surpluses formed throughout the day.</p></section>
-      <section class="panel reveal"><h2>Objective / Success Metrics</h2><p>Improve bike and dock availability during peak windows while minimizing rebalancing miles and overtime requirements.</p></section>
-      <section class="panel reveal"><h2>Approach</h2><p>Combined usage clustering with short-horizon demand estimates and proposed route bundles for redistribution teams.</p></section>
-      <section class="panel reveal"><h2>Results / Key Insights</h2><p>Commute-driven directional imbalances dominated weekday patterns, while weekend demand was more leisure-centric and weather-sensitive.</p></section>
-      <section class="panel reveal"><h2>Impact / Conclusion / Future Work</h2><p>The approach can support shift planning and dynamic routing; future work includes integrating live dock telemetry for intraday optimization.</p></section>
-      <section class="panel reveal" aria-label="Project navigation footer"><a class="btn" href="projects.html">&larr; Back to Projects</a></section>
+      <section class="page-header compact project-hero reveal">
+        <p class="eyebrow">operations analytics case study</p>
+        <h1>Capital Bikeshare Operations Optimization</h1>
+        <p class="meta">A demand and rebalancing analysis to improve bike availability while lowering operational friction.</p>
+      </section>
+
+      <section class="panel project-meta reveal" aria-label="Project metadata">
+        <dl class="project-meta-grid">
+          <div>
+            <dt>Duration</dt>
+            <dd>2025</dd>
+          </div>
+          <div>
+            <dt>Skills</dt>
+            <dd>Python, Spatial-Temporal Analysis, Forecasting, Operations Planning, Data Visualization</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="container split-grid project-split reveal" id="overview">
+        <figure class="media-block warm-a">
+          <img src="assets/project-bikeshare-operations-1.jpg" alt="Placeholder visual for bikeshare demand and station imbalance analysis" />
+        </figure>
+        <article class="text-block">
+          <h2>Overview / Description</h2>
+          <p>Bikeshare systems frequently face station-level shortages and surpluses that reduce rider reliability during peak windows.</p>
+          <p>This project analyzed trip patterns, weather effects, and directional commute flows to guide smarter rebalancing operations.</p>
+        </article>
+      </section>
+
+      <section class="panel reveal" id="objective">
+        <h2>Objective / Success Metrics</h2>
+        <p>The objective was to improve rider access with more efficient redistribution planning:</p>
+        <ol>
+          <li><strong>Availability:</strong> Reduce stockout risk at high-demand stations.</li>
+          <li><strong>Efficiency:</strong> Minimize rebalancing mileage and avoidable overtime.</li>
+          <li><strong>Timing:</strong> Align rebalancing windows with recurring demand shifts.</li>
+        </ol>
+      </section>
+
+      <section class="panel reveal" id="approach">
+        <h2>Approach</h2>
+        <h3>1) Demand profiling</h3>
+        <p>Built station-level demand signatures by hour, weekday/weekend, and seasonality effects.</p>
+        <ul>
+          <li>Classified stations by source/sink behavior.</li>
+          <li>Mapped recurring directional commute imbalances.</li>
+        </ul>
+        <h3>2) Short-horizon planning</h3>
+        <ul>
+          <li><strong>Forecasting:</strong> Estimated near-term net bike movement by cluster.</li>
+          <li><strong>Routing:</strong> Proposed redistribution bundles for operations crews.</li>
+        </ul>
+        <h3>3) Performance monitoring</h3>
+        <p>Defined operational KPIs for stockout minutes, empty-dock minutes, and route efficiency.</p>
+      </section>
+
+      <section class="container split-grid reverse project-split reveal" id="results">
+        <figure class="media-block warm-c">
+          <img src="assets/project-bikeshare-operations-2.jpg" alt="Placeholder visual for bikeshare rebalancing strategy outcomes" />
+        </figure>
+        <article class="text-block">
+          <h2>Results / Key Insights</h2>
+          <p>Weekday commute corridors drove the largest directional imbalance, while weekend demand was more weather- and leisure-sensitive.</p>
+          <div class="metric-grid" aria-label="Bikeshare project highlights">
+            <p class="metric-row"><span class="metric-label">Dominant pattern</span><span class="metric-pill">Directional commute flow</span></p>
+            <p class="metric-row"><span class="metric-label">Operational lever</span><span class="metric-pill">Time-bucket routing</span></p>
+          </div>
+          <p>Cluster-based rebalancing windows offered a practical balance between availability and routing effort.</p>
+        </article>
+      </section>
+
+      <section class="panel reveal" id="impact">
+        <h2>Impact / Conclusion / Future Work</h2>
+        <p>The framework supports repeatable shift planning and can be extended into more dynamic dispatch decisions.</p>
+        <ul>
+          <li><strong>Impact:</strong> Improved operational visibility into where and when imbalances emerge.</li>
+          <li><strong>Future work:</strong> Integrate live station telemetry for intra-day optimization.</li>
+        </ul>
+      </section>
+
+      <section class="panel reveal" aria-label="Project navigation footer">
+        <a class="btn" href="projects.html">&larr; Back to Projects</a>
+      </section>
     </main>
-    <footer class="site-footer"><p>let's connect @ <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a> :))</p></footer>
+
+    <footer class="site-footer">
+      <p>
+        let's connect @
+        <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a>
+        :))
+      </p>
+    </footer>
+
     <script src="assets/js/main.js"></script>
   </body>
 </html>

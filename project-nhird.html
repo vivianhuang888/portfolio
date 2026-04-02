@@ -1,19 +1,122 @@
 <!doctype html>
 <html lang="en">
-  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Project - Evaluating Health Policy Impact</title><link rel="stylesheet" href="assets/css/style.css" /></head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project - Evaluating Health Policy Impact</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
   <body>
-    <header class="site-header"><div class="container banner-shell"><nav class="nav-wrap"><a class="brand" href="index.html">VivianHuang</a><button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button><ul class="nav-menu"><li><a href="about.html">about me</a></li><li><a href="projects.html">projects</a></li><li><a href="contact.html">contact</a></li></ul></nav><div class="banner-spacer" aria-hidden="true"></div></div></header>
+    <header class="site-header">
+      <div class="container banner-shell">
+        <nav class="nav-wrap">
+          <a class="brand" href="index.html">VivianHuang</a>
+          <button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
+          <ul class="nav-menu">
+            <li><a href="about.html">about me</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </nav>
+        <div class="banner-spacer" aria-hidden="true"></div>
+      </div>
+    </header>
+
     <main class="container page-stack project-detail">
-      <section class="page-header compact project-hero reveal"><p class="eyebrow">health policy analytics case study</p><h1>Evaluating Health Policy Impact with NHIRD</h1><p class="meta">Population-level claims analysis of dementia and P4P effects on diabetes care quality.</p></section>
-      <section class="panel project-meta reveal"><dl class="project-meta-grid"><div><dt>Duration</dt><dd>2024–2025</dd></div><div><dt>Skills</dt><dd>Claims Data Analytics, Cohort Design, Regression Modeling, Policy Evaluation</dd></div></dl></section>
-      <section class="panel reveal"><h2>Overview / Description</h2><p>Using NHIRD records, this study measured how comorbidity and payment incentives changed care patterns for diabetic populations across longitudinal cohorts.</p></section>
-      <section class="panel reveal"><h2>Objective / Success Metrics</h2><p>Assess differences in utilization, continuity, and quality indicators between patients exposed and unexposed to targeted programs.</p></section>
-      <section class="panel reveal"><h2>Approach</h2><p>Constructed matched cohorts, applied risk adjustment, and tested sensitivity across model specifications to separate policy signal from baseline disease burden.</p></section>
-      <section class="panel reveal"><h2>Results / Key Insights</h2><p>P4P exposure was associated with improved follow-up consistency, while dementia burden remained a strong modifier of quality outcomes and resource needs.</p></section>
-      <section class="panel reveal"><h2>Impact / Conclusion / Future Work</h2><p>Findings support tailored care pathways for dual-burden patients and inform value-based program design with equity-focused risk stratification.</p></section>
-      <section class="panel reveal" aria-label="Project navigation footer"><a class="btn" href="projects.html">&larr; Back to Projects</a></section>
+      <section class="page-header compact project-hero reveal">
+        <p class="eyebrow">health policy analytics case study</p>
+        <h1>Evaluating Health Policy Impact with NHIRD</h1>
+        <p class="meta">A population-level claims analysis of dementia burden and pay-for-performance effects in diabetes care.</p>
+      </section>
+
+      <section class="panel project-meta reveal" aria-label="Project metadata">
+        <dl class="project-meta-grid">
+          <div>
+            <dt>Duration</dt>
+            <dd>2024-2025</dd>
+          </div>
+          <div>
+            <dt>Skills</dt>
+            <dd>Claims Analytics, Cohort Design, Regression Modeling, Policy Evaluation, R</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="container split-grid project-split reveal" id="overview">
+        <figure class="media-block warm-a">
+          <img src="assets/project-nhird-1.jpg" alt="Placeholder visual for NHIRD cohort design and policy comparison" />
+        </figure>
+        <article class="text-block">
+          <h2>Overview / Description</h2>
+          <p>Policymakers need evidence on whether payment incentives improve outcomes for patients with complex chronic conditions.</p>
+          <p>Using NHIRD claims data, this project compared utilization and quality patterns between diabetes patients with and without dementia under different policy exposure groups.</p>
+        </article>
+      </section>
+
+      <section class="panel reveal" id="objective">
+        <h2>Objective / Success Metrics</h2>
+        <p>The project aimed to isolate policy effects while accounting for baseline clinical complexity:</p>
+        <ol>
+          <li><strong>Policy signal:</strong> Estimate the association of P4P participation with follow-up quality.</li>
+          <li><strong>Equity lens:</strong> Measure whether dementia status modified program benefit.</li>
+          <li><strong>Actionability:</strong> Translate findings into targeted care management priorities.</li>
+        </ol>
+      </section>
+
+      <section class="panel reveal" id="approach">
+        <h2>Approach</h2>
+        <h3>1) Cohort construction</h3>
+        <p>Built longitudinal diabetes cohorts and aligned observation windows for policy exposure and outcomes.</p>
+        <ul>
+          <li>Defined comorbidity and utilization baselines before exposure.</li>
+          <li>Applied matching and risk adjustment to improve comparability.</li>
+        </ul>
+        <h3>2) Modeling strategy</h3>
+        <ul>
+          <li><strong>Core models:</strong> Multivariable regressions for utilization and continuity metrics.</li>
+          <li><strong>Sensitivity checks:</strong> Alternative specifications to test robustness of effect direction.</li>
+        </ul>
+        <h3>3) Interpretation</h3>
+        <p>Converted statistical outputs into policy-facing insights for program design and high-risk subgroup management.</p>
+      </section>
+
+      <section class="container split-grid reverse project-split reveal" id="results">
+        <figure class="media-block warm-c">
+          <img src="assets/project-nhird-2.jpg" alt="Placeholder visual for NHIRD policy impact findings" />
+        </figure>
+        <article class="text-block">
+          <h2>Results / Key Insights</h2>
+          <p>P4P participation was associated with better continuity of care, but dementia burden remained a strong driver of outcome variability.</p>
+          <div class="metric-grid" aria-label="NHIRD key findings">
+            <p class="metric-row"><span class="metric-label">Program effect</span><span class="metric-pill">Positive</span></p>
+            <p class="metric-row"><span class="metric-label">Key modifier</span><span class="metric-pill">Dementia status</span></p>
+          </div>
+          <p>Findings highlighted the need for differentiated interventions rather than one-size-fits-all policy design.</p>
+        </article>
+      </section>
+
+      <section class="panel reveal" id="impact">
+        <h2>Impact / Conclusion / Future Work</h2>
+        <p>This analysis supports more targeted value-based strategies for dual-burden populations within national claims programs.</p>
+        <ul>
+          <li><strong>Impact:</strong> Strengthened evidence for risk-stratified policy implementation.</li>
+          <li><strong>Future work:</strong> Add provider-level variation analysis and longer-term outcome tracking.</li>
+        </ul>
+      </section>
+
+      <section class="panel reveal" aria-label="Project navigation footer">
+        <a class="btn" href="projects.html">&larr; Back to Projects</a>
+      </section>
     </main>
-    <footer class="site-footer"><p>let's connect @ <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a> :))</p></footer>
+
+    <footer class="site-footer">
+      <p>
+        let's connect @
+        <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a>
+        :))
+      </p>
+    </footer>
+
     <script src="assets/js/main.js"></script>
   </body>
 </html>
