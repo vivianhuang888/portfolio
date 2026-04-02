@@ -1,19 +1,122 @@
 <!doctype html>
 <html lang="en">
-  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Project - A/B Testing E-commerce Behavior</title><link rel="stylesheet" href="assets/css/style.css" /></head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project - A/B Testing E-commerce Behavior</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
   <body>
-    <header class="site-header"><div class="container banner-shell"><nav class="nav-wrap"><a class="brand" href="index.html">VivianHuang</a><button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button><ul class="nav-menu"><li><a href="about.html">about me</a></li><li><a href="projects.html">projects</a></li><li><a href="contact.html">contact</a></li></ul></nav><div class="banner-spacer" aria-hidden="true"></div></div></header>
+    <header class="site-header">
+      <div class="container banner-shell">
+        <nav class="nav-wrap">
+          <a class="brand" href="index.html">VivianHuang</a>
+          <button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
+          <ul class="nav-menu">
+            <li><a href="about.html">about me</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </nav>
+        <div class="banner-spacer" aria-hidden="true"></div>
+      </div>
+    </header>
+
     <main class="container page-stack project-detail">
-      <section class="page-header compact project-hero reveal"><p class="eyebrow">experimentation case study</p><h1>A/B Testing E-commerce Behavior</h1><p class="meta">Measured whether image reviews causally improved conversion across product cohorts.</p></section>
-      <section class="panel project-meta reveal"><dl class="project-meta-grid"><div><dt>Duration</dt><dd>Spring 2025</dd></div><div><dt>Skills</dt><dd>Experiment Design, Hypothesis Testing, Power Analysis, Causal Inference</dd></div></dl></section>
-      <section class="panel reveal"><h2>Overview / Description</h2><p>This project evaluated the business impact of user-generated image reviews by comparing treatment and control user journeys.</p></section>
-      <section class="panel reveal"><h2>Objective / Success Metrics</h2><p>Estimate conversion lift with statistical confidence and define rollout thresholds balancing expected gain with implementation cost.</p></section>
-      <section class="panel reveal"><h2>Approach</h2><p>Designed randomized assignment, monitored guardrail metrics, and performed segment-level significance checks to verify consistency.</p></section>
-      <section class="panel reveal"><h2>Results / Key Insights</h2><p>Image reviews showed positive conversion effects in trust-sensitive categories, with weaker impact in low-consideration purchases.</p></section>
-      <section class="panel reveal"><h2>Impact / Conclusion / Future Work</h2><p>Recommended staged rollout by category and further testing on review prominence and mobile placement to optimize lift.</p></section>
-      <section class="panel reveal" aria-label="Project navigation footer"><a class="btn" href="projects.html">&larr; Back to Projects</a></section>
+      <section class="page-header compact project-hero reveal">
+        <p class="eyebrow">experimentation case study</p>
+        <h1>A/B Testing E-commerce Behavior</h1>
+        <p class="meta">A randomized experiment assessing whether user-generated image reviews increase conversion.</p>
+      </section>
+
+      <section class="panel project-meta reveal" aria-label="Project metadata">
+        <dl class="project-meta-grid">
+          <div>
+            <dt>Duration</dt>
+            <dd>Spring 2025</dd>
+          </div>
+          <div>
+            <dt>Skills</dt>
+            <dd>Experiment Design, Hypothesis Testing, Power Analysis, SQL, Causal Inference</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="container split-grid project-split reveal" id="overview">
+        <figure class="media-block warm-a">
+          <img src="assets/project-ab-testing-ecommerce-1.jpg" alt="Placeholder visual for A/B test design and treatment logic" />
+        </figure>
+        <article class="text-block">
+          <h2>Overview / Description</h2>
+          <p>Product teams wanted causal evidence on whether showing customer image reviews would improve purchase behavior.</p>
+          <p>This project designed and analyzed an A/B test comparing treatment and control user journeys across major product categories.</p>
+        </article>
+      </section>
+
+      <section class="panel reveal" id="objective">
+        <h2>Objective / Success Metrics</h2>
+        <p>The experiment focused on conversion impact and rollout readiness:</p>
+        <ol>
+          <li><strong>Primary metric:</strong> Measure conversion rate lift with statistical confidence.</li>
+          <li><strong>Guardrails:</strong> Monitor bounce rate and checkout completion for adverse effects.</li>
+          <li><strong>Decision rule:</strong> Define a category-level rollout strategy based on effect size stability.</li>
+        </ol>
+      </section>
+
+      <section class="panel reveal" id="approach">
+        <h2>Approach</h2>
+        <h3>1) Experiment setup</h3>
+        <p>Implemented randomized assignment with balanced traffic allocation and pre-defined analysis windows.</p>
+        <ul>
+          <li>Validated sample size with power calculations.</li>
+          <li>Confirmed baseline parity before result interpretation.</li>
+        </ul>
+        <h3>2) Analysis framework</h3>
+        <ul>
+          <li><strong>Core tests:</strong> Difference-in-proportions and confidence interval estimation.</li>
+          <li><strong>Segment checks:</strong> Category-level heterogeneity analysis to detect uneven effects.</li>
+        </ul>
+        <h3>3) Recommendation logic</h3>
+        <p>Converted statistical findings into staged rollout guidance with monitoring checkpoints for post-launch verification.</p>
+      </section>
+
+      <section class="container split-grid reverse project-split reveal" id="results">
+        <figure class="media-block warm-c">
+          <img src="assets/project-ab-testing-ecommerce-2.jpg" alt="Placeholder visual for A/B test outcome dashboard" />
+        </figure>
+        <article class="text-block">
+          <h2>Results / Key Insights</h2>
+          <p>Image reviews generated stronger conversion gains in high-consideration categories, while low-consideration categories showed limited lift.</p>
+          <div class="metric-grid" aria-label="A/B testing key outcomes">
+            <p class="metric-row"><span class="metric-label">Overall signal</span><span class="metric-pill">Positive lift</span></p>
+            <p class="metric-row"><span class="metric-label">Best fit</span><span class="metric-pill">Trust-sensitive products</span></p>
+          </div>
+          <p>Results supported targeted rollout rather than uniform implementation.</p>
+        </article>
+      </section>
+
+      <section class="panel reveal" id="impact">
+        <h2>Impact / Conclusion / Future Work</h2>
+        <p>The project provided a statistically grounded roadmap for feature rollout and experimentation governance.</p>
+        <ul>
+          <li><strong>Impact:</strong> Reduced decision risk by replacing assumptions with causal evidence.</li>
+          <li><strong>Future work:</strong> Test review placement hierarchy and mobile-first presentation variants.</li>
+        </ul>
+      </section>
+
+      <section class="panel reveal" aria-label="Project navigation footer">
+        <a class="btn" href="projects.html">&larr; Back to Projects</a>
+      </section>
     </main>
-    <footer class="site-footer"><p>let's connect @ <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a> :))</p></footer>
+
+    <footer class="site-footer">
+      <p>
+        let's connect @
+        <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a>
+        :))
+      </p>
+    </footer>
+
     <script src="assets/js/main.js"></script>
   </body>
 </html>

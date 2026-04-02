@@ -1,19 +1,122 @@
 <!doctype html>
 <html lang="en">
-  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Project - Predicting Preventive Care Engagement</title><link rel="stylesheet" href="assets/css/style.css" /></head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project - Predicting Preventive Care Engagement</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
   <body>
-    <header class="site-header"><div class="container banner-shell"><nav class="nav-wrap"><a class="brand" href="index.html">VivianHuang</a><button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button><ul class="nav-menu"><li><a href="about.html">about me</a></li><li><a href="projects.html">projects</a></li><li><a href="contact.html">contact</a></li></ul></nav><div class="banner-spacer" aria-hidden="true"></div></div></header>
+    <header class="site-header">
+      <div class="container banner-shell">
+        <nav class="nav-wrap">
+          <a class="brand" href="index.html">VivianHuang</a>
+          <button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
+          <ul class="nav-menu">
+            <li><a href="about.html">about me</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </nav>
+        <div class="banner-spacer" aria-hidden="true"></div>
+      </div>
+    </header>
+
     <main class="container page-stack project-detail">
-      <section class="page-header compact project-hero reveal"><p class="eyebrow">payer analytics case study</p><h1>Predicting Preventive Care Engagement</h1><p class="meta">Risk stratification for Medicare members to improve targeted outreach and care gap closure.</p></section>
-      <section class="panel project-meta reveal"><dl class="project-meta-grid"><div><dt>Duration</dt><dd>2025</dd></div><div><dt>Skills</dt><dd>LightGBM, Feature Engineering, Healthcare Segmentation, Model Evaluation</dd></div></dl></section>
-      <section class="panel reveal"><h2>Overview / Description</h2><p>The project modeled preventive care participation likelihood to support outreach prioritization under constrained care management resources.</p></section>
-      <section class="panel reveal"><h2>Objective / Success Metrics</h2><p>Increase engagement among high-risk members while improving precision of outreach lists and reducing low-yield contact volume.</p></section>
-      <section class="panel reveal"><h2>Approach</h2><p>Developed a LightGBM model with calibration checks, then translated model scores into operational outreach tiers with transparent business rules.</p></section>
-      <section class="panel reveal"><h2>Results / Key Insights</h2><p>The highest-risk tier captured a disproportionate share of future care gaps, enabling more focused intervention planning for care teams.</p></section>
-      <section class="panel reveal"><h2>Impact / Conclusion / Future Work</h2><p>This framework supports routine campaign planning; future iterations can include social vulnerability features for equity-sensitive prioritization.</p></section>
-      <section class="panel reveal" aria-label="Project navigation footer"><a class="btn" href="projects.html">&larr; Back to Projects</a></section>
+      <section class="page-header compact project-hero reveal">
+        <p class="eyebrow">payer analytics case study</p>
+        <h1>Predicting Preventive Care Engagement</h1>
+        <p class="meta">A risk-stratification model to prioritize outreach for Medicare members with open preventive care gaps.</p>
+      </section>
+
+      <section class="panel project-meta reveal" aria-label="Project metadata">
+        <dl class="project-meta-grid">
+          <div>
+            <dt>Duration</dt>
+            <dd>2025</dd>
+          </div>
+          <div>
+            <dt>Skills</dt>
+            <dd>Python, LightGBM, Feature Engineering, Model Calibration, Healthcare Segmentation</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="container split-grid project-split reveal" id="overview">
+        <figure class="media-block warm-a">
+          <img src="assets/project-humana-preventive-care-1.jpg" alt="Placeholder visual for preventive care outreach scoring workflow" />
+        </figure>
+        <article class="text-block">
+          <h2>Overview / Description</h2>
+          <p>Care teams often have limited outreach capacity and need a reliable way to prioritize members most likely to benefit from engagement.</p>
+          <p>This project predicted preventive care participation propensity and translated model scores into practical outreach tiers for operations teams.</p>
+        </article>
+      </section>
+
+      <section class="panel reveal" id="objective">
+        <h2>Objective / Success Metrics</h2>
+        <p>The objective was to improve campaign efficiency without sacrificing equity in member outreach:</p>
+        <ol>
+          <li><strong>Precision:</strong> Increase concentration of open care gaps in top-priority outreach lists.</li>
+          <li><strong>Efficiency:</strong> Reduce low-yield contact attempts.</li>
+          <li><strong>Usability:</strong> Provide interpretable score bands for care managers.</li>
+        </ol>
+      </section>
+
+      <section class="panel reveal" id="approach">
+        <h2>Approach</h2>
+        <h3>1) Data preparation</h3>
+        <p>Combined claims history, utilization patterns, and demographic features to build member-level training records.</p>
+        <ul>
+          <li>Engineered recency/frequency indicators for preventive service behavior.</li>
+          <li>Handled class imbalance to preserve high-risk signal detection.</li>
+        </ul>
+        <h3>2) Modeling and validation</h3>
+        <ul>
+          <li><strong>Model:</strong> LightGBM classifier tuned for ranking performance.</li>
+          <li><strong>Validation:</strong> Calibration and lift checks across operational segments.</li>
+        </ul>
+        <h3>3) Operational translation</h3>
+        <p>Mapped predicted risk into outreach tiers with simple business rules aligned to staffing capacity.</p>
+      </section>
+
+      <section class="container split-grid reverse project-split reveal" id="results">
+        <figure class="media-block warm-c">
+          <img src="assets/project-humana-preventive-care-2.jpg" alt="Placeholder visual for preventive care engagement model performance" />
+        </figure>
+        <article class="text-block">
+          <h2>Results / Key Insights</h2>
+          <p>The top outreach tier captured a disproportionate share of future care-gap closures, improving campaign targeting quality.</p>
+          <div class="metric-grid" aria-label="Preventive care model highlights">
+            <p class="metric-row"><span class="metric-label">Primary outcome</span><span class="metric-pill">Higher lift</span></p>
+            <p class="metric-row"><span class="metric-label">Operational output</span><span class="metric-pill">Tiered outreach</span></p>
+          </div>
+          <p>Score transparency made adoption easier for care management teams.</p>
+        </article>
+      </section>
+
+      <section class="panel reveal" id="impact">
+        <h2>Impact / Conclusion / Future Work</h2>
+        <p>The framework supports repeatable preventive campaign planning with clearer resource allocation and measurable follow-up outcomes.</p>
+        <ul>
+          <li><strong>Impact:</strong> Improved targeting efficiency for preventive outreach operations.</li>
+          <li><strong>Future work:</strong> Incorporate social determinants to strengthen equity-aware prioritization.</li>
+        </ul>
+      </section>
+
+      <section class="panel reveal" aria-label="Project navigation footer">
+        <a class="btn" href="projects.html">&larr; Back to Projects</a>
+      </section>
     </main>
-    <footer class="site-footer"><p>let's connect @ <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a> :))</p></footer>
+
+    <footer class="site-footer">
+      <p>
+        let's connect @
+        <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a>
+        :))
+      </p>
+    </footer>
+
     <script src="assets/js/main.js"></script>
   </body>
 </html>

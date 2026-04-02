@@ -1,19 +1,122 @@
 <!doctype html>
 <html lang="en">
-  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Project - Exposing Medical Debt (WGBH)</title><link rel="stylesheet" href="assets/css/style.css" /></head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project - Exposing Medical Debt (WGBH)</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
   <body>
-    <header class="site-header"><div class="container banner-shell"><nav class="nav-wrap"><a class="brand" href="index.html">VivianHuang</a><button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button><ul class="nav-menu"><li><a href="about.html">about me</a></li><li><a href="projects.html">projects</a></li><li><a href="contact.html">contact</a></li></ul></nav><div class="banner-spacer" aria-hidden="true"></div></div></header>
+    <header class="site-header">
+      <div class="container banner-shell">
+        <nav class="nav-wrap">
+          <a class="brand" href="index.html">VivianHuang</a>
+          <button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
+          <ul class="nav-menu">
+            <li><a href="about.html">about me</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </nav>
+        <div class="banner-spacer" aria-hidden="true"></div>
+      </div>
+    </header>
+
     <main class="container page-stack project-detail">
-      <section class="page-header compact project-hero reveal"><p class="eyebrow">public impact case study</p><h1>Exposing Medical Debt (WGBH)</h1><p class="meta">Investigative analytics pipeline for identifying predatory debt collection patterns at scale.</p></section>
-      <section class="panel project-meta reveal"><dl class="project-meta-grid"><div><dt>Duration</dt><dd>2025</dd></div><div><dt>Skills</dt><dd>Data Engineering, Fuzzy Matching, Record Linkage, Investigative Analytics</dd></div></dl></section>
-      <section class="panel reveal"><h2>Overview / Description</h2><p>Built a data processing workflow to reconcile fragmented court records and connect debt filings back to healthcare-related claims activity.</p></section>
-      <section class="panel reveal"><h2>Objective / Success Metrics</h2><p>Increase linkage accuracy, reduce manual review burden, and surface patterns suitable for publication-grade investigative reporting.</p></section>
-      <section class="panel reveal"><h2>Approach</h2><p>Implemented normalization, phonetic keys, and multi-stage fuzzy matching to connect entities across noisy datasets with traceable confidence scoring.</p></section>
-      <section class="panel reveal"><h2>Results / Key Insights</h2><p>The pipeline surfaced recurring high-volume collectors and geographic concentration patterns that were previously hidden in fragmented records.</p></section>
-      <section class="panel reveal"><h2>Impact / Conclusion / Future Work</h2><p>Findings strengthened evidence for public-interest reporting; future work can add court outcome classification and longitudinal monitoring.</p></section>
-      <section class="panel reveal" aria-label="Project navigation footer"><a class="btn" href="projects.html">&larr; Back to Projects</a></section>
+      <section class="page-header compact project-hero reveal">
+        <p class="eyebrow">public impact analytics case study</p>
+        <h1>Exposing Medical Debt (WGBH)</h1>
+        <p class="meta">An investigative data pipeline to connect fragmented court filings and reveal medical debt collection patterns.</p>
+      </section>
+
+      <section class="panel project-meta reveal" aria-label="Project metadata">
+        <dl class="project-meta-grid">
+          <div>
+            <dt>Duration</dt>
+            <dd>2025</dd>
+          </div>
+          <div>
+            <dt>Skills</dt>
+            <dd>Data Engineering, Record Linkage, Fuzzy Matching, Investigative Analytics, Python</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="container split-grid project-split reveal" id="overview">
+        <figure class="media-block warm-a">
+          <img src="assets/project-wgbh-medical-debt-1.jpg" alt="Placeholder visual for medical debt record linkage workflow" />
+        </figure>
+        <article class="text-block">
+          <h2>Overview / Description</h2>
+          <p>Medical debt data is often split across inconsistent court and claimant records, making systemic patterns difficult to detect.</p>
+          <p>This project built a reproducible linkage workflow to identify healthcare-related filings and trace concentration by collector and geography.</p>
+        </article>
+      </section>
+
+      <section class="panel reveal" id="objective">
+        <h2>Objective / Success Metrics</h2>
+        <p>The goal was to produce publication-ready evidence for public-interest reporting:</p>
+        <ol>
+          <li><strong>Accuracy:</strong> Improve entity linkage across noisy legal records.</li>
+          <li><strong>Scale:</strong> Reduce manual review needs for large filing volumes.</li>
+          <li><strong>Transparency:</strong> Keep confidence scoring and audit trails for verification.</li>
+        </ol>
+      </section>
+
+      <section class="panel reveal" id="approach">
+        <h2>Approach</h2>
+        <h3>1) Data normalization</h3>
+        <p>Standardized names, addresses, and claimant text fields to reduce variation from formatting and spelling noise.</p>
+        <ul>
+          <li>Applied phonetic keys and token cleanup for candidate generation.</li>
+          <li>Built deterministic and probabilistic matching stages.</li>
+        </ul>
+        <h3>2) Linkage and validation</h3>
+        <ul>
+          <li><strong>Matching:</strong> Multi-pass fuzzy linkage with thresholded confidence bands.</li>
+          <li><strong>Review:</strong> Manual adjudication on ambiguous high-impact records.</li>
+        </ul>
+        <h3>3) Investigative output</h3>
+        <p>Created summary tables and visuals highlighting filing concentration, repeat actors, and regional disparity patterns.</p>
+      </section>
+
+      <section class="container split-grid reverse project-split reveal" id="results">
+        <figure class="media-block warm-c">
+          <img src="assets/project-wgbh-medical-debt-2.jpg" alt="Placeholder visual for medical debt concentration findings" />
+        </figure>
+        <article class="text-block">
+          <h2>Results / Key Insights</h2>
+          <p>The pipeline surfaced repeat high-volume collectors and hotspot geographies that were not visible in raw disconnected datasets.</p>
+          <div class="metric-grid" aria-label="Medical debt project highlights">
+            <p class="metric-row"><span class="metric-label">Key discovery</span><span class="metric-pill">Repeat collectors</span></p>
+            <p class="metric-row"><span class="metric-label">Primary value</span><span class="metric-pill">Traceable evidence</span></p>
+          </div>
+          <p>These outputs supported clear narrative framing for investigative stories and stakeholder briefings.</p>
+        </article>
+      </section>
+
+      <section class="panel reveal" id="impact">
+        <h2>Impact / Conclusion / Future Work</h2>
+        <p>The project improved analytical rigor and reproducibility for journalism-focused debt investigations.</p>
+        <ul>
+          <li><strong>Impact:</strong> Enabled stronger public accountability through data-backed reporting.</li>
+          <li><strong>Future work:</strong> Add case outcome tracking to study downstream legal and financial consequences.</li>
+        </ul>
+      </section>
+
+      <section class="panel reveal" aria-label="Project navigation footer">
+        <a class="btn" href="projects.html">&larr; Back to Projects</a>
+      </section>
     </main>
-    <footer class="site-footer"><p>let's connect @ <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a> :))</p></footer>
+
+    <footer class="site-footer">
+      <p>
+        let's connect @
+        <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a>
+        :))
+      </p>
+    </footer>
+
     <script src="assets/js/main.js"></script>
   </body>
 </html>
