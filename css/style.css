@@ -270,3 +270,53 @@ body {
     order: initial;
   }
 }
+
+/* =========================================
+   Project Categories & Tags
+   ========================================= */
+
+/* 每個大分類之間的間距 */
+.project-category {
+  margin-bottom: 4rem; 
+}
+
+/* 分類標題樣式 */
+.category-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ececec; /* 淡淡的底線增加層次 */
+}
+
+/* 確保卡片列表在分類下依然維持你的 Grid 設定 */
+.project-category .project-cards {
+  display: grid;
+  gap: 2rem; /* 你可以依照原本的設計調整這個數值 */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* 技術標籤 (Tags) 容器 */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 16px 0; /* 與上下文字保持舒適距離 */
+}
+
+/* 單個技術標籤樣式 (膠囊狀) */
+.project-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #4a4a4a;
+  background-color: #f4f4f4; /* 淡淡的淺灰色 */
+  padding: 4px 10px;
+  border-radius: 99px;
+  letter-spacing: 0.02em;
+}
+
+/* 稍微調整原本 project-card 內 p 的下邊距，讓 Tag 空間更好看 */
+.project-card p {
+  margin-bottom: 12px;
+}
