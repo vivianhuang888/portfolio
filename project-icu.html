@@ -25,19 +25,98 @@
     <main class="container page-stack">
       <section class="page-header compact">
         <p class="eyebrow">case study</p>
-        <h1>ICU Demand Forecasting</h1>
-        <p class="meta">Predicting ICU admissions and readmissions</p>
+        <h1>Bridging the Gap: Forecasting ICU Demand and Readmission Risk</h1>
+        <p class="meta">Built a machine learning framework to predict short-term ICU demand by combining ED-to-ICU admission risk and ICU readmission risk.</p>
+        <div class="skill-chips" aria-label="Project skills">
+          <span>Machine Learning</span>
+          <span>Healthcare Analytics</span>
+          <span>ICU Forecasting</span>
+          <span>XGBoost</span>
+          <span>EHR Data</span>
+          <span>Operations Analytics</span>
+        </div>
       </section>
-      <section class="panel">
-        <h2>Summary</h2>
+
+      <section class="panel reveal" id="overview">
+        <h2>Overview</h2>
         <p>
-          Developed forecasting and classification models to support bed planning, staffing decisions, and risk
-          stratification for critical-care operations.
+          Hospitals often struggle to anticipate ICU demand in real time.
+          Patients may deteriorate quickly in the ED, while others return shortly after ICU discharge — both creating pressure on limited ICU capacity.
         </p>
         <p>
-          <a class="btn" href="drug-overdose.html">&laquo; prev</a>
-          <a class="btn" href="project-procdna.html">next &raquo;</a>
+          This project connects these two challenges and frames them as a short-term ICU forecasting problem, rather than separate prediction tasks.
         </p>
+      </section>
+
+      <section class="panel reveal" id="problem">
+        <h2>Objectives</h2>
+        <ul>
+          <li>Predict ICU admission within 12 hours from ED data</li>
+          <li>Predict ICU readmission within 72 hours after discharge</li>
+          <li>Combine both into a short-term ICU demand forecasting framework</li>
+        </ul>
+      </section>
+
+      <section class="panel reveal" id="methodology">
+        <h2>Data &amp; Method</h2>
+        <ul>
+          <li><strong>Data:</strong> MIMIC-IV (ED + ICU + hospital data)</li>
+          <li><strong>Integration:</strong> Linked patient journey using hadm_id across ED → ICU → discharge</li>
+          <li><strong>Feature engineering:</strong>
+            <ul>
+              <li>Triage signals (vitals, acuity, complaints)</li>
+              <li>Medication grouping (1,000+ → 22 categories)</li>
+            </ul>
+          </li>
+          <li><strong>Model:</strong> XGBoost with imbalance handling</li>
+        </ul>
+      </section>
+
+      <section class="panel reveal" id="findings">
+        <h2>Results</h2>
+        <p><strong>ICU Admission Model</strong></p>
+        <ul>
+          <li>AUC: 0.96</li>
+          <li>Recall: 0.93</li>
+        </ul>
+        <p><strong>ICU Readmission Model</strong></p>
+        <ul>
+          <li>AUC: 0.72</li>
+          <li>Recall: 0.52</li>
+        </ul>
+        <p><strong>Key insight:</strong></p>
+        <p>
+          Early ED data is highly predictive, while readmission is inherently more complex but still useful as a screening signal.
+        </p>
+      </section>
+
+      <section class="panel reveal" id="framework">
+        <h2>ICU Forecasting Framework</h2>
+        <ul>
+          <li><strong>Inflow:</strong> predicted ICU admissions from ED</li>
+          <li><strong>Occupancy:</strong> estimated using ICU length of stay</li>
+          <li><strong>Risk:</strong> predicted readmission after discharge</li>
+        </ul>
+        <p>
+          Together, this provides a real-time view of ICU demand and helps anticipate bed needs in the next 12 hours.
+        </p>
+      </section>
+
+      <section class="panel reveal" id="impact">
+        <h2>Impact</h2>
+        <ul>
+          <li>Supports ICU bed planning and resource allocation</li>
+          <li>Enables earlier intervention for high-risk patients</li>
+          <li>Adds decision support for safer ICU discharge</li>
+        </ul>
+        <p><strong>Key value:</strong></p>
+        <p>
+          Transforms machine learning predictions into operational insights, not just model outputs.
+        </p>
+      </section>
+
+      <section class="panel reveal" aria-label="Project navigation footer">
+        <a class="btn" href="projects.html">&larr; Back to Projects</a>
       </section>
     </main>
 
@@ -56,6 +135,7 @@
     :))
   </p>
 </footer>
+
     <script src="assets/js/main.js"></script>
   </body>
 </html>
