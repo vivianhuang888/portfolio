@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Project - Exposing Medical Debt (WGBH)</title>
+    <title>Project - Medical Debt Court Filings in Massachusetts</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -24,84 +24,80 @@
 
     <main class="container page-stack project-detail">
       <section class="page-header compact project-hero reveal">
-        <p class="eyebrow">public impact analytics case study</p>
-        <h1>Exposing Medical Debt (WGBH)</h1>
-        <p class="meta">An investigative data pipeline to connect fragmented court filings and reveal medical debt collection patterns.</p>
+        <p class="eyebrow">investigative data journalism case study</p>
+        <h1>Medical Debt Court Filings in Massachusetts: WGBH Investigative Reporting</h1>
+        <p class="meta">A court-data pipeline that identified hidden medical debt lawsuits and supported actionable newsroom reporting.</p>
       </section>
 
       <section class="panel project-meta reveal" aria-label="Project metadata">
         <dl class="project-meta-grid">
           <div>
-            <dt>Duration</dt>
-            <dd>2025</dd>
+            <dt>Client</dt>
+            <dd>Jenifer B. McKim, Investigative Editor at GBH News</dd>
+          </div>
+          <div>
+            <dt>Role</dt>
+            <dd>Lead Data Analyst</dd>
           </div>
           <div>
             <dt>Skills</dt>
-            <dd>Data Engineering, Record Linkage, Fuzzy Matching, Investigative Analytics, Python</dd>
+            <dd>PostgreSQL, Data Engineering Pipeline, Fuzzy Matching (RapidFuzz), Regex, Client Reporting &amp; Data Storytelling</dd>
           </div>
         </dl>
       </section>
 
       <section class="container split-grid project-split reveal" id="overview">
         <figure class="media-block warm-a">
-          <img src="assets/project-wgbh-medical-debt-1.jpg" alt="Placeholder visual for medical debt record linkage workflow" />
+          <img src="assets/project-wgbh-medical-debt-1.jpg" alt="Placeholder visual for medical debt court data processing workflow" />
         </figure>
         <article class="text-block">
           <h2>Overview / Description</h2>
-          <p>Medical debt data is often split across inconsistent court and claimant records, making systemic patterns difficult to detect.</p>
-          <p>This project built a reproducible linkage workflow to identify healthcare-related filings and trace concentration by collector and geography.</p>
+          <p>Medical debt is a major crisis, yet it remains difficult to identify in public court records because lawsuits filed by hospitals and ambulances are grouped into general consumer civil cases.</p>
+          <p>GBH News needed to uncover who was aggressively suing patients and how the medical debt landscape was shifting over time. As Lead Data Analyst, I helped architect a pipeline to sift through decades of court data and translate findings into investigative insights.</p>
         </article>
       </section>
 
       <section class="panel reveal" id="objective">
         <h2>Objective / Success Metrics</h2>
-        <p>The goal was to produce publication-ready evidence for public-interest reporting:</p>
-        <ol>
-          <li><strong>Accuracy:</strong> Improve entity linkage across noisy legal records.</li>
-          <li><strong>Scale:</strong> Reduce manual review needs for large filing volumes.</li>
-          <li><strong>Transparency:</strong> Keep confidence scoring and audit trails for verification.</li>
-        </ol>
+        <p>Surface medical debt lawsuits from large-scale public court records, standardize fragmented healthcare entity names, and produce a reliable dataset journalists could use for reporting.</p>
       </section>
 
       <section class="panel reveal" id="approach">
         <h2>Approach</h2>
-        <h3>1) Data normalization</h3>
-        <p>Standardized names, addresses, and claimant text fields to reduce variation from formatting and spelling noise.</p>
+        <h3>Data engineering pipeline</h3>
+        <h3>1) Keyword filtering</h3>
         <ul>
-          <li>Applied phonetic keys and token cleanup for candidate generation.</li>
-          <li>Built deterministic and probabilistic matching stages.</li>
+          <li>Used advanced PostgreSQL regex with word boundaries across 43 healthcare-related terms to reduce false positives.</li>
         </ul>
-        <h3>2) Linkage and validation</h3>
+        <h3>2) Fuzzy string matching</h3>
         <ul>
-          <li><strong>Matching:</strong> Multi-pass fuzzy linkage with thresholded confidence bands.</li>
-          <li><strong>Review:</strong> Manual adjudication on ambiguous high-impact records.</li>
+          <li>Healthcare providers often appeared under inconsistent names.</li>
+          <li>Implemented normalization, stopword filtering, and RapidFuzz at an 85% similarity threshold to consolidate hundreds of provider name variations.</li>
         </ul>
-        <h3>3) Investigative output</h3>
-        <p>Created summary tables and visuals highlighting filing concentration, repeat actors, and regional disparity patterns.</p>
+        <h3>3) Data integration</h3>
+        <ul>
+          <li>Cross-referenced court data with official Massachusetts licensed ambulance registries to improve reporting accuracy.</li>
+        </ul>
       </section>
 
       <section class="container split-grid reverse project-split reveal" id="results">
         <figure class="media-block warm-c">
-          <img src="assets/project-wgbh-medical-debt-2.jpg" alt="Placeholder visual for medical debt concentration findings" />
+          <img src="assets/project-wgbh-medical-debt-2.jpg" alt="Placeholder visual for medical debt court filing trend findings" />
         </figure>
         <article class="text-block">
-          <h2>Results / Key Insights</h2>
-          <p>The pipeline surfaced repeat high-volume collectors and hotspot geographies that were not visible in raw disconnected datasets.</p>
-          <div class="metric-grid" aria-label="Medical debt project highlights">
-            <p class="metric-row"><span class="metric-label">Key discovery</span><span class="metric-pill">Repeat collectors</span></p>
-            <p class="metric-row"><span class="metric-label">Primary value</span><span class="metric-pill">Traceable evidence</span></p>
-          </div>
-          <p>These outputs supported clear narrative framing for investigative stories and stakeholder briefings.</p>
+          <h2>Results / Key Findings</h2>
+          <ul>
+            <li>Reduced 3.7 million records into a refined dataset of around 10,500 medical debt-related cases.</li>
+            <li>Discovered ambulance court filings dropped 96% from 2015 to 2025, while supporting reporting suggested the debt had been outsourced to private collection agencies rather than disappearing.</li>
+            <li>Found litigation was concentrated among a small number of creditors, including Trinity EMS and MSPCA Angell.</li>
+            <li>Observed that urgent care and emergency-related cases were often resolved in a median of around 50 days, suggesting a high likelihood of default judgments.</li>
+          </ul>
         </article>
       </section>
 
       <section class="panel reveal" id="impact">
-        <h2>Impact / Conclusion / Future Work</h2>
-        <p>The project improved analytical rigor and reproducibility for journalism-focused debt investigations.</p>
-        <ul>
-          <li><strong>Impact:</strong> Enabled stronger public accountability through data-backed reporting.</li>
-          <li><strong>Future work:</strong> Add case outcome tracking to study downstream legal and financial consequences.</li>
-        </ul>
+        <h2>Impact / Conclusion / Recommendations</h2>
+        <p>This project showed how data engineering and data storytelling can help non-technical stakeholders uncover real-world systemic issues. It also strengthened my ability to align SQL/Python workflows with investigative reporting goals.</p>
       </section>
 
       <section class="panel reveal" aria-label="Project navigation footer">
