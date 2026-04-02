@@ -272,51 +272,58 @@ body {
 }
 
 /* =========================================
-   Project Categories & Tags
+   Project Categories & Tags (Updated for 3 Columns)
    ========================================= */
 
-/* 每個大分類之間的間距 */
 .project-category {
-  margin-bottom: 4rem; 
+  margin-bottom: 4.5rem; 
 }
 
-/* 分類標題樣式 */
 .category-title {
   font-size: 1.6rem;
   font-weight: 700;
   color: #1e1e1e;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #ececec; /* 淡淡的底線增加層次 */
+  border-bottom: 1px solid #ececec; 
 }
 
-/* 確保卡片列表在分類下依然維持你的 Grid 設定 */
+/* 強迫一排顯示 3 個卡片 */
 .project-category .project-cards {
   display: grid;
-  gap: 2rem; /* 你可以依照原本的設計調整這個數值 */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 26px; /* 配合你原本網站的間距 */
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 強制 3 等份 */
 }
 
-/* 技術標籤 (Tags) 容器 */
+/* 標籤容器 */
 .project-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 12px 0 16px 0; /* 與上下文字保持舒適距離 */
+  margin: 12px 0 16px 0; 
 }
 
-/* 單個技術標籤樣式 (膠囊狀) */
+/* 修復：強制顯示膠囊狀背景 */
 .project-tag {
+  display: inline-block; /* 加上這個才能讓 span 正確顯示背景跟 padding */
   font-size: 0.75rem;
-  font-weight: 500;
-  color: #4a4a4a;
-  background-color: #f4f4f4; /* 淡淡的淺灰色 */
+  font-weight: 600;
+  color: #1a365d; /* 深藍色字體 */
+  background-color: #e2e8f0; /* 灰藍色背景 */
   padding: 4px 10px;
   border-radius: 99px;
   letter-spacing: 0.02em;
 }
 
-/* 稍微調整原本 project-card 內 p 的下邊距，讓 Tag 空間更好看 */
-.project-card p {
-  margin-bottom: 12px;
+/* 讓手機版或平板也能響應式 (螢幕變小自動變 2排 或 1排) */
+@media (max-width: 960px) {
+  .project-category .project-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .project-category .project-cards {
+    grid-template-columns: 1fr;
+  }
 }
