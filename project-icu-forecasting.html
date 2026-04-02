@@ -1,1 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project Title | VivianHuang</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container banner-shell">
+        <nav class="nav-wrap">
+          <a class="brand" href="index.html">VivianHuang</a>
+          <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+          <ul class="nav-menu">
+            <li><a href="about.html">about me</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </nav>
+        <div class="banner-spacer" aria-hidden="true"></div>
+      </div>
+    </header>
 
+    <main>
+      <section class="hero container reveal">
+        <p class="eyebrow">Provider Analytics & Clinical Operations</p>
+        <h1>Forecasting Real-time ICU Demand</h1>
+        
+        <div class="project-tags" style="justify-content: center; margin-top: 16px;">
+          <span class="project-tag">Machine Learning</span>
+          <span class="project-tag">EHR Data (MIMIC-IV)</span>
+          <span class="project-tag">Operations</span>
+        </div>
+        
+        <p class="hero-subtitle" style="margin-top: 24px;">
+          Bridging the gap in capacity planning by forecasting short-term ICU patient flow and readmission risk to alleviate hospital bed strain.
+        </p>
+      </section>
+
+      <section class="container split-grid reveal">
+        <div class="media-block warm-a" aria-hidden="true">
+          <img src="assets/project_image_1.jpg" alt="Dashboard preview or workflow diagram" />
+        </div>
+        <article class="text-block">
+          <p class="eyebrow">The Challenge</p>
+          <h3>Anticipating Capacity Bottlenecks</h3>
+          <p>
+            Hospitals often face sudden surges in Intensive Care Unit (ICU) bed demand. Patients who initially appear stable in the ED may deteriorate, while premature ICU discharges can lead to rapid readmissions. 
+          </p>
+          <p>
+            The challenge was to move away from reactive bed management and develop a data-driven approach to anticipate short-term capacity needs, ensuring patient safety and optimal resource allocation.
+          </p>
+        </article>
+      </section>
+
+      <section class="container split-grid reverse reveal">
+        <div class="media-block warm-b" aria-hidden="true">
+          <img src="assets/project_image_2.jpg" alt="Final predictive dashboard" />
+        </div>
+        <article class="text-block">
+          <p class="eyebrow">The Approach & Solution</p>
+          <h3>A Unified Forecasting Framework</h3>
+          <p>
+            Utilizing the MIMIC-IV electronic health record database, we developed two complementary machine learning models using XGBoost. The first model flags high-risk ED patients likely to require ICU transfer within 12 hours. The second assesses 72-hour readmission risk for those being discharged.
+          </p>
+          <p>
+            <strong>Business Impact:</strong> We integrated these predictive models into a dynamic ICU capacity dashboard, providing hospital administrators with real-time visibility into expected inflows and outflows, ultimately enabling proactive staffing and safer discharge planning.
+          </p>
+        </article>
+      </section>
+
+      <section class="container cta-panel reveal" style="margin-top: 40px;">
+        <p>
+          <a class="btn ghost" href="projects.html">← Back to All Projects</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        let's connect @
+        <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 4px;">
+          <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18" stroke="currentColor" fill="none" stroke-width="1.8" style="transform: translateY(1px);">
+            <rect x="3" y="3" width="18" height="18" rx="3"/>
+            <path d="M8 10v7"/>
+            <path d="M8 7.5h.01"/>
+            <path d="M12 17v-4a2 2 0 0 1 4 0v4"/>
+            <path d="M12 10v7"/>
+          </svg> VivianHuang
+        </a>
+        :))
+      </p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
