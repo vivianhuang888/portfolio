@@ -31,62 +31,112 @@
         <h1>Projects</h1>
       </section>
 
-      <!-- Project cards -->
-      <section class="project-cards">
-        <article class="project-card reveal">
-          <a href="project-icu.html" class="media-block warm-a"></a>
-          <h3>ICU Demand &amp; Readmission Forecasting</h3>
-          <p>
-            Improving ICU capacity planning through predictive analytics. This project focuses on addressing ICU capacity strain by predicting short-term patient flow using clinical data from the MIMIC-IV database, enabling more proactive and informed operational decisions.
-          </p>
-          <a href="project-icu.html" class="link">learn more</a>
-        </article>
+      <!-- ========================================== -->
+      <!-- Category 1: Provider Analytics & Clinical Operations -->
+      <!-- ========================================== -->
+      <section class="project-category reveal">
+        <h2 class="category-title">1. Provider Analytics & Clinical Operations</h2>
+        <div class="project-cards">
+          
+          <!-- Card: ICU -->
+          <article class="project-card">
+            <a href="project-icu.html" class="media-block warm-a"></a>
+            <h3>ICU Demand &amp; Readmission Forecasting</h3>
+            <p>Improving ICU capacity planning through predictive analytics. This project focuses on addressing ICU capacity strain by predicting short-term patient flow using clinical data from the MIMIC-IV database.</p>
+            <div class="project-tags">
+              <span class="project-tag">Machine Learning</span>
+              <span class="project-tag">MIMIC-IV EHR</span>
+              <span class="project-tag">Operations</span>
+            </div>
+            <a href="project-icu.html" class="link">learn more</a>
+          </article>
 
-        <article class="project-card reveal">
-          <a href="project-medicare-advantage.html" class="media-block warm-b"></a>
-          <h3>Medicare Advantage Engagement</h3>
-          <p>
-            Identifying at-risk members to improve preventive care participation. Using a LightGBM model, this project predicts disengagement risk and translates insights into targeted outreach strategies to reduce long-term care gaps.
-          </p>
-          <a href="project-medicare-advantage.html" class="link">learn more</a>
-        </article>
+          <!-- Card: ED Congestion -->
+          <article class="project-card">
+            <a href="project-ed-overcrowding.html" class="media-block warm-c"></a>
+            <h3>ED Congestion &amp; Patient Flow Optimization</h3>
+            <p>Improving emergency department throughput through workflow analysis. By examining patient flow and discharge processes, this project identifies bottlenecks and informs strategies to enhance bed turnover.</p>
+            <div class="project-tags">
+              <span class="project-tag">Workflow Analysis</span>
+              <span class="project-tag">Process Improvement</span>
+            </div>
+            <a href="project-ed-overcrowding.html" class="link">learn more</a>
+          </article>
 
-        <article class="project-card reveal">
-          <a href="project-ed-overcrowding.html" class="media-block warm-c"></a>
-          <h3>ED Congestion &amp; Patient Flow Optimization</h3>
-          <p>
-            Improving emergency department throughput through workflow analysis. By examining patient flow and discharge processes, this project identifies bottlenecks and informs strategies to enhance bed turnover and care delivery.
-          </p>
-          <a href="project-ed-overcrowding.html" class="link">learn more</a>
-        </article>
+          <!-- Card: Healthcare Delivery -->
+          <article class="project-card">
+            <a href="project-healthcare-problem-solving.html" class="media-block warm-b"></a>
+            <h3>Healthcare System &amp; Care Delivery Improvement</h3>
+            <p>Understanding patient experience to improve care coordination. Through stakeholder interviews and journey mapping, this project identifies communication and support gaps in oncology and postpartum care settings.</p>
+            <div class="project-tags">
+              <span class="project-tag">Journey Mapping</span>
+              <span class="project-tag">Qualitative Research</span>
+            </div>
+            <a href="project-healthcare-problem-solving.html" class="link">learn more</a>
+          </article>
 
-        <article class="project-card reveal">
-          <a href="project-nhird.html" class="media-block warm-a"></a>
-          <h3>Taiwan NHI &mdash; Chronic Care Quality</h3>
-          <p>
-            Evaluating chronic care quality through population-level data analysis. Leveraging 23M patient records with SAS and GEE modeling, this project uncovers key drivers of care outcomes and supports evidence-based healthcare policy.
-          </p>
-          <a href="project-nhird.html" class="link">learn more</a>
-        </article>
-
-        <article class="project-card reveal">
-          <a href="project-healthcare-problem-solving.html" class="media-block warm-b"></a>
-          <h3>Healthcare System &amp; Care Delivery Improvement</h3>
-          <p>
-            Understanding patient experience to improve care coordination. Through stakeholder interviews and journey mapping, this project identifies communication and support gaps in oncology and postpartum care settings.
-          </p>
-          <a href="project-healthcare-problem-solving.html" class="link">learn more</a>
-        </article>
-
-        <article class="project-card reveal">
-          <a href="project-yelp-gcp.html" class="media-block warm-c"></a>
-          <h3>Yelp Review BI Dashboard</h3>
-          <p>
-            Leveraging data analytics to understand customer engagement drivers. Using SQL, BigQuery, and Tableau, this project identifies key factors influencing reviews and supports data-driven business decisions.
-          </p>
-          <a href="project-yelp-gcp.html" class="link">learn more</a>
-        </article>
+        </div>
       </section>
+
+      <!-- ========================================== -->
+      <!-- Category 2: Payer Strategy & Population Health -->
+      <!-- ========================================== -->
+      <section class="project-category reveal">
+        <h2 class="category-title">2. Payer Strategy & Population Health</h2>
+        <div class="project-cards">
+
+          <!-- Card: Medicare -->
+          <article class="project-card">
+            <a href="project-medicare-advantage.html" class="media-block warm-b"></a>
+            <h3>Medicare Advantage Engagement</h3>
+            <p>Identifying at-risk members to improve preventive care participation. Using a LightGBM model, this project predicts disengagement risk and translates insights into targeted outreach strategies.</p>
+            <div class="project-tags">
+              <span class="project-tag">LightGBM</span>
+              <span class="project-tag">Medicare</span>
+              <span class="project-tag">Preventive Care</span>
+            </div>
+            <a href="project-medicare-advantage.html" class="link">learn more</a>
+          </article>
+
+          <!-- Card: NHIRD -->
+          <article class="project-card">
+            <a href="project-nhird.html" class="media-block warm-a"></a>
+            <h3>Taiwan NHI &mdash; Chronic Care Quality</h3>
+            <p>Evaluating chronic care quality through population-level data analysis. Leveraging 23M patient records with SAS and GEE modeling, this project uncovers key drivers of care outcomes.</p>
+            <div class="project-tags">
+              <span class="project-tag">Claims Data (NHIRD)</span>
+              <span class="project-tag">SAS</span>
+              <span class="project-tag">Health Policy</span>
+            </div>
+            <a href="project-nhird.html" class="link">learn more</a>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- Category 3: Business Analytics & Data Methodology -->
+      <!-- ========================================== -->
+      <section class="project-category reveal">
+        <h2 class="category-title">3. Business Analytics & Data Methodology</h2>
+        <div class="project-cards">
+
+          <!-- Card: Yelp -->
+          <article class="project-card">
+            <a href="project-yelp-gcp.html" class="media-block warm-c"></a>
+            <h3>Yelp Review BI Dashboard</h3>
+            <p>Leveraging data analytics to understand customer engagement drivers. Using SQL, BigQuery, and Tableau, this project identifies key factors influencing reviews and supports business decisions.</p>
+            <div class="project-tags">
+              <span class="project-tag">SQL & BigQuery</span>
+              <span class="project-tag">Tableau</span>
+              <span class="project-tag">Business Intelligence</span>
+            </div>
+            <a href="project-yelp-gcp.html" class="link">learn more</a>
+          </article>
+
+        </div>
+      </section>
+
     </main>
 
     <!-- Footer -->
