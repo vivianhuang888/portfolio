@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Project - Evaluating Health Policy Impact</title>
+    <title>Project - Dementia, Diabetes Care, and P4P</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -24,83 +24,80 @@
 
     <main class="container page-stack project-detail">
       <section class="page-header compact project-hero reveal">
-        <p class="eyebrow">health policy analytics case study</p>
-        <h1>Evaluating Health Policy Impact with NHIRD</h1>
-        <p class="meta">A population-level claims analysis of dementia burden and pay-for-performance effects in diabetes care.</p>
+        <p class="eyebrow">health policy analytics study</p>
+        <h1>Influence of Dementia on Quality of Diabetes Care: The Role of Pay-for-Performance (P4P) Programs</h1>
+        <p class="meta">A national claims-data study evaluating whether continuous P4P enrollment protects diabetes care quality after dementia onset.</p>
       </section>
 
       <section class="panel project-meta reveal" aria-label="Project metadata">
         <dl class="project-meta-grid">
           <div>
-            <dt>Duration</dt>
-            <dd>2024-2025</dd>
+            <dt>Institution</dt>
+            <dd>Institute of Hospital and Health Care Administration, NYCU</dd>
           </div>
           <div>
             <dt>Skills</dt>
-            <dd>Claims Analytics, Cohort Design, Regression Modeling, Policy Evaluation, R</dd>
+            <dd>Claims Data Analytics (NHIRD), Propensity Score Matching (PSM), Generalized Estimating Equations (GEE), Longitudinal Data Analysis, Health Policy Evaluation</dd>
           </div>
         </dl>
       </section>
 
       <section class="container split-grid project-split reveal" id="overview">
         <figure class="media-block warm-a">
-          <img src="assets/project-nhird-1.jpg" alt="Placeholder visual for NHIRD cohort design and policy comparison" />
+          <img src="assets/project-nhird-1.jpg" alt="Placeholder visual for NHIRD cohort design and dementia-diabetes care analysis" />
         </figure>
         <article class="text-block">
           <h2>Overview / Description</h2>
-          <p>Policymakers need evidence on whether payment incentives improve outcomes for patients with complex chronic conditions.</p>
-          <p>Using NHIRD claims data, this project compared utilization and quality patterns between diabetes patients with and without dementia under different policy exposure groups.</p>
+          <p>Managing multiple chronic conditions is a growing healthcare challenge. In older adults with diabetes, self-management depends on lifestyle control, glucose monitoring, and medication adherence. Once dementia develops, patients often lose the ability to manage these tasks, and caregivers may prioritize cognitive decline over glycemic control.</p>
+          <p>This study examined whether newly diagnosed dementia worsens diabetes care quality and whether provider financial incentives through P4P can help sustain quality.</p>
         </article>
       </section>
 
       <section class="panel reveal" id="objective">
         <h2>Objective / Success Metrics</h2>
-        <p>The project aimed to isolate policy effects while accounting for baseline clinical complexity:</p>
-        <ol>
-          <li><strong>Policy signal:</strong> Estimate the association of P4P participation with follow-up quality.</li>
-          <li><strong>Equity lens:</strong> Measure whether dementia status modified program benefit.</li>
-          <li><strong>Actionability:</strong> Translate findings into targeted care management priorities.</li>
-        </ol>
+        <p>Evaluate whether dementia is associated with deterioration in diabetes care quality, and whether continuous participation in the DM-P4P program moderates that impact.</p>
       </section>
 
       <section class="panel reveal" id="approach">
         <h2>Approach</h2>
-        <h3>1) Cohort construction</h3>
-        <p>Built longitudinal diabetes cohorts and aligned observation windows for policy exposure and outcomes.</p>
         <ul>
-          <li>Defined comorbidity and utilization baselines before exposure.</li>
-          <li>Applied matching and risk adjustment to improve comparability.</li>
+          <li>Used Taiwan National Health Insurance Database (NHIRD) data from 2010-2020.</li>
+          <li>Built an analytical cohort from over 1.1 million elderly patients with diabetes.</li>
+          <li>Defined an intervention group (new dementia diagnosis in 2016-2017) and a comparison group.</li>
+          <li>Applied 1:4 propensity score matching by age, gender, DCSI, and residential location, producing a matched sample of 43,175 patients.</li>
         </ul>
-        <h3>2) Modeling strategy</h3>
+        <p>Defined outcomes across three dimensions:</p>
         <ul>
-          <li><strong>Core models:</strong> Multivariable regressions for utilization and continuity metrics.</li>
-          <li><strong>Sensitivity checks:</strong> Alternative specifications to test robustness of effect direction.</li>
+          <li><strong>Process 1:</strong> Attendance to diabetes-related regular visits</li>
+          <li><strong>Process 2:</strong> Adherence to guideline-concordant services (HbA1c, blood lipids, eye exams)</li>
+          <li><strong>Outcome:</strong> Diabetes-related avoidable hospitalization rate</li>
         </ul>
-        <h3>3) Interpretation</h3>
-        <p>Converted statistical outputs into policy-facing insights for program design and high-risk subgroup management.</p>
+        <p>Used longitudinal GEE models:</p>
+        <ul>
+          <li>Logit link with binomial distribution for visit attendance and hospitalizations</li>
+          <li>Poisson distribution for guideline-concordant services</li>
+        </ul>
       </section>
 
       <section class="container split-grid reverse project-split reveal" id="results">
         <figure class="media-block warm-c">
-          <img src="assets/project-nhird-2.jpg" alt="Placeholder visual for NHIRD policy impact findings" />
+          <img src="assets/project-nhird-2.jpg" alt="Placeholder visual for dementia impact and P4P subgroup findings" />
         </figure>
         <article class="text-block">
-          <h2>Results / Key Insights</h2>
-          <p>P4P participation was associated with better continuity of care, but dementia burden remained a strong driver of outcome variability.</p>
-          <div class="metric-grid" aria-label="NHIRD key findings">
-            <p class="metric-row"><span class="metric-label">Program effect</span><span class="metric-pill">Positive</span></p>
-            <p class="metric-row"><span class="metric-label">Key modifier</span><span class="metric-pill">Dementia status</span></p>
-          </div>
-          <p>Findings highlighted the need for differentiated interventions rather than one-size-fits-all policy design.</p>
+          <h2>Results / Key Findings</h2>
+          <ol>
+            <li><strong>Negative impact of dementia:</strong> Newly diagnosed dementia was associated with a significant decline in regular diabetes visits (p &lt; .001) and guideline-concordant care (p &lt; .001) versus non-dementia peers.</li>
+            <li><strong>Protective effect of continuous P4P enrollment:</strong> Among Non-P4P, Ever enrolled, and Continuously enrolled groups, only the continuously enrolled group showed no significant dementia-related differences.</li>
+          </ol>
         </article>
       </section>
 
       <section class="panel reveal" id="impact">
-        <h2>Impact / Conclusion / Future Work</h2>
-        <p>This analysis supports more targeted value-based strategies for dual-burden populations within national claims programs.</p>
+        <h2>Impact / Conclusion / Recommendations</h2>
         <ul>
-          <li><strong>Impact:</strong> Strengthened evidence for risk-stratified policy implementation.</li>
-          <li><strong>Future work:</strong> Add provider-level variation analysis and longer-term outcome tracking.</li>
+          <li>Cognitive decline can signal early deterioration in chronic disease management quality.</li>
+          <li>The DM-P4P program can protect vulnerable patients, but continuity of enrollment is critical.</li>
+          <li>Policy design should encourage providers to retain multimorbid patients in P4P programs rather than allowing dropout due to care complexity.</li>
         </ul>
       </section>
 

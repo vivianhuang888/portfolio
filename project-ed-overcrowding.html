@@ -25,83 +25,82 @@
     <main class="container page-stack project-detail">
       <section class="page-header compact project-hero reveal">
         <p class="eyebrow">healthcare operations case study</p>
-        <h1>Tackling ED Overcrowding Through Throughput Analytics</h1>
-        <p class="meta">An operations analytics project focused on reducing wait-time bottlenecks from triage through discharge.</p>
+        <h1>Tackling ED Overcrowding: Optimizing Average Length of Stay and Discharge Workflows</h1>
+        <p class="meta">A mixed-methods hospital operations project to improve bed turnover and reduce emergency department congestion.</p>
       </section>
 
       <section class="panel project-meta reveal" aria-label="Project metadata">
         <dl class="project-meta-grid">
           <div>
             <dt>Duration</dt>
-            <dd>Spring 2025</dd>
+            <dd>Summer 2023 (NYCU Hospital Internship)</dd>
           </div>
           <div>
             <dt>Skills</dt>
-            <dd>Process Mapping, Queue Analysis, SQL, KPI Design, Healthcare Operations</dd>
+            <dd>Data Benchmarking, Qualitative Fieldwork, Service Blueprinting, 5W1H Framework, Workflow Optimization</dd>
           </div>
         </dl>
       </section>
 
       <section class="container split-grid project-split reveal" id="overview">
         <figure class="media-block warm-a">
-          <img src="assets/project-ed-overcrowding-1.jpg" alt="Placeholder visual for emergency department throughput map" />
+          <img src="assets/project-ed-overcrowding-1.jpg" alt="Placeholder visual for ED overcrowding and discharge workflow analysis" />
         </figure>
         <article class="text-block">
           <h2>Overview / Description</h2>
-          <p>Emergency department crowding created long waits, care delays, and high pressure on staff during peak hours.</p>
-          <p>This project analyzed patient flow from arrival to discharge to identify where delays accumulated and where improvement would create the largest throughput gains.</p>
+          <p>Emergency Department (ED) overcrowding is a critical global healthcare issue. At NYCU Hospital, the Input-Throughput-Output model showed the primary issue on the output side: patients were stuck in the ED waiting for inpatient beds.</p>
+          <p>The core business problem was low bed turnover driven by prolonged inpatient average length of stay (ALOS) and delays in the physical discharge process. To relieve ED strain, I investigated both ALOS data patterns and human factors that slowed discharge execution.</p>
         </article>
       </section>
 
       <section class="panel reveal" id="objective">
         <h2>Objective / Success Metrics</h2>
-        <p>The goal was to prioritize operational interventions with measurable effects on access and flow:</p>
         <ol>
-          <li><strong>Access:</strong> Reduce door-to-provider time across all acuity tiers.</li>
-          <li><strong>Flow:</strong> Shorten discharge turnaround and boarding duration.</li>
-          <li><strong>Reliability:</strong> Decrease shift-level variability in throughput.</li>
+          <li><strong>Part A (Quantitative):</strong> Analyze NYCU Hospital's ALOS distribution, benchmark against peer hospitals, and identify departments and disease categories with prolonged stays.</li>
+          <li><strong>Part B (Qualitative):</strong> Map the inpatient discharge process, identify bottlenecks, and propose actionable operational improvements.</li>
         </ol>
       </section>
 
       <section class="panel reveal" id="approach">
         <h2>Approach</h2>
-        <h3>1) Current-state diagnostics</h3>
-        <p>Mapped the ED journey into triage, provider evaluation, diagnostics, disposition, and discharge handoff stages.</p>
+        <h3>Part A: Data-Driven ALOS Benchmarking</h3>
         <ul>
-          <li>Segmented cycle times by acuity, shift, and day-of-week.</li>
-          <li>Identified queue build-up patterns during late-day surges.</li>
+          <li>Extracted and analyzed admission data from 2018-2023 and cross-referenced National Health Insurance benchmark reports.</li>
+          <li>Found NYCU Hospital's ALOS was consistently longer than peer hospitals, by up to 1.34 days.</li>
+          <li>Department-level analysis identified Internal Medicine and Surgery as the longest-stay departments.</li>
+          <li>Disease-level analysis showed five major categories, including circulatory, digestive, and endocrine diseases, where over 50% of cases exceeded national average ALOS.</li>
         </ul>
-        <h3>2) Bottleneck analysis</h3>
+        <h3>Part B: Field Research &amp; Service Blueprinting</h3>
         <ul>
-          <li><strong>Imaging dependency:</strong> Delays concentrated around diagnostic turnaround windows.</li>
-          <li><strong>Discharge coordination:</strong> Last-mile handoff steps created avoidable boarding time.</li>
+          <li>Conducted a month-long field study across wards, emergency room, and administrative counters.</li>
+          <li>Mapped the end-to-end discharge journey from physician order to final bed cleaning using a service blueprint.</li>
+          <li>Used 5W1H interviews with nurses, doctors, clerks, patients, and cleaning staff to identify hidden bottlenecks.</li>
         </ul>
-        <h3>3) Intervention design</h3>
-        <p>Proposed fast-track eligibility rules, standardized discharge windows, and a weekly KPI review cadence for ongoing tuning.</p>
       </section>
 
       <section class="container split-grid reverse project-split reveal" id="results">
         <figure class="media-block warm-c">
-          <img src="assets/project-ed-overcrowding-2.jpg" alt="Placeholder visual for ED throughput metrics dashboard" />
+          <img src="assets/project-ed-overcrowding-2.jpg" alt="Placeholder visual for discharge bottleneck findings and bed turnover recommendations" />
         </figure>
         <article class="text-block">
-          <h2>Results / Key Insights</h2>
-          <p>Analysis showed that a small number of late-stage process steps drove a large share of total length-of-stay variance.</p>
-          <div class="metric-grid" aria-label="ED crowding project outcomes">
-            <p class="metric-row"><span class="metric-label">Primary bottleneck</span><span class="metric-pill">Discharge delay</span></p>
-            <p class="metric-row"><span class="metric-label">Most volatile window</span><span class="metric-pill">Late afternoon</span></p>
-          </div>
-          <p>Targeting discharge coordination and fast-track routing emerged as the highest-yield operational strategy.</p>
+          <h2>Results / Key Findings</h2>
+          <p>Using the 5W1H framework, discharge bottlenecks were grouped into three stakeholder areas:</p>
+          <ol>
+            <li><strong>Patient side:</strong> Requests for medical certificates and transportation planning were often left until the last minute.</li>
+            <li><strong>Physician side:</strong> Unpredictable ward-round timing delayed discharge orders until late in the day.</li>
+            <li><strong>Administrative / cleaning side:</strong> Clerks had limited control over timelines, and bed-cleaning status was not synchronized with inpatient systems, reducing real-time bed visibility.</li>
+          </ol>
         </article>
       </section>
 
       <section class="panel reveal" id="impact">
-        <h2>Impact / Conclusion / Future Work</h2>
-        <p>The project produced a practical playbook for monthly ED throughput review and cross-team alignment on flow KPIs.</p>
+        <h2>Impact / Conclusion / Recommendations</h2>
         <ul>
-          <li><strong>Impact:</strong> Turned broad crowding concerns into actionable process-level priorities.</li>
-          <li><strong>Future work:</strong> Add short-horizon arrival forecasts to support proactive staffing and bed planning.</li>
+          <li><strong>Short-term:</strong> Set physician KPI expectations so discharge orders are completed within 30 minutes of decision, and publish ward-round schedules to improve communication and discharge readiness.</li>
+          <li><strong>Mid-term:</strong> Launch an online portal for certificate requests 2-3 days before discharge, and integrate housekeeping software with the central inpatient system for live clean-bed tracking.</li>
+          <li><strong>Long-term:</strong> Strengthen partnerships with nursing homes and home-care providers to reduce ALOS extensions caused by social placement barriers.</li>
         </ul>
+        <p>This project combined data benchmarking with process engineering to provide hospital administrators a practical roadmap for improving bed turnover and reducing ED congestion.</p>
       </section>
 
       <section class="panel reveal" aria-label="Project navigation footer">
