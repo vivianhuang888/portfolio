@@ -840,3 +840,77 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
         gap: 24px !important;
     }
 }
+
+/* ⭐ 全域圖片保護 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ⭐ PROJECT DETAIL PAGE (新版 ICU 頁面) */
+.project-hero-block {
+  padding: 3rem 0 1.5rem;
+  text-align: left;
+}
+
+.project-hero-block .eyebrow {
+  margin: 0 0 0.6rem;
+}
+
+.project-hero-block h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.15;
+  margin: 0.5rem 0 1rem;
+}
+
+.project-subtitle {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--muted);
+  margin: 0 0 1.6rem;
+  max-width: 680px;
+  line-height: 1.7;
+}
+
+.project-meta-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1.2rem 0 0.5rem;
+  border-top: 1px solid var(--line);
+  max-width: 680px;
+}
+
+.meta-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.meta-row .meta-label {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.78rem;
+}
+
+.meta-row .meta-value {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.project-image {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
