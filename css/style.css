@@ -467,3 +467,91 @@ body {
   max-width: 860px !important;
   margin: 0 auto 48px auto !important; /* 上距為 0，拉近與文字的距離；下距 48px */
 }
+
+/* =========================================
+   ICU Results Layout (上圖、下雙欄數據卡片)
+   ========================================= */
+
+/* 確保整個區塊的上下間距適當 */
+.results-stacked {
+  margin-top: 32px;
+}
+
+/* 上方的圖片置中且全寬 */
+.results-stacked .media-block {
+  margin-bottom: 48px;
+  text-align: center;
+  background: transparent !important;
+  border: none !important;
+}
+
+.results-stacked .media-block img {
+  width: 100%;
+  max-width: 900px; /* 限制最大寬度讓圖片不會無限放大 */
+  margin: 0 auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* 下方的雙欄佈局 */
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* 每個 Model 的標題 */
+.model-column h3 {
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #111;
+  font-weight: 700;
+}
+
+/* 數據卡片外框 (淡暖灰色底) */
+.model-card {
+  background: #faf8f7; 
+  border: 1px solid #eee8e3;
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* AUC 和 RECALL 兩行之間的垂直間距 */
+}
+
+/* 卡片內每一行 (Label 在左，Pill 在右) */
+.model-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* AUC / RECALL 標籤文字 */
+.stat-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #444;
+  letter-spacing: 0.05em;
+}
+
+/* 分數標籤 (淡藍底、深藍字) */
+.stat-pill {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #274b9f; 
+  background: #e8edff; 
+  padding: 6px 18px;
+  border-radius: 99px; /* 完美的膠囊形狀 */
+  border: 1px solid #d4def7;
+}
+
+/* 手機版自動變成上下排列 */
+@media (max-width: 860px) {
+  .models-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
