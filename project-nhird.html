@@ -23,34 +23,35 @@
     </header>
 
     <main class="container page-stack project-detail">
-      <section class="page-header compact project-hero reveal">
+
+      <section class="project-hero-block reveal">
         <p class="eyebrow">health policy analytics study</p>
         <h1>Influence of Dementia on Quality of Diabetes Care: The Role of Pay-for-Performance (P4P) Programs</h1>
-        <p class="meta">A national claims-data study evaluating whether continuous P4P enrollment protects diabetes care quality after dementia onset.</p>
+        <p class="project-subtitle">— A national claims-data study evaluating whether continuous P4P enrollment protects diabetes care quality after dementia onset.</p>
+        <div class="project-meta-stack">
+          <div class="meta-row">
+            <span class="meta-label">Duration</span>
+            <span class="meta-value">September 2022 – June 2024</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Institution</span>
+            <span class="meta-value">Institute of Hospital and Health Care Administration, NYCU</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Skills</span>
+            <span class="meta-value">Claims Data Analytics (NHIRD), Propensity Score Matching (PSM), Generalized Estimating Equations (GEE), Longitudinal Data Analysis, Health Policy Evaluation</span>
+          </div>
+        </div>
       </section>
 
-      <section class="panel project-meta reveal" aria-label="Project metadata">
-        <dl class="project-meta-grid">
-          <div>
-            <dt>Institution</dt>
-            <dd>Institute of Hospital and Health Care Administration, NYCU</dd>
-          </div>
-          <div>
-            <dt>Skills</dt>
-            <dd>Claims Data Analytics (NHIRD), Propensity Score Matching (PSM), Generalized Estimating Equations (GEE), Longitudinal Data Analysis, Health Policy Evaluation</dd>
-          </div>
-        </dl>
-      </section>
+      <figure class="project-image reveal">
+        <img src="assets/projects/03-Health-2.png" alt="NHIRD cohort design and dementia-diabetes care analysis" />
+      </figure>
 
-      <section class="container split-grid project-split reveal" id="overview">
-        <figure class="media-block warm-a">
-          <img src="assets/projects/03-Health-2.png" alt="Placeholder visual for NHIRD cohort design and dementia-diabetes care analysis" />
-        </figure>
-        <article class="text-block">
-          <h2>Overview / Description</h2>
-          <p>Managing multiple chronic conditions is a growing healthcare challenge. In older adults with diabetes, self-management depends on lifestyle control, glucose monitoring, and medication adherence. Once dementia develops, patients often lose the ability to manage these tasks, and caregivers may prioritize cognitive decline over glycemic control.</p>
-          <p>This study examined whether newly diagnosed dementia worsens diabetes care quality and whether provider financial incentives through P4P can help sustain quality.</p>
-        </article>
+      <section class="panel reveal" id="overview">
+        <h2>Overview / Description</h2>
+        <p>Managing multiple chronic conditions is a growing healthcare challenge. In older adults with diabetes, self-management depends on lifestyle control, glucose monitoring, and medication adherence. Once dementia develops, patients often lose the ability to manage these tasks, and caregivers may prioritize cognitive decline over glycemic control.</p>
+        <p>This study examined whether newly diagnosed dementia worsens diabetes care quality and whether provider financial incentives through P4P can help sustain quality.</p>
       </section>
 
       <section class="panel reveal" id="objective">
@@ -61,35 +62,34 @@
       <section class="panel reveal" id="approach">
         <h2>Approach</h2>
         <ul>
-          <li>Used Taiwan National Health Insurance Database (NHIRD) data from 2010-2020.</li>
+          <li>Used Taiwan National Health Insurance Database (NHIRD) data from 2010–2020.</li>
           <li>Built an analytical cohort from over 1.1 million elderly patients with diabetes.</li>
-          <li>Defined an intervention group (new dementia diagnosis in 2016-2017) and a comparison group.</li>
-          <li>Applied 1:4 propensity score matching by age, gender, DCSI, and residential location, producing a matched sample of 43,175 patients.</li>
+          <li>Defined an intervention group (new dementia diagnosis in 2016–2017) and a comparison group.</li>
+          <li>Applied 1:4 propensity score matching, producing a matched sample of 43,175 patients.</li>
         </ul>
-        <p>Defined outcomes across three dimensions:</p>
+        <h3>Outcomes</h3>
         <ul>
           <li><strong>Process 1:</strong> Attendance to diabetes-related regular visits</li>
           <li><strong>Process 2:</strong> Adherence to guideline-concordant services (HbA1c, blood lipids, eye exams)</li>
           <li><strong>Outcome:</strong> Diabetes-related avoidable hospitalization rate</li>
         </ul>
-        <p>Used longitudinal GEE models:</p>
+        <h3>Models</h3>
         <ul>
           <li>Logit link with binomial distribution for visit attendance and hospitalizations</li>
           <li>Poisson distribution for guideline-concordant services</li>
         </ul>
       </section>
 
-      <section class="container split-grid reverse project-split reveal" id="results">
-        <figure class="media-block warm-c">
-          <img src="assets/projects/03-Health-3.png" alt="Placeholder visual for dementia impact and P4P subgroup findings" />
-        </figure>
-        <article class="text-block">
-          <h2>Results / Key Findings</h2>
-          <ol>
-            <li><strong>Negative impact of dementia:</strong> Newly diagnosed dementia was associated with a significant decline in regular diabetes visits (p &lt; .001) and guideline-concordant care (p &lt; .001) versus non-dementia peers.</li>
-            <li><strong>Protective effect of continuous P4P enrollment:</strong> Among Non-P4P, Ever enrolled, and Continuously enrolled groups, only the continuously enrolled group showed no significant dementia-related differences.</li>
-          </ol>
-        </article>
+      <figure class="project-image reveal">
+        <img src="assets/projects/03-Health-3.png" alt="Dementia impact and P4P subgroup findings" />
+      </figure>
+
+      <section class="panel reveal" id="results">
+        <h2>Results / Key Findings</h2>
+        <ol>
+          <li><strong>Negative impact of dementia:</strong> Newly diagnosed dementia was associated with a significant decline in regular diabetes visits (p &lt; .001) and guideline-concordant care (p &lt; .001).</li>
+          <li><strong>Protective effect of continuous P4P enrollment:</strong> Only the continuously enrolled group showed no significant dementia-related differences.</li>
+        </ol>
       </section>
 
       <section class="panel reveal" id="impact">
@@ -102,18 +102,14 @@
       </section>
 
       <section class="panel reveal" aria-label="Project navigation footer">
-        <a class="btn" href="projects.html">&larr; Back to Projects</a>
+        <a class="btn" href="projects.html">← Back to Projects</a>
       </section>
+
     </main>
 
     <footer class="site-footer">
-      <p>
-        let's connect @
-        <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a>
-        :))
-      </p>
+      <p>let's connect @ <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a> :))</p>
     </footer>
-
     <script src="assets/js/main.js"></script>
   </body>
 </html>
