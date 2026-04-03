@@ -5,6 +5,7 @@
 /* =========================
    BASE
 ========================= */
+
 body {
   margin: 0;
   font-family: "Arial", "Helvetica", sans-serif;
@@ -27,6 +28,7 @@ body {
 /* =========================
    NAVBAR
 ========================= */
+
 .site-header {
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
@@ -44,6 +46,7 @@ body {
 /* =========================
    HERO
 ========================= */
+
 .hero,
 .page-title {
   text-align: center;
@@ -66,8 +69,50 @@ body {
 }
 
 /* =========================
+   PAGE STACK（⭐ 新增：讓 project detail 頁置中）
+========================= */
+
+.page-stack {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* =========================
+   PROJECT HERO（page-stack 裡的大標題區）
+========================= */
+
+.project-hero {
+  padding: 48px 0 8px;
+}
+
+.project-hero .eyebrow {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888;
+  margin: 0 0 10px;
+}
+
+.project-hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin: 0 0 14px;
+  line-height: 1.3;
+}
+
+.project-hero .meta {
+  color: #555;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* =========================
    PROJECT DETAIL
 ========================= */
+
 .project-detail {
   max-width: 860px;
   margin: 0 auto;
@@ -82,8 +127,8 @@ body {
   border: 1px solid #eaeaea;
   border-radius: 20px;
   padding: 32px 28px;
-  margin-bottom: 24px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  margin-bottom: 0; /* gap 由 page-stack 的 gap 控制 */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
 /* Meta */
@@ -113,18 +158,19 @@ body {
 }
 
 /* =========================
-   ⭐ 圖片（已修正置中）
+   ⭐ 圖片（修正：加回遺失的選擇器）
 ========================= */
-.project-detail figure.media-block {
-  display: flex;
-  justify-content: center;   /* ⭐ 真正置中 */
-  margin: 40px auto;
+
+.project-detail figure.media-block,
+figure.media-block {
+  margin: 0 auto;     /* 上下 gap 由 page-stack 控制 */
   width: 100%;
 }
 
-.project-detail figure.media-block img {
+.project-detail figure.media-block img,
+figure.media-block img {
   width: 100%;
-  max-width: 860px;          /* 跟整體對齊 */
+  max-width: 860px;
   height: auto;
   border-radius: 16px;
   border: 1px solid #eaeaea;
@@ -134,6 +180,7 @@ body {
 /* =========================
    GRID（可保留）
 ========================= */
+
 .models-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -150,6 +197,7 @@ body {
 /* =========================
    PROJECT LIST
 ========================= */
+
 .project-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -164,8 +212,28 @@ body {
 }
 
 /* =========================
+   BUTTON
+========================= */
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1a365d;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #2a4a7f;
+}
+
+/* =========================
    FOOTER
 ========================= */
+
 .site-footer {
   border-top: 1px solid #efefef;
   padding: 18px;
@@ -176,13 +244,14 @@ body {
 /* =========================
    MOBILE
 ========================= */
-@media (max-width: 768px) {
 
+@media (max-width: 768px) {
   .container,
   .intro,
   .about-page,
   .projects-page,
-  .contact-page {
+  .contact-page,
+  .page-stack {
     padding: 0 16px;
   }
 
@@ -195,25 +264,4 @@ body {
     padding: 22px 18px;
     border-radius: 14px;
   }
-}
-
-/* =========================================
-   強制專案頁面 (Project Detail) 完美置中
-   ========================================= */
-
-/* 讓包含所有卡片的最大容器置中 */
-body.project-detail main {
-  max-width: 860px !important; /* 限制與卡片相同的最大寬度 */
-  margin: 0 auto !important;   /* 關鍵魔法：左右 margin 設為 auto，自動推到正中央 */
-  padding: 0 24px !important;  /* 左右加一點留白，避免手機版時文字貼死螢幕邊緣 */
-  width: 100% !important;      /* 確保區塊能完整撐開 */
-  display: block !important;
-}
-
-/* 確保裡面的每一個卡片、圖片、標題都乖乖對齊中央 */
-body.project-detail section,
-body.project-detail figure.media-block {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  width: 100% !important;
 }
