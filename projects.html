@@ -51,31 +51,32 @@
         transform: scale(1.03);
       }
 
-      /* ── Card content spacing ── */
+      /* ── Card content ── */
       .project-card {
         display: flex;
         flex-direction: column;
-        gap: 0.6rem;
+        gap: 0.5rem;
       }
       .project-card h3 {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
         font-weight: 700;
         margin: 0.4rem 0 0;
         color: var(--text);
         line-height: 1.3;
       }
-      .project-card p {
-        font-size: 0.9rem;
+      .project-card > p {
+        font-size: 0.95rem;
         color: var(--muted);
         line-height: 1.6;
         margin: 0;
       }
       .project-card .link {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         font-weight: 600;
         color: var(--accent);
         text-decoration: none;
         margin-top: auto;
+        padding-top: 0.3rem;
       }
       .project-card .link:hover {
         text-decoration: underline;
@@ -109,7 +110,6 @@
 
     <main class="container page-stack">
 
-      <!-- Page hero -->
       <section class="projects-hero">
         <p class="eyebrow">selected work</p>
         <h1>Projects</h1>
@@ -125,7 +125,7 @@
         <div class="project-card">
           <a href="project-icu.html">
             <div class="media-block">
-              <img src="assets/projects/01-icu-1.png" alt="ICU demand forecasting" />
+              <img src="assets/projects/01-icu-1png.png" alt="ICU demand forecasting" />
             </div>
           </a>
           <div class="project-tags">
