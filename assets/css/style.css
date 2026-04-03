@@ -191,7 +191,21 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
   transition: transform .22s ease, box-shadow .22s ease;
 }
 .project-card:hover { transform: translateY(-4px); box-shadow: 0 14px 24px rgb(0 0 0 / 9%); }
-.project-card .media-block { min-height: 220px; }
+.project-card .media-block {
+  min-height: 0;
+  aspect-ratio: 16 / 10;
+  display: grid;
+  place-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.project-card .media-block img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+}
 .project-card .link { font-weight: 700; text-decoration: none; color: var(--accent); }
 
 .project-tags {
@@ -570,6 +584,24 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
 /* Project detail template (shared pattern for project pages) */
 .project-detail {
   width: min(920px, 92vw);
+}
+
+.project-detail figure.media-block {
+  min-height: 0;
+  height: auto;
+  display: grid;
+  place-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.project-detail figure.media-block img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  object-fit: contain;
 }
 
 .project-detail h1 {
