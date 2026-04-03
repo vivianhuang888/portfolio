@@ -13,7 +13,7 @@ body {
   line-height: 1.6;
 }
 
-/* ⭐ 核心：統一閱讀寬度（解決桌機太寬問題） */
+/* ⭐ 統一閱讀寬度 */
 .container,
 .intro,
 .about-page,
@@ -41,31 +41,6 @@ body {
   align-items: center;
 }
 
-.logo {
-  text-decoration: none;
-  color: #111;
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 24px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  text-decoration: none;
-  text-transform: lowercase;
-  color: #333;
-}
-
-.nav-links a:hover {
-  color: #5e3bea;
-}
-
 /* =========================
    HERO
 ========================= */
@@ -91,15 +66,14 @@ body {
 }
 
 /* =========================
-   PROJECT DETAIL (核心)
+   PROJECT DETAIL
 ========================= */
 .project-detail {
   max-width: 860px;
   margin: 0 auto;
 }
 
-/* 卡片系統 */
-.project-detail .container.split-grid.project-split,
+/* 卡片 */
 .project-detail .panel,
 .project-meta-clean {
   display: flex;
@@ -125,49 +99,40 @@ body {
   letter-spacing: 0.08em;
 }
 
-.project-meta-clean p {
-  margin: 0;
-}
-
-/* Typography（閱讀優化） */
+/* Typography */
 .project-detail h2 {
   font-size: 1.6rem;
   margin-bottom: 18px;
-  color: #111;
 }
 
 .project-detail p,
 .project-detail li {
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #333;
-  max-width: 720px; /* ⭐ 關鍵：像手機一樣好讀 */
+  max-width: 720px;
 }
 
-.project-detail ul,
-.project-detail ol {
-  padding-left: 20px;
-}
-
-.project-detail li {
-  margin-bottom: 8px;
-}
-
-/* 圖片 */
+/* =========================
+   ⭐ 圖片（已修正置中）
+========================= */
 .project-detail figure.media-block {
+  display: flex;
+  justify-content: center;   /* ⭐ 真正置中 */
+  margin: 40px auto;
   width: 100%;
-  margin: 0 auto 24px auto;
 }
 
 .project-detail figure.media-block img {
   width: 100%;
+  max-width: 860px;          /* 跟整體對齊 */
+  height: auto;
   border-radius: 16px;
   border: 1px solid #eaeaea;
   display: block;
 }
 
 /* =========================
-   DATA / RESULT 卡片
+   GRID（可保留）
 ========================= */
 .models-grid {
   display: grid;
@@ -183,7 +148,7 @@ body {
 }
 
 /* =========================
-   PROJECT LIST（卡片頁）
+   PROJECT LIST
 ========================= */
 .project-list {
   display: grid;
@@ -196,17 +161,6 @@ body {
   border: 1px solid #e8e8e8;
   border-radius: 14px;
   padding: 16px;
-}
-
-.project-card h2 {
-  margin: 10px 0 0;
-  font-size: 1.3rem;
-}
-
-.project-card h5 {
-  margin: 6px 0 8px;
-  color: #555;
-  font-size: 0.95rem;
 }
 
 /* =========================
@@ -230,10 +184,6 @@ body {
   .projects-page,
   .contact-page {
     padding: 0 16px;
-  }
-
-  .nav-links {
-    display: none;
   }
 
   .models-grid {
