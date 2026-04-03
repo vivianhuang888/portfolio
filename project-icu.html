@@ -23,23 +23,19 @@
     </header>
 
     <main class="container page-stack project-detail">
+      
+      <!-- 1. 優化後的標題區塊 (Hero) -->
       <section class="page-header compact project-hero reveal">
         <p class="eyebrow">healthcare analytics case study</p>
         <h1>Bridging the Gap: Forecasting ICU Demand and Readmission Risk</h1>
-        <p class="meta">A unified machine learning framework linking ED triage risk, ICU discharge safety, and short-term bed demand forecasting.</p>
+        <!-- 加上了斜體與破折號，增加設計感 -->
+        <p class="meta"><em>&mdash; A unified machine learning framework linking ED triage risk, ICU discharge safety, and short-term bed demand forecasting.</em></p>
       </section>
 
-      <section class="panel project-meta reveal" aria-label="Project metadata">
-        <dl class="project-meta-grid">
-          <div>
-            <dt>Duration</dt>
-            <dd>Fall 2025</dd>
-          </div>
-          <div>
-            <dt>Skills</dt>
-            <dd>Data Preprocessing (Python), Machine Learning (XGBoost), Data Visualization, Clinical Data Analytics (MIMIC-IV)</dd>
-          </div>
-        </dl>
+      <!-- 2. 優化後的專案資訊 (拿掉白底框、改為乾淨的上下堆疊排列) -->
+      <section class="project-meta-clean reveal" aria-label="Project metadata">
+        <p><span class="meta-label">Duration</span> Fall 2025</p>
+        <p><span class="meta-label">Skills</span> Data Preprocessing (Python), Machine Learning (XGBoost), Data Visualization, Clinical Data Analytics (MIMIC-IV)</p>
       </section>
 
       <section class="container split-grid project-split reveal" id="overview">
@@ -83,17 +79,12 @@
         </ul>
       </section>
 
-<!-- 替換成新的 Results 區塊結構 -->
+      <!-- 之前已經做好的優化版 Results 雙欄數據卡片 -->
       <section class="container reveal results-stacked" id="results">
-        <!-- 圖片在最上方 -->
         <figure class="media-block">
           <img src="assets/projects/01-icu-3.png" alt="ICU Dashboard and Model Performance" />
         </figure>
-
-        <!-- 下方文字與數據改成雙欄網格 -->
         <div class="models-grid">
-          
-          <!-- 左欄：Model 1 -->
           <div class="model-column">
             <h3>Model 1: 12-Hour ICU Admission</h3>
             <div class="model-card">
@@ -108,8 +99,6 @@
             </div>
             <p>The model captured the large majority of patients requiring urgent intensive care using early ED data.</p>
           </div>
-
-          <!-- 右欄：Model 2 -->
           <div class="model-column">
             <h3>Model 2: 72-Hour ICU Readmission</h3>
             <div class="model-card">
@@ -124,9 +113,9 @@
             </div>
             <p>Readmission remained harder to predict, but the model still provided a useful screening signal for discharge risk.</p>
           </div>
-
         </div>
       </section>
+
       <section class="panel reveal" id="impact">
         <h2>Impact / Conclusion / Recommendations</h2>
         <ul>
