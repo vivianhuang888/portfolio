@@ -23,38 +23,35 @@
     </header>
 
     <main class="container page-stack project-detail">
-      <section class="page-header compact project-hero reveal">
+
+      <section class="project-hero-block reveal">
         <p class="eyebrow">data storytelling</p>
         <h1>Medical Debt Court Filings in Massachusetts: WGBH Investigative Reporting</h1>
-        <p class="meta">A data storytelling project that translated hidden medical debt lawsuits into actionable insights for investigative newsroom reporting.</p>
+        <p class="project-subtitle">— A data storytelling project that translated hidden medical debt lawsuits into actionable insights for investigative newsroom reporting.</p>
+        <div class="project-meta-stack">
+          <div class="meta-row">
+            <span class="meta-label">Duration</span>
+            <span class="meta-value">Fall 2025</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Client</span>
+            <span class="meta-value">Jenifer B. McKim, Investigative Editor at GBH News</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Skills</span>
+            <span class="meta-value">Client Reporting & Executive Presentations, Data Storytelling, Data Visualization, Cross-functional Communication, PostgreSQL, Python</span>
+          </div>
+        </div>
       </section>
 
-      <section class="panel project-meta reveal" aria-label="Project metadata">
-        <dl class="project-meta-grid">
-          <div>
-            <dt>Client</dt>
-            <dd>Jenifer B. McKim, Investigative Editor at GBH News</dd>
-          </div>
-          <div>
-            <dt>Role</dt>
-            <dd>Data Analyst (Client Management &amp; Data Storytelling)</dd>
-          </div>
-          <div>
-            <dt>Skills</dt>
-            <dd>Client Reporting &amp; Executive Presentations, Data Storytelling, Data Visualization, Cross-functional Communication, PostgreSQL, Python</dd>
-          </div>
-        </dl>
-      </section>
+      <figure class="project-image reveal">
+        <img src="assets/projects/06-GBH-2.png" alt="Medical debt court data processing workflow" />
+      </figure>
 
-      <section class="container split-grid project-split reveal" id="overview">
-        <figure class="media-block warm-a">
-          <img src="assets/projects/06-GBH-2.png" alt="Placeholder visual for medical debt court data processing workflow" />
-        </figure>
-        <article class="text-block">
-          <h2>Overview / Description</h2>
-          <p>Medical debt is a persistent financial burden, yet it remains difficult to identify in public court records because lawsuits filed by hospitals and ambulances are typically grouped under general consumer civil cases. GBH News needed to uncover who was aggressively suing patients and how the medical debt landscape was shifting over time.</p>
-          <p>My role focused heavily on client management and data storytelling. I worked directly with the Investigative Editor to translate their reporting goals into visual narratives and executive presentations, ensuring our technical findings were actionable for a non-technical audience.</p>
-        </article>
+      <section class="panel reveal" id="overview">
+        <h2>Overview / Description</h2>
+        <p>Medical debt is a persistent financial burden, yet it remains difficult to identify in public court records because lawsuits filed by hospitals and ambulances are typically grouped under general consumer civil cases. GBH News needed to uncover who was aggressively suing patients and how the medical debt landscape was shifting over time.</p>
+        <p>My role focused heavily on client management and data storytelling. I worked directly with the Investigative Editor to translate their reporting goals into visual narratives and executive presentations, ensuring our technical findings were actionable for a non-technical audience.</p>
       </section>
 
       <section class="panel reveal" id="objective">
@@ -64,30 +61,36 @@
 
       <section class="panel reveal" id="approach">
         <h2>Approach</h2>
-        <h3>Client Collaboration &amp; Goal Translation</h3>
-        <p>Worked closely with the GBH investigative team to understand their ongoing reporting needs, specifically ensuring that our data pipeline prioritized areas of interest like ambulance and veterinary cases.</p>
-
-        <h3>Visual Narratives &amp; Executive Presentations</h3>
-        <p>Designed exploratory and presentation-ready charts to surface key trends, such as category shifts and plaintiff concentration. Translated complex SQL/Python pipeline outputs into accessible executive summaries and slide decks.</p>
-
+        <h3>Client Collaboration & Goal Translation</h3>
+        <ul>
+          <li>Worked closely with the GBH investigative team to understand their ongoing reporting needs.</li>
+          <li>Ensured that our data pipeline prioritized areas of interest like ambulance and veterinary cases.</li>
+        </ul>
+        <h3>Visual Narratives & Executive Presentations</h3>
+        <ul>
+          <li>Designed exploratory and presentation-ready charts to surface key trends.</li>
+          <li>Translated complex SQL/Python pipeline outputs into accessible executive summaries and slide decks.</li>
+        </ul>
         <h3>Data Contextualization</h3>
-        <p>Collaborated with the data engineering team to ensure technical processes (like keyword filtering and RapidFuzz string matching) accurately reflected real-world entities, such as cross-referencing findings with Massachusetts licensed ambulance registries.</p>
+        <ul>
+          <li>Collaborated with the data engineering team to ensure technical processes accurately reflected real-world entities.</li>
+          <li>Cross-referenced findings with Massachusetts licensed ambulance registries.</li>
+        </ul>
       </section>
 
-      <section class="container split-grid reverse project-split reveal" id="results">
-        <figure class="media-block warm-c">
-          <img src="assets/projects/06-GBH-3.png" alt="Placeholder visual for medical debt court filing trend findings" />
-        </figure>
-        <article class="text-block">
-          <h2>Results / Key Findings</h2>
-          <ul>
-            <li>Refined 3.7 million court records into a targeted primary analysis dataset of approximately 10,500 medical debt-related cases spanning from 2015 to 2025.</li>
-            <li>Illustrated a sharp decline in public court filings for ambulance debt, which fell from more than 1,000 cases in 2015 to fewer than 200 by 2025.</li>
-            <li>Contextualized data trends with journalistic reporting to demonstrate that this decline did not mean the debt disappeared, but rather indicated that debt collection had shifted to private third-party agencies.</li>
-            <li>Highlighted that litigation was highly concentrated among a small number of specific creditors, such as Trinity EMS and MSPCA Angell.</li>
-            <li>Revealed that emergency and urgent care cases often resolved quickly (within 50 to 90 days), providing evidence consistent with high default judgment rates.</li>
-          </ul>
-        </article>
+      <figure class="project-image reveal">
+        <img src="assets/projects/06-GBH-3.png" alt="Medical debt court filing trend findings" />
+      </figure>
+
+      <section class="panel reveal" id="results">
+        <h2>Results / Key Findings</h2>
+        <ul>
+          <li>Refined 3.7 million court records into a targeted primary analysis dataset of approximately 10,500 medical debt-related cases spanning 2015–2025.</li>
+          <li>Illustrated a sharp decline in public court filings for ambulance debt, falling from over 1,000 cases in 2015 to fewer than 200 by 2025.</li>
+          <li>Contextualized data trends: the decline indicated that debt collection had shifted to private third-party agencies.</li>
+          <li>Highlighted that litigation was highly concentrated among a small number of specific creditors, such as Trinity EMS and MSPCA Angell.</li>
+          <li>Revealed that emergency and urgent care cases often resolved quickly (within 50–90 days), consistent with high default judgment rates.</li>
+        </ul>
       </section>
 
       <section class="panel reveal" id="impact">
@@ -96,18 +99,14 @@
       </section>
 
       <section class="panel reveal" aria-label="Project navigation footer">
-        <a class="btn" href="projects.html">&larr; Back to Projects</a>
+        <a class="btn" href="projects.html">← Back to Projects</a>
       </section>
+
     </main>
 
     <footer class="site-footer">
-      <p>
-        let's connect @
-        <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a>
-        :))
-      </p>
+      <p>let's connect @ <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a> :))</p>
     </footer>
-
     <script src="assets/js/main.js"></script>
   </body>
 </html>
