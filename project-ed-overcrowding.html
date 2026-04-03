@@ -23,34 +23,31 @@
     </header>
 
     <main class="container page-stack project-detail">
-      <section class="page-header compact project-hero reveal">
+
+      <section class="project-hero-block reveal">
         <p class="eyebrow">healthcare operations case study</p>
         <h1>Tackling ED Overcrowding: Optimizing Average Length of Stay and Discharge Workflows</h1>
-        <p class="meta">A mixed-methods hospital operations project to improve bed turnover and reduce emergency department congestion.</p>
+        <p class="project-subtitle">— A mixed-methods hospital operations project to improve bed turnover and reduce emergency department congestion.</p>
+        <div class="project-meta-stack">
+          <div class="meta-row">
+            <span class="meta-label">Duration</span>
+            <span class="meta-value">Summer 2023 (NYCU Hospital Internship)</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Skills</span>
+            <span class="meta-value">Data Benchmarking, Qualitative Fieldwork, Service Blueprinting, 5W1H Framework, Workflow Optimization</span>
+          </div>
+        </div>
       </section>
 
-      <section class="panel project-meta reveal" aria-label="Project metadata">
-        <dl class="project-meta-grid">
-          <div>
-            <dt>Duration</dt>
-            <dd>Summer 2023 (NYCU Hospital Internship)</dd>
-          </div>
-          <div>
-            <dt>Skills</dt>
-            <dd>Data Benchmarking, Qualitative Fieldwork, Service Blueprinting, 5W1H Framework, Workflow Optimization</dd>
-          </div>
-        </dl>
-      </section>
+      <figure class="project-image reveal">
+        <img src="assets/projects/02-ED-2.jpg" alt="ED overcrowding and discharge workflow analysis" />
+      </figure>
 
-      <section class="container split-grid project-split reveal" id="overview">
-        <figure class="media-block warm-a">
-          <img src="assets/projects/02-ED-2.jpg" alt="Placeholder visual for ED overcrowding and discharge workflow analysis" />
-        </figure>
-        <article class="text-block">
-          <h2>Overview / Description</h2>
-          <p>Emergency Department (ED) overcrowding is a critical global healthcare issue. At NYCU Hospital, the Input-Throughput-Output model showed the primary issue on the output side: patients were stuck in the ED waiting for inpatient beds.</p>
-          <p>The core business problem was low bed turnover driven by prolonged inpatient average length of stay (ALOS) and delays in the physical discharge process. To relieve ED strain, I investigated both ALOS data patterns and human factors that slowed discharge execution.</p>
-        </article>
+      <section class="panel reveal" id="overview">
+        <h2>Overview / Description</h2>
+        <p>Emergency Department (ED) overcrowding is a critical global healthcare issue. At NYCU Hospital, the Input-Throughput-Output model showed the primary issue on the output side: patients were stuck in the ED waiting for inpatient beds.</p>
+        <p>The core business problem was low bed turnover driven by prolonged inpatient average length of stay (ALOS) and delays in the physical discharge process. To relieve ED strain, I investigated both ALOS data patterns and human factors that slowed discharge execution.</p>
       </section>
 
       <section class="panel reveal" id="objective">
@@ -65,12 +62,12 @@
         <h2>Approach</h2>
         <h3>Part A: Data-Driven ALOS Benchmarking</h3>
         <ul>
-          <li>Extracted and analyzed admission data from 2018-2023 and cross-referenced National Health Insurance benchmark reports.</li>
+          <li>Extracted and analyzed admission data from 2018–2023 and cross-referenced National Health Insurance benchmark reports.</li>
           <li>Found NYCU Hospital's ALOS was consistently longer than peer hospitals, by up to 1.34 days.</li>
           <li>Department-level analysis identified Internal Medicine and Surgery as the longest-stay departments.</li>
-          <li>Disease-level analysis showed five major categories, including circulatory, digestive, and endocrine diseases, where over 50% of cases exceeded national average ALOS.</li>
+          <li>Disease-level analysis showed five major categories where over 50% of cases exceeded national average ALOS.</li>
         </ul>
-        <h3>Part B: Field Research &amp; Service Blueprinting</h3>
+        <h3>Part B: Field Research & Service Blueprinting</h3>
         <ul>
           <li>Conducted a month-long field study across wards, emergency room, and administrative counters.</li>
           <li>Mapped the end-to-end discharge journey from physician order to final bed cleaning using a service blueprint.</li>
@@ -78,44 +75,38 @@
         </ul>
       </section>
 
-      <section class="container split-grid reverse project-split reveal" id="results">
-        <figure class="media-block warm-c">
-          <img src="assets/projects/02-ED-3.png" alt="Placeholder visual for discharge bottleneck findings and bed turnover recommendations" />
-        </figure>
-        <article class="text-block">
-          <h2>Results / Key Findings</h2>
-          <p>Using the 5W1H framework, discharge bottlenecks were grouped into three stakeholder areas:</p>
-          <ol>
-            <li><strong>Patient side:</strong> Requests for medical certificates and transportation planning were often left until the last minute.</li>
-            <li><strong>Physician side:</strong> Unpredictable ward-round timing delayed discharge orders until late in the day.</li>
-            <li><strong>Administrative / cleaning side:</strong> Clerks had limited control over timelines, and bed-cleaning status was not synchronized with inpatient systems, reducing real-time bed visibility.</li>
-          </ol>
-        </article>
+      <figure class="project-image reveal">
+        <img src="assets/projects/02-ED-3.png" alt="Discharge bottleneck findings and bed turnover recommendations" />
+      </figure>
+
+      <section class="panel reveal" id="results">
+        <h2>Results / Key Findings</h2>
+        <p>Using the 5W1H framework, discharge bottlenecks were grouped into three stakeholder areas:</p>
+        <ol>
+          <li><strong>Patient side:</strong> Requests for medical certificates and transportation planning were often left until the last minute.</li>
+          <li><strong>Physician side:</strong> Unpredictable ward-round timing delayed discharge orders until late in the day.</li>
+          <li><strong>Administrative / cleaning side:</strong> Clerks had limited control over timelines, and bed-cleaning status was not synchronized with inpatient systems.</li>
+        </ol>
       </section>
 
       <section class="panel reveal" id="impact">
         <h2>Impact / Conclusion / Recommendations</h2>
         <ul>
-          <li><strong>Short-term:</strong> Set physician KPI expectations so discharge orders are completed within 30 minutes of decision, and publish ward-round schedules to improve communication and discharge readiness.</li>
-          <li><strong>Mid-term:</strong> Launch an online portal for certificate requests 2-3 days before discharge, and integrate housekeeping software with the central inpatient system for live clean-bed tracking.</li>
+          <li><strong>Short-term:</strong> Set physician KPI expectations so discharge orders are completed within 30 minutes of decision, and publish ward-round schedules.</li>
+          <li><strong>Mid-term:</strong> Launch an online portal for certificate requests 2–3 days before discharge, and integrate housekeeping software with the central inpatient system.</li>
           <li><strong>Long-term:</strong> Strengthen partnerships with nursing homes and home-care providers to reduce ALOS extensions caused by social placement barriers.</li>
         </ul>
-        <p>This project combined data benchmarking with process engineering to provide hospital administrators a practical roadmap for improving bed turnover and reducing ED congestion.</p>
       </section>
 
       <section class="panel reveal" aria-label="Project navigation footer">
-        <a class="btn" href="projects.html">&larr; Back to Projects</a>
+        <a class="btn" href="projects.html">← Back to Projects</a>
       </section>
+
     </main>
 
     <footer class="site-footer">
-      <p>
-        let's connect @
-        <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a>
-        :))
-      </p>
+      <p>let's connect @ <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a> :))</p>
     </footer>
-
     <script src="assets/js/main.js"></script>
   </body>
 </html>
