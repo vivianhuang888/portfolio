@@ -3,132 +3,147 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Project - ICU Demand &amp; Readmission Forecasting</title>
+    <title>Project - ICU Demand & Readmission Forecasting</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
+
+  <body class="project-detail">
+
+    <!-- NAV -->
     <header class="site-header">
       <div class="container banner-shell">
         <nav class="nav-wrap">
           <a class="brand" href="index.html">VivianHuang</a>
-          <button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
+          <button class="menu-btn" type="button">☰</button>
           <ul class="nav-menu">
             <li><a href="about.html">about me</a></li>
             <li><a href="projects.html">projects</a></li>
             <li><a href="contact.html">contact</a></li>
           </ul>
         </nav>
-        <div class="banner-spacer" aria-hidden="true"></div>
       </div>
     </header>
 
-    <main class="container page-stack project-detail">
-      <section class="page-header compact project-hero reveal">
+    <!-- MAIN -->
+    <main class="page-stack">
+
+      <!-- HERO -->
+      <section class="project-hero">
         <p class="eyebrow">healthcare analytics case study</p>
         <h1>Bridging the Gap: Forecasting ICU Demand and Readmission Risk</h1>
-        <p class="meta">A unified machine learning framework linking ED triage risk, ICU discharge safety, and short-term bed demand forecasting.</p>
+        <p class="meta">
+          A unified machine learning framework linking ED triage risk, ICU discharge safety, and short-term bed demand forecasting.
+        </p>
       </section>
 
-      <section class="panel project-meta reveal" aria-label="Project metadata">
-        <dl class="project-meta-grid">
-          <div>
-            <dt>Duration</dt>
-            <dd>Fall 2025</dd>
-          </div>
-          <div>
-            <dt>Skills</dt>
-            <dd>Data Preprocessing (Python), Machine Learning (XGBoost), Data Visualization, Clinical Data Analytics (MIMIC-IV)</dd>
-          </div>
-        </dl>
+      <!-- META -->
+      <section class="project-meta-clean">
+        <div>
+          <span class="meta-label">Duration</span>
+          <p>Fall 2025</p>
+        </div>
+        <div>
+          <span class="meta-label">Skills</span>
+          <p>Data Preprocessing (Python), Machine Learning (XGBoost), Data Visualization, Clinical Data Analytics (MIMIC-IV)</p>
+        </div>
       </section>
 
-      <section class="container split-grid project-split reveal" id="overview">
-        <figure class="media-block warm-a">
-          <img src="assets/projects/01-icu-2.png" alt="Placeholder visual for ICU demand forecasting workflow" />
-        </figure>
-        <article class="text-block">
-          <h2>Overview / Description</h2>
-          <p>Emergency department crowding and ICU strain are major hospital operational challenges. Patients who appear stable in the ED can deteriorate quickly, while patients discharged too early from ICU may face dangerous readmission risk.</p>
-          <p>This project analyzed the MIMIC-IV EHR database across the full patient journey, from ED triage to ICU admission, discharge, and potential readmission, to build a unified framework for real-time ICU bed demand forecasting.</p>
-        </article>
+      <!-- IMAGE -->
+      <figure class="media-block">
+        <img src="assets/projects/01-icu-2.png" alt="ICU workflow overview" />
+      </figure>
+
+      <!-- OVERVIEW -->
+      <section class="panel">
+        <h2>Overview / Description</h2>
+        <p>
+          Emergency department crowding and ICU strain are major hospital operational challenges. Patients who appear stable in the ED can deteriorate quickly, while patients discharged too early from ICU may face dangerous readmission risk.
+        </p>
+        <p>
+          This project analyzed the MIMIC-IV EHR database across the full patient journey, from ED triage to ICU admission, discharge, and potential readmission, to build a unified framework for real-time ICU bed demand forecasting.
+        </p>
       </section>
 
-      <section class="panel reveal" id="objective">
+      <!-- OBJECTIVE -->
+      <section class="panel">
         <h2>Objective / Success Metrics</h2>
         <ol>
-          <li><strong>Early deterioration detection (Phase 1):</strong> Predict ICU admission within 12 hours of ED arrival using early triage data.</li>
-          <li><strong>Safe discharge assessment (Phase 2):</strong> Predict ICU readmission within 72 hours using clinical data prior to ICU discharge.</li>
-          <li><strong>Unified capacity forecasting:</strong> Combine both predictions with length-of-stay estimates to support a dynamic ICU bed demand dashboard.</li>
+          <li><strong>Early deterioration detection:</strong> Predict ICU admission within 12 hours of ED arrival.</li>
+          <li><strong>Safe discharge assessment:</strong> Predict ICU readmission within 72 hours.</li>
+          <li><strong>Unified forecasting:</strong> Support dynamic ICU bed demand planning.</li>
         </ol>
       </section>
 
-      <section class="panel reveal" id="approach">
+      <!-- APPROACH -->
+      <section class="panel">
         <h2>Approach</h2>
-        <h3>1) Data integration &amp; cohort selection</h3>
+
+        <h3>1) Data integration & cohort selection</h3>
         <ul>
-          <li>Joined records across <code>ed_stays</code>, <code>admissions</code>, <code>transfers</code>, and <code>icustays</code> using <code>subject_id</code> and <code>hadm_id</code>.</li>
-          <li>Built two cohorts: an upstream cohort for ED-to-ICU prediction and a downstream cohort for ICU readmission prediction.</li>
+          <li>Joined <code>ed_stays</code>, <code>admissions</code>, <code>transfers</code>, <code>icustays</code>.</li>
+          <li>Built upstream and downstream cohorts.</li>
         </ul>
 
-        <h3>2) Feature engineering &amp; unstructured data handling</h3>
+        <h3>2) Feature engineering</h3>
         <ul>
-          <li>Normalized home medication text and mapped more than 1,000 drug names into 22 pharmacologic categories.</li>
-          <li>Standardized free-text pain scores and transformed the top 25 chief complaints into binary indicators.</li>
+          <li>Mapped 1,000+ drugs into 22 categories.</li>
+          <li>Standardized pain scores and chief complaints.</li>
         </ul>
 
-        <h3>3) Predictive modeling</h3>
+        <h3>3) Modeling</h3>
         <ul>
-          <li>Used XGBoost with <code>scale_pos_weight</code> to address class imbalance.</li>
-          <li>Prioritized AUC and Recall to improve sensitivity to high-risk patients.</li>
+          <li>XGBoost with imbalance handling.</li>
+          <li>Optimized for AUC and Recall.</li>
         </ul>
       </section>
 
-      <section class="container split-grid reverse project-split reveal" id="results">
-        <figure class="media-block warm-c">
-          <img src="assets/projects/01-icu-3.png" alt="Placeholder visual for ICU model performance and dashboard concept" />
-        </figure>
-        <article class="text-block">
-          <h2>Results / Key Findings</h2>
-          
-          <h3>Model 1: 12-Hour ICU Admission</h3>
-          <div class="metric-grid" aria-label="12-hour ICU admission model metrics">
-            <p class="metric-row"><span class="metric-label">AUC</span><span class="metric-pill">0.96</span></p>
-            <p class="metric-row"><span class="metric-label">Recall</span><span class="metric-pill">0.93</span></p>
-          </div>
-          <p>The model captured the large majority of patients requiring urgent intensive care using early ED data.</p>
+      <!-- IMAGE -->
+      <figure class="media-block">
+        <img src="assets/projects/01-icu-3.png" alt="Model results" />
+      </figure>
 
-          <h3>Model 2: 72-Hour ICU Readmission</h3>
-          <div class="metric-grid" aria-label="72-hour ICU readmission model metrics">
-            <p class="metric-row"><span class="metric-label">AUC</span><span class="metric-pill">0.72</span></p>
-            <p class="metric-row"><span class="metric-label">Recall</span><span class="metric-pill">0.52</span></p>
-          </div>
-          <p>Readmission remained harder to predict, but the model still provided a useful screening signal for discharge risk.</p>
-        </article>
+      <!-- RESULTS -->
+      <section class="panel">
+        <h2>Results / Key Findings</h2>
+
+        <h3>Model 1: 12-Hour ICU Admission</h3>
+        <p><strong>AUC:</strong> 0.96 | <strong>Recall:</strong> 0.93</p>
+        <p>Successfully captured high-risk ICU patients early.</p>
+
+        <h3>Model 2: 72-Hour ICU Readmission</h3>
+        <p><strong>AUC:</strong> 0.72 | <strong>Recall:</strong> 0.52</p>
+        <p>Provided useful signal for discharge risk screening.</p>
       </section>
 
-      <section class="panel reveal" id="impact">
+      <!-- IMPACT -->
+      <section class="panel">
         <h2>Impact / Conclusion / Recommendations</h2>
         <ul>
-          <li>Built a proof-of-concept ICU bed demand dashboard operating at 12-hour intervals.</li>
-          <li>Extended the work from single-patient prediction to system-level capacity forecasting.</li>
-          <li>Provided a practical framework for anticipating near-term bed shortages, prioritizing triage, and reducing unsafe premature discharge.</li>
+          <li>Built a 12-hour ICU demand dashboard.</li>
+          <li>Shifted from patient-level to system-level insights.</li>
+          <li>Improved planning for ICU capacity and safety.</li>
         </ul>
-        <p><strong>Future direction:</strong> Incorporate a dedicated length-of-stay model, clinical notes, and physiologic time-series data to improve real-time deployment and readmission precision.</p>
+        <p>
+          <strong>Future:</strong> integrate length-of-stay models and time-series clinical data.
+        </p>
       </section>
 
-      <section class="panel reveal" aria-label="Project navigation footer">
-        <a class="btn" href="projects.html">&larr; Back to Projects</a>
+      <!-- BACK -->
+      <section class="panel">
+        <a class="btn" href="projects.html">← Back to Projects</a>
       </section>
+
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
       <p>
         let's connect @
-        <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a>
-        :))
+        <a href="https://www.linkedin.com/in/weianhuang/" target="_blank">
+          VivianHuang
+        </a>
       </p>
     </footer>
 
-    <script src="assets/js/main.js"></script>
   </body>
 </html>
