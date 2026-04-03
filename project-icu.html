@@ -83,29 +83,50 @@
         </ul>
       </section>
 
-      <section class="container split-grid reverse project-split reveal" id="results">
-        <figure class="media-block warm-c">
-          <img src="assets/projects/01-icu-3.png" alt="Placeholder visual for ICU model performance and dashboard concept" />
+<!-- 替換成新的 Results 區塊結構 -->
+      <section class="container reveal results-stacked" id="results">
+        <!-- 圖片在最上方 -->
+        <figure class="media-block">
+          <img src="assets/projects/01-icu-3.png" alt="ICU Dashboard and Model Performance" />
         </figure>
-        <article class="text-block">
-          <h2>Results / Key Findings</h2>
 
-          <h3>Model 1: 12-Hour ICU Admission</h3>
-          <div class="metric-grid" aria-label="12-hour ICU admission model metrics">
-            <p class="metric-row"><span class="metric-label">AUC</span><span class="metric-pill">0.96</span></p>
-            <p class="metric-row"><span class="metric-label">Recall</span><span class="metric-pill">0.93</span></p>
+        <!-- 下方文字與數據改成雙欄網格 -->
+        <div class="models-grid">
+          
+          <!-- 左欄：Model 1 -->
+          <div class="model-column">
+            <h3>Model 1: 12-Hour ICU Admission</h3>
+            <div class="model-card">
+              <div class="model-stat">
+                <span class="stat-label">AUC</span>
+                <span class="stat-pill">0.96</span>
+              </div>
+              <div class="model-stat">
+                <span class="stat-label">RECALL</span>
+                <span class="stat-pill">0.93</span>
+              </div>
+            </div>
+            <p>The model captured the large majority of patients requiring urgent intensive care using early ED data.</p>
           </div>
-          <p>The model captured the large majority of patients requiring urgent intensive care using early ED data.</p>
 
-          <h3>Model 2: 72-Hour ICU Readmission</h3>
-          <div class="metric-grid" aria-label="72-hour ICU readmission model metrics">
-            <p class="metric-row"><span class="metric-label">AUC</span><span class="metric-pill">0.72</span></p>
-            <p class="metric-row"><span class="metric-label">Recall</span><span class="metric-pill">0.52</span></p>
+          <!-- 右欄：Model 2 -->
+          <div class="model-column">
+            <h3>Model 2: 72-Hour ICU Readmission</h3>
+            <div class="model-card">
+              <div class="model-stat">
+                <span class="stat-label">AUC</span>
+                <span class="stat-pill">0.72</span>
+              </div>
+              <div class="model-stat">
+                <span class="stat-label">RECALL</span>
+                <span class="stat-pill">0.52</span>
+              </div>
+            </div>
+            <p>Readmission remained harder to predict, but the model still provided a useful screening signal for discharge risk.</p>
           </div>
-          <p>Readmission remained harder to predict, but the model still provided a useful screening signal for discharge risk.</p>
-        </article>
+
+        </div>
       </section>
-
       <section class="panel reveal" id="impact">
         <h2>Impact / Conclusion / Recommendations</h2>
         <ul>
