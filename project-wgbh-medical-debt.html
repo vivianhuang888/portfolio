@@ -24,9 +24,9 @@
 
     <main class="container page-stack project-detail">
       <section class="page-header compact project-hero reveal">
-        <p class="eyebrow">investigative data journalism case study</p>
+        <p class="eyebrow">data storytelling</p>
         <h1>Medical Debt Court Filings in Massachusetts: WGBH Investigative Reporting</h1>
-        <p class="meta">A court-data pipeline that identified hidden medical debt lawsuits and supported actionable newsroom reporting.</p>
+        <p class="meta">A data storytelling project that translated hidden medical debt lawsuits into actionable insights for investigative newsroom reporting.</p>
       </section>
 
       <section class="panel project-meta reveal" aria-label="Project metadata">
@@ -37,11 +37,11 @@
           </div>
           <div>
             <dt>Role</dt>
-            <dd>Lead Data Analyst</dd>
+            <dd>Data Analyst (Client Management &amp; Data Storytelling)</dd>
           </div>
           <div>
             <dt>Skills</dt>
-            <dd>PostgreSQL, Data Engineering Pipeline, Fuzzy Matching (RapidFuzz), Regex, Client Reporting &amp; Data Storytelling</dd>
+            <dd>Client Reporting &amp; Executive Presentations, Data Storytelling, Data Visualization, Cross-functional Communication, PostgreSQL, Python</dd>
           </div>
         </dl>
       </section>
@@ -52,32 +52,26 @@
         </figure>
         <article class="text-block">
           <h2>Overview / Description</h2>
-          <p>Medical debt is a major crisis, yet it remains difficult to identify in public court records because lawsuits filed by hospitals and ambulances are grouped into general consumer civil cases.</p>
-          <p>GBH News needed to uncover who was aggressively suing patients and how the medical debt landscape was shifting over time. As Lead Data Analyst, I helped architect a pipeline to sift through decades of court data and translate findings into investigative insights.</p>
+          <p>Medical debt is a persistent financial burden, yet it remains difficult to identify in public court records because lawsuits filed by hospitals and ambulances are typically grouped under general consumer civil cases. GBH News needed to uncover who was aggressively suing patients and how the medical debt landscape was shifting over time.</p>
+          <p>My role focused heavily on client management and data storytelling. I worked directly with the Investigative Editor to translate their reporting goals into visual narratives and executive presentations, ensuring our technical findings were actionable for a non-technical audience.</p>
         </article>
       </section>
 
       <section class="panel reveal" id="objective">
         <h2>Objective / Success Metrics</h2>
-        <p>Surface medical debt lawsuits from large-scale public court records, standardize fragmented healthcare entity names, and produce a reliable dataset journalists could use for reporting.</p>
+        <p>Surface medical debt lawsuits from large-scale public court records and produce reliable visual narratives and datasets that journalists could directly use to drive their investigative reporting.</p>
       </section>
 
       <section class="panel reveal" id="approach">
         <h2>Approach</h2>
-        <h3>Data engineering pipeline</h3>
-        <h3>1) Keyword filtering</h3>
-        <ul>
-          <li>Used advanced PostgreSQL regex with word boundaries across 43 healthcare-related terms to reduce false positives.</li>
-        </ul>
-        <h3>2) Fuzzy string matching</h3>
-        <ul>
-          <li>Healthcare providers often appeared under inconsistent names.</li>
-          <li>Implemented normalization, stopword filtering, and RapidFuzz at an 85% similarity threshold to consolidate hundreds of provider name variations.</li>
-        </ul>
-        <h3>3) Data integration</h3>
-        <ul>
-          <li>Cross-referenced court data with official Massachusetts licensed ambulance registries to improve reporting accuracy.</li>
-        </ul>
+        <h3>Client Collaboration &amp; Goal Translation</h3>
+        <p>Worked closely with the GBH investigative team to understand their ongoing reporting needs, specifically ensuring that our data pipeline prioritized areas of interest like ambulance and veterinary cases.</p>
+
+        <h3>Visual Narratives &amp; Executive Presentations</h3>
+        <p>Designed exploratory and presentation-ready charts to surface key trends, such as category shifts and plaintiff concentration. Translated complex SQL/Python pipeline outputs into accessible executive summaries and slide decks.</p>
+
+        <h3>Data Contextualization</h3>
+        <p>Collaborated with the data engineering team to ensure technical processes (like keyword filtering and RapidFuzz string matching) accurately reflected real-world entities, such as cross-referencing findings with Massachusetts licensed ambulance registries.</p>
       </section>
 
       <section class="container split-grid reverse project-split reveal" id="results">
@@ -87,17 +81,18 @@
         <article class="text-block">
           <h2>Results / Key Findings</h2>
           <ul>
-            <li>Reduced 3.7 million records into a refined dataset of around 10,500 medical debt-related cases.</li>
-            <li>Discovered ambulance court filings dropped 96% from 2015 to 2025, while supporting reporting suggested the debt had been outsourced to private collection agencies rather than disappearing.</li>
-            <li>Found litigation was concentrated among a small number of creditors, including Trinity EMS and MSPCA Angell.</li>
-            <li>Observed that urgent care and emergency-related cases were often resolved in a median of around 50 days, suggesting a high likelihood of default judgments.</li>
+            <li>Refined 3.7 million court records into a targeted primary analysis dataset of approximately 10,500 medical debt-related cases spanning from 2015 to 2025.</li>
+            <li>Illustrated a sharp decline in public court filings for ambulance debt, which fell from more than 1,000 cases in 2015 to fewer than 200 by 2025.</li>
+            <li>Contextualized data trends with journalistic reporting to demonstrate that this decline did not mean the debt disappeared, but rather indicated that debt collection had shifted to private third-party agencies.</li>
+            <li>Highlighted that litigation was highly concentrated among a small number of specific creditors, such as Trinity EMS and MSPCA Angell.</li>
+            <li>Revealed that emergency and urgent care cases often resolved quickly (within 50 to 90 days), providing evidence consistent with high default judgment rates.</li>
           </ul>
         </article>
       </section>
 
       <section class="panel reveal" id="impact">
         <h2>Impact / Conclusion / Recommendations</h2>
-        <p>This project showed how data engineering and data storytelling can help non-technical stakeholders uncover real-world systemic issues. It also strengthened my ability to align SQL/Python workflows with investigative reporting goals.</p>
+        <p>This project demonstrated the power of bridging the gap between raw data engineering and investigative journalism. By focusing on data storytelling and client management, I was able to translate complex data extraction workflows into actionable, systemic insights, directly supporting high-impact reporting on healthcare collection practices.</p>
       </section>
 
       <section class="panel reveal" aria-label="Project navigation footer">
