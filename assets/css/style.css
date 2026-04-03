@@ -798,3 +798,45 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
         grid-template-columns: 1fr !important;
     }
 }
+/* =========================================
+   PROJECT DETAIL PAGE LAYOUT & IMAGE FIX
+   ========================================= */
+
+/* 1. Fix the balance: Image gets slightly more space than text */
+.container.split-grid.project-split {
+    display: grid !important;
+    grid-template-columns: 1.2fr 1fr !important;
+    gap: 40px !important;
+    align-items: center !important;
+}
+
+/* 2. Kill the weird background box (warm-a, etc.) and padding */
+.project-split figure.media-block {
+    background: transparent !important;
+    background-image: none !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    min-height: auto !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 !important;
+}
+
+/* 3. Make the image fill the space properly without cropping */
+.project-split figure.media-block img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 12px !important; /* Put rounded corners on the image itself */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important; /* Add a soft shadow to the image */
+    display: block !important;
+}
+
+/* 4. Responsive design for mobile */
+@media (max-width: 860px) {
+    .container.split-grid.project-split {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+}
