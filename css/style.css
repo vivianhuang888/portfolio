@@ -2,15 +2,18 @@
   box-sizing: border-box;
 }
 
+/* 1. 讓全站背景變成極淡的灰底，這樣白色的卡片才會浮現出來 */
 body {
   margin: 0;
   font-family: "Arial", "Helvetica", sans-serif;
   color: #1e1e1e;
-  background: #fff;
+  background-color: #faf9f8; 
   line-height: 1.6;
 }
 
+/* 確保導覽列和選單保持乾淨的純白 */
 .site-header {
+  background-color: #ffffff;
   border-bottom: 1px solid #ececec;
 }
 
@@ -191,6 +194,7 @@ body {
 }
 
 .project-card {
+  background-color: #ffffff;
   border: 1px solid #e8e8e8;
   border-radius: 14px;
   padding: 14px;
@@ -238,39 +242,6 @@ body {
   color: #666;
 }
 
-@media (max-width: 860px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    right: 24px;
-    top: 62px;
-    background: #fff;
-    border: 1px solid #e4e4e4;
-    border-radius: 10px;
-    flex-direction: column;
-    gap: 12px;
-    padding: 12px;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .feature-block,
-  .project-list {
-    grid-template-columns: 1fr;
-  }
-
-  .feature-block.reverse .feature-image,
-  .feature-block.reverse .feature-text {
-    order: initial;
-  }
-}
-
 /* =========================================
    Project Categories & Tags
    ========================================= */
@@ -288,7 +259,6 @@ body {
   border-bottom: 1px solid #ececec; 
 }
 
-/* 這裡改成 repeat(3, 1fr) */
 .project-category .project-cards {
   display: grid;
   gap: 26px; 
@@ -313,325 +283,223 @@ body {
   letter-spacing: 0.02em;
 }
 
-@media (max-width: 960px) {
-  .project-category .project-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 650px) {
-  .project-category .project-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* =========================================
-   PROJECT DETAIL PAGE LAYOUT & IMAGE FIX
+   PROJECT DETAIL PAGE: 單欄順滑卡片流 (高質感)
    ========================================= */
 
-/* 調整左右比例：讓圖片佔比較大 (1.2 : 1)，文字佔比較小 */
-.container.split-grid.project-split {
-    display: grid !important;
-    grid-template-columns: 1.2fr 1fr !important;
-    gap: 40px !important;
-    align-items: center !important;
-}
-
-/* 殺掉圖片外面那個多餘的白框/灰框 */
-.project-split figure.media-block {
-    background: transparent !important;
-    background-image: none !important;
-    padding: 0 !important;
-    border: none !important;
-    box-shadow: none !important;
-    min-height: 0 !important;
-    height: auto !important;
-    display: block !important;
-    margin: 0 !important;
-}
-
-/* 讓圖片自然放大，並加上圓角與質感陰影 */
-.project-split figure.media-block img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    border-radius: 12px !important; 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
-    display: block !important;
-}
-
-/* 手機版的時候自動變成上下排列 */
-@media (max-width: 860px) {
-    .container.split-grid.project-split {
-        grid-template-columns: 1fr !important;
-        gap: 24px !important;
-    }
-}
-
-/* =========================================
-   Metrics Grid (Results 數據卡片優化 - 強制覆蓋版)
-   ========================================= */
-
-.project-detail .metric-grid {
-  display: grid !important;
-  /* 讓數據卡片左右並排 */
-  grid-template-columns: repeat(2, 1fr) !important; 
-  gap: 16px !important;
-  margin: 16px 0 24px !important;
-  background: transparent !important; /* 清除可能殘留的背景底色 */
-  border: none !important;
-  padding: 0 !important;
-  box-shadow: none !important;
-}
-
-.project-detail .metric-row {
-  background: #fdfdfd !important; 
-  border: 1px solid #eaeaea !important;
-  border-radius: 12px !important;
-  padding: 20px 16px !important;
-  margin: 0 !important;
-  display: flex !important;
-  flex-direction: column !important; /* 強制上下排列 */
-  align-items: flex-start !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.03) !important;
-}
-
-.project-detail .metric-label {
-  font-size: 0.85rem !important;
-  color: #7a7a7a !important;
-  text-transform: uppercase !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.05em !important;
-  margin-bottom: 12px !important; /* 強制拉開標籤跟分數的距離 */
-}
-
-.project-detail .metric-pill {
-  font-size: 1.8rem !important; /* 分數再稍微放大一點 */
-  font-weight: 700 !important;
-  color: #5e3bea !important;
-  background: rgba(94, 59, 234, 0.08) !important; 
-  padding: 6px 14px !important;
-  border-radius: 8px !important;
-  line-height: 1 !important;
-}
-
-/* 手機版時變回上下排列 */
-@media (max-width: 650px) {
-  .project-detail .metric-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* =========================================
-   Project Hero Header 標題區塊排版優化
-   ========================================= */
-
-/* 1. 讓整個標題區塊置中，並縮減底部的 padding 以減少留白 */
-.project-hero {
-  text-align: center !important;
-  max-width: 860px !important; /* 限制最大寬度，讓文字不會拉太長 */
-  margin: 0 auto !important; /* 區塊置中 */
-  padding-top: 56px !important;
-  padding-bottom: 24px !important; /* 大幅縮小標題與下方白框的距離 */
-}
-
-/* 2. 裝飾性的眉批文字 (Eyebrow) */
-.project-hero .eyebrow {
-  color: #5e3bea !important; /* 換成你的主視覺紫色，增加亮點 */
-  font-size: 0.85rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.1em !important;
-  text-transform: uppercase !important;
-  margin-bottom: 12px !important; /* 拉近跟大標題的距離 */
-}
-
-/* 3. 專案大標題 */
-.project-hero h1 {
-  font-size: clamp(2rem, 4vw, 2.8rem) !important; /* 字體微調，避免三行看起來太擁擠 */
-  line-height: 1.25 !important;
-  margin-bottom: 16px !important;
-  color: #111 !important;
-}
-
-/* 4. 專案副標題 (Description) */
-.project-hero .meta {
-  font-size: 1.1rem !important;
-  color: #555 !important;
-  max-width: 680px !important; /* 副標題再收窄一點，創造好看的倒三角形視覺 */
-  margin: 0 auto !important; /* 置中 */
-  line-height: 1.6 !important;
-}
-
-/* 5. 把下方的白色資訊卡 (Project Meta) 往上拉 */
-.project-meta {
-  max-width: 860px !important;
-  margin: 0 auto 48px auto !important; /* 上距為 0，拉近與文字的距離；下距 48px */
-}
-
-/* =========================================
-   ICU Results Layout (上圖、下雙欄數據卡片)
-   ========================================= */
-
-/* 確保整個區塊的上下間距適當 */
-.results-stacked {
-  margin-top: 32px;
-}
-
-/* 上方的圖片置中且全寬 */
-.results-stacked .media-block {
-  margin-bottom: 48px;
+/* --- Hero 標題區 --- */
+.project-detail .project-hero {
   text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 56px 24px 24px;
+}
+
+.project-detail .project-hero .eyebrow {
+  color: #5e3bea;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.project-detail .project-hero h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.25;
+  margin-bottom: 16px;
+  color: #111;
+}
+
+.project-detail .project-hero .meta {
+  font-size: 1.15rem;
+  color: #555;
+  max-width: 760px;
+  margin: 0 auto;
+  font-style: italic; /* 斜體副標題 */
+}
+
+/* --- 白色資訊卡片 (所有的文字區塊) --- */
+/* 將原本的網格(Grid)取消，強制變成上下排列的獨立卡片 */
+.project-detail .container.split-grid.project-split,
+.project-detail .panel,
+.project-meta-clean {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff; /* 純白背景 */
+  border: 1px solid #eaeaea; /* 淡淡的灰邊框 */
+  border-radius: 24px; /* 漂亮的大圓角 */
+  padding: 40px 48px;
+  max-width: 860px;
+  margin: 0 auto 32px auto; /* 區塊置中且上下保持距離 */
+  box-shadow: 0 4px 24px rgba(0,0,0,0.02); /* 極淡的陰影 */
+  text-align: left;
+}
+
+/* Meta 資訊欄特製 (Duration / Skills) */
+.project-meta-clean {
+  gap: 16px;
+}
+.project-meta-clean .meta-label {
+  color: #1a365d;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 4px;
+}
+.project-meta-clean p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+/* --- 圖片處理 --- */
+/* 圖片獨立出來，不套用白底卡片 */
+.project-detail figure.media-block {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto 32px auto;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+.project-detail figure.media-block img {
+  width: 100%;
+  border-radius: 20px; /* 圖片大圓角 */
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  display: block;
+}
+
+/* --- 字體與排版細節 --- */
+.project-detail h2 {
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #111;
+}
+
+.project-detail p, 
+.project-detail li {
+  font-size: 1.125rem; /* 字體放大，提升閱讀體驗 */
+  line-height: 1.7;
+  color: #333;
+}
+
+.project-detail li {
+  margin-bottom: 10px;
+}
+
+.project-detail ul, 
+.project-detail ol {
+  padding-left: 24px;
+}
+
+/* --- ICU 專案專用的雙欄數據卡片 --- */
+/* 將 results-stacked 外層的白框拿掉，保留內部小卡片 */
+section.results-stacked {
   background: transparent !important;
   border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
 }
 
-.results-stacked .media-block img {
-  width: 100%;
-  max-width: 900px; /* 限制最大寬度讓圖片不會無限放大 */
-  margin: 0 auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-}
-
-/* 下方的雙欄佈局 */
 .models-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 32px;
 }
 
-/* 每個 Model 的標題 */
 .model-column h3 {
-  font-size: 1.4rem;
-  margin-top: 0;
-  margin-bottom: 20px;
+  font-size: 1.3rem;
+  margin-bottom: 16px;
   color: #111;
-  font-weight: 700;
 }
 
-/* 數據卡片外框 (淡暖灰色底) */
 .model-card {
-  background: #faf8f7; 
+  background: #faf8f7; /* 溫柔米灰底 */
   border: 1px solid #eee8e3;
   border-radius: 16px;
-  padding: 24px 28px;
-  margin-bottom: 20px;
+  padding: 24px;
+  margin-bottom: 16px;
   display: flex;
   flex-direction: column;
-  gap: 32px; /* AUC 和 RECALL 兩行之間的垂直間距 */
+  gap: 24px;
 }
 
-/* 卡片內每一行 (Label 在左，Pill 在右) */
 .model-stat {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* AUC / RECALL 標籤文字 */
 .stat-label {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #444;
   letter-spacing: 0.05em;
 }
 
-/* 分數標籤 (淡藍底、深藍字) */
 .stat-pill {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: #274b9f; 
   background: #e8edff; 
-  padding: 6px 18px;
-  border-radius: 99px; /* 完美的膠囊形狀 */
+  padding: 4px 16px;
+  border-radius: 99px; /* 膠囊形狀 */
   border: 1px solid #d4def7;
 }
 
-/* 手機版自動變成上下排列 */
+/* =========================================
+   響應式設計 (RWD / Mobile)
+   ========================================= */
 @media (max-width: 860px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    right: 24px;
+    top: 62px;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .feature-block,
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+  .feature-block.reverse .feature-image,
+  .feature-block.reverse .feature-text {
+    order: initial;
+  }
+  
+  /* ICU卡片手機版變上下排列 */
   .models-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 24px;
   }
 }
 
-/* =========================================
-   全球字體放大與留白縮減 (Typography & Spacing)
-   ========================================= */
-
-/* 1. 將內文和列表字體放大，提升閱讀體驗 */
-.project-detail p,
-.project-detail li {
-  font-size: 1.125rem !important; /* 約 18px */
-  line-height: 1.7 !important;
-  color: #333 !important; /* 稍微柔和的深灰色 */
-}
-
-/* 2. 增加列表點 (Bullet points) 之間的間距 */
-.project-detail li {
-  margin-bottom: 10px !important; 
-}
-
-/* 3. 大幅縮小白色文字框 (Panel) 的過度留白 */
-.project-detail .panel {
-  padding: 32px 32px !important; /* 原本留白太多，現在縮緊 */
-  margin-bottom: 24px !important;
-}
-
-/* =========================================
-   Hero 標題區與 Meta 資訊優化
-   ========================================= */
-
-/* 1. 標題區塊置中與延伸 */
-.project-hero {
-  text-align: center !important;
-  max-width: 900px !important; /* 放寬最大寬度，讓標題不會提早斷行 */
-  margin: 0 auto !important;
-  padding-top: 48px !important;
-  padding-bottom: 16px !important;
-}
-
-.project-hero h1 {
-  font-size: clamp(2.2rem, 4vw, 3.2rem) !important;
-  line-height: 1.25 !important;
-  margin-bottom: 24px !important;
-  color: #111 !important;
-}
-
-/* 2. 副標題 (斜體) */
-.project-hero .meta {
-  font-size: 1.25rem !important; /* 副標題特別放大 */
-  color: #555 !important;
-  max-width: 800px !important;
-  margin: 0 auto !important;
-}
-
-/* 3. 乾淨無白框的 Meta 區塊 (上下堆疊排列) */
-.project-meta-clean {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 56px auto; /* 距離下方的 Overview 有呼吸空間 */
-  display: flex;
-  flex-direction: column; /* 上下堆疊 */
-  gap: 8px;
-}
-
-.project-meta-clean p {
-  margin: 0 !important;
-  font-size: 1.05rem !important; /* 比正文稍微小一點點，區隔層次 */
-  color: #666 !important;
-}
-
-.meta-label {
-  color: #111;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-  margin-right: 8px;
-  display: inline-block;
-  background: #f1f1f1;
-  padding: 2px 8px;
-  border-radius: 4px;
+@media (max-width: 650px) {
+  .project-category .project-cards {
+    grid-template-columns: 1fr;
+  }
+  /* 手機版縮小卡片的內部留白 */
+  .project-detail .container.split-grid.project-split,
+  .project-detail .panel,
+  .project-meta-clean {
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
 }
