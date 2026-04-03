@@ -7,9 +7,8 @@
     <meta name="description" content="VivianHuang portfolio — data analytics and healthcare analytics projects, experience, and contact." />
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
-      /* ── Section divider：跟 projects 一致 ── */
       .section-divider {
-        margin: 3.5rem 0 1.8rem;
+        margin: 2rem 0 1.5rem;
         display: flex;
         align-items: center;
         gap: 1rem;
@@ -28,6 +27,11 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: var(--accent);
+      }
+
+      /* Hero 間距縮小 */
+      .hero {
+        padding: 5rem 0 2rem;
       }
     </style>
   </head>
@@ -57,12 +61,13 @@
         </p>
       </section>
 
-      <!-- Section divider：跟 projects category 一樣風格 -->
-      <div class="container section-divider reveal">
-        <span>me in a nutshell</span>
+      <!-- Section divider — 包在 container 裡才會對齊 -->
+      <div class="container">
+        <div class="section-divider reveal">
+          <span>me in a nutshell</span>
+        </div>
       </div>
 
-      <!-- Alternating sections -->
       <section class="container split-grid reveal">
         <div class="media-block warm-a" aria-hidden="true">
           <img src="assets/index_profile_2.jpg" alt="Vivian Huang outdoors near the water" />
