@@ -421,3 +421,49 @@ body {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* =========================================
+   Project Hero Header 標題區塊排版優化
+   ========================================= */
+
+/* 1. 讓整個標題區塊置中，並縮減底部的 padding 以減少留白 */
+.project-hero {
+  text-align: center !important;
+  max-width: 860px !important; /* 限制最大寬度，讓文字不會拉太長 */
+  margin: 0 auto !important; /* 區塊置中 */
+  padding-top: 56px !important;
+  padding-bottom: 24px !important; /* 大幅縮小標題與下方白框的距離 */
+}
+
+/* 2. 裝飾性的眉批文字 (Eyebrow) */
+.project-hero .eyebrow {
+  color: #5e3bea !important; /* 換成你的主視覺紫色，增加亮點 */
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 12px !important; /* 拉近跟大標題的距離 */
+}
+
+/* 3. 專案大標題 */
+.project-hero h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem) !important; /* 字體微調，避免三行看起來太擁擠 */
+  line-height: 1.25 !important;
+  margin-bottom: 16px !important;
+  color: #111 !important;
+}
+
+/* 4. 專案副標題 (Description) */
+.project-hero .meta {
+  font-size: 1.1rem !important;
+  color: #555 !important;
+  max-width: 680px !important; /* 副標題再收窄一點，創造好看的倒三角形視覺 */
+  margin: 0 auto !important; /* 置中 */
+  line-height: 1.6 !important;
+}
+
+/* 5. 把下方的白色資訊卡 (Project Meta) 往上拉 */
+.project-meta {
+  max-width: 860px !important;
+  margin: 0 auto 48px auto !important; /* 上距為 0，拉近與文字的距離；下距 48px */
+}
