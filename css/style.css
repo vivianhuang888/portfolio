@@ -324,3 +324,46 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================================
+   PROJECT DETAIL PAGE LAYOUT & IMAGE FIX
+   ========================================= */
+
+/* 調整左右比例：讓圖片佔比較大 (1.2 : 1)，文字佔比較小 */
+.container.split-grid.project-split {
+    display: grid !important;
+    grid-template-columns: 1.2fr 1fr !important;
+    gap: 40px !important;
+    align-items: center !important;
+}
+
+/* 殺掉圖片外面那個多餘的白框/灰框 */
+.project-split figure.media-block {
+    background: transparent !important;
+    background-image: none !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    min-height: 0 !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 !important;
+}
+
+/* 讓圖片自然放大，並加上圓角與質感陰影 */
+.project-split figure.media-block img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 12px !important; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+    display: block !important;
+}
+
+/* 手機版的時候自動變成上下排列 */
+@media (max-width: 860px) {
+    .container.split-grid.project-split {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+}
