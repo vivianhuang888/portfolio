@@ -514,3 +514,105 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
     border: 1px solid var(--line);
     border-radius: 12px;
     p
+/* ==============================================
+   PROJECT DETAIL PAGE — 以下貼在 style.css 最下面
+   ============================================== */
+
+/* Hero 區塊：無白底，整體置中 */
+.project-hero-block {
+  padding: 3rem 0 1.5rem;
+  text-align: center;
+}
+
+.project-hero-block h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.15;
+  margin: 0.5rem 0 1rem;
+  max-width: 100%;
+}
+
+/* 副標題：斜體、破折號、稍大字體 */
+.project-subtitle {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--muted, #5f5a56);
+  margin: 0 auto 1.6rem;
+  max-width: 720px;
+  line-height: 1.7;
+}
+
+/* Duration / Skills 上下排列，無白底 */
+.project-meta-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-align: left;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.2rem 0 0.5rem;
+  border-top: 1px solid var(--line, #e8dfd8);
+}
+
+.meta-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.meta-row .meta-label {
+  color: var(--accent, #274a75);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.meta-row .meta-value {
+  font-size: 1rem;
+  color: var(--text, #17171b);
+  line-height: 1.5;
+}
+
+/* 圖片：無白底，圓角 */
+.project-image {
+  margin: 0;
+  width: 100%;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+
+/* Panel 留白縮減（讓卡片更緊湊） */
+.panel {
+  padding: 1.2rem 1.4rem;
+}
+
+/* 全域內文字體放大 */
+.project-detail p,
+.project-detail li {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--text, #17171b);
+}
+
+/* h2 顏色層次 */
+.project-detail h2 {
+  color: var(--text, #17171b);
+  margin-bottom: 0.75rem;
+}
+
+/* h3 顏色層次（比 h2 淡一點） */
+.project-detail h3 {
+  color: #3a3530;
+  margin-top: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+/* 段落間距 */
+.project-detail p + p {
+  margin-top: 0.75rem;
+}
