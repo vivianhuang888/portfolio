@@ -7,54 +7,57 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
-  <body class="project-detail">
+  <body>
 
     <!-- NAV -->
     <header class="site-header">
       <div class="container banner-shell">
         <nav class="nav-wrap">
           <a class="brand" href="index.html">VivianHuang</a>
-          <button class="menu-btn" type="button">☰</button>
+          <button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
           <ul class="nav-menu">
             <li><a href="about.html">about me</a></li>
             <li><a href="projects.html">projects</a></li>
             <li><a href="contact.html">contact</a></li>
           </ul>
         </nav>
+        <div class="banner-spacer" aria-hidden="true"></div>
       </div>
     </header>
 
     <!-- MAIN -->
-    <main class="page-stack">
+    <main class="container page-stack project-detail">
 
       <!-- HERO -->
-      <section class="project-hero">
+      <section class="page-header compact project-hero reveal">
         <p class="eyebrow">healthcare analytics case study</p>
         <h1>Bridging the Gap: Forecasting ICU Demand and Readmission Risk</h1>
-        <p class="meta">
-          A unified machine learning framework linking ED triage risk, ICU discharge safety, and short-term bed demand forecasting.
-        </p>
+        <p class="meta">A unified machine learning framework linking ED triage risk, ICU discharge safety, and short-term bed demand forecasting.</p>
       </section>
 
       <!-- META -->
-      <section class="project-meta-clean">
-        <div>
-          <span class="meta-label">Duration</span>
-          <p>Fall 2025</p>
-        </div>
-        <div>
-          <span class="meta-label">Skills</span>
-          <p>Data Preprocessing (Python), Machine Learning (XGBoost), Data Visualization, Clinical Data Analytics (MIMIC-IV)</p>
-        </div>
+      <section class="panel project-meta reveal" aria-label="Project metadata">
+        <dl class="project-meta-grid">
+          <div>
+            <dt>Duration</dt>
+            <dd>Fall 2025</dd>
+          </div>
+          <div>
+            <dt>Skills</dt>
+            <dd>Data Preprocessing (Python), Machine Learning (XGBoost), Data Visualization, Clinical Data Analytics (MIMIC-IV)</dd>
+          </div>
+        </dl>
       </section>
 
       <!-- IMAGE -->
-      <figure class="media-block">
-        <img src="assets/projects/01-icu-2.png" alt="ICU workflow overview" />
-      </figure>
+      <section class="panel reveal">
+        <figure class="media-block">
+          <img src="assets/projects/01-icu-2.png" alt="ICU workflow overview" />
+        </figure>
+      </section>
 
       <!-- OVERVIEW -->
-      <section class="panel">
+      <section class="panel reveal" id="overview">
         <h2>Overview / Description</h2>
         <p>
           Emergency department crowding and ICU strain are major hospital operational challenges. Patients who appear stable in the ED can deteriorate quickly, while patients discharged too early from ICU may face dangerous readmission risk.
@@ -65,7 +68,7 @@
       </section>
 
       <!-- OBJECTIVE -->
-      <section class="panel">
+      <section class="panel reveal" id="objective">
         <h2>Objective / Success Metrics</h2>
         <ol>
           <li><strong>Early deterioration detection:</strong> Predict ICU admission within 12 hours of ED arrival.</li>
@@ -75,21 +78,18 @@
       </section>
 
       <!-- APPROACH -->
-      <section class="panel">
+      <section class="panel reveal" id="approach">
         <h2>Approach</h2>
-
         <h3>1) Data integration & cohort selection</h3>
         <ul>
           <li>Joined <code>ed_stays</code>, <code>admissions</code>, <code>transfers</code>, <code>icustays</code>.</li>
           <li>Built upstream and downstream cohorts.</li>
         </ul>
-
         <h3>2) Feature engineering</h3>
         <ul>
           <li>Mapped 1,000+ drugs into 22 categories.</li>
           <li>Standardized pain scores and chief complaints.</li>
         </ul>
-
         <h3>3) Modeling</h3>
         <ul>
           <li>XGBoost with imbalance handling.</li>
@@ -98,38 +98,36 @@
       </section>
 
       <!-- IMAGE -->
-      <figure class="media-block">
-        <img src="assets/projects/01-icu-3.png" alt="Model results" />
-      </figure>
+      <section class="panel reveal">
+        <figure class="media-block">
+          <img src="assets/projects/01-icu-3.png" alt="Model results" />
+        </figure>
+      </section>
 
       <!-- RESULTS -->
-      <section class="panel">
+      <section class="panel reveal" id="results">
         <h2>Results / Key Findings</h2>
-
         <h3>Model 1: 12-Hour ICU Admission</h3>
         <p><strong>AUC:</strong> 0.96 | <strong>Recall:</strong> 0.93</p>
         <p>Successfully captured high-risk ICU patients early.</p>
-
         <h3>Model 2: 72-Hour ICU Readmission</h3>
         <p><strong>AUC:</strong> 0.72 | <strong>Recall:</strong> 0.52</p>
         <p>Provided useful signal for discharge risk screening.</p>
       </section>
 
       <!-- IMPACT -->
-      <section class="panel">
+      <section class="panel reveal" id="impact">
         <h2>Impact / Conclusion / Recommendations</h2>
         <ul>
           <li>Built a 12-hour ICU demand dashboard.</li>
           <li>Shifted from patient-level to system-level insights.</li>
           <li>Improved planning for ICU capacity and safety.</li>
         </ul>
-        <p>
-          <strong>Future:</strong> integrate length-of-stay models and time-series clinical data.
-        </p>
+        <p><strong>Future:</strong> integrate length-of-stay models and time-series clinical data.</p>
       </section>
 
       <!-- BACK -->
-      <section class="panel">
+      <section class="panel reveal" aria-label="Project navigation footer">
         <a class="btn" href="projects.html">← Back to Projects</a>
       </section>
 
@@ -139,11 +137,14 @@
     <footer class="site-footer">
       <p>
         let's connect @
-        <a href="https://www.linkedin.com/in/weianhuang/" target="_blank">
+        <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">
           VivianHuang
         </a>
+        :))
       </p>
     </footer>
+
+    <script src="assets/js/main.js"></script>
 
   </body>
 </html>
