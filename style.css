@@ -1,0 +1,34 @@
+
+/* --- Fix Split Grid Balance for Project Detail Pages --- */
+.project-split {
+    display: grid !important;
+    /* Give the image column more space (e.g., 55%) and the text less (45%), 
+       or let them flex naturally. Using 1.2fr to 1fr ratio */
+    grid-template-columns: 1.2fr 1fr !important; 
+    gap: 2rem !important;
+    align-items: center !important; /* Vertically center both sides */
+}
+
+/* Make sure the media block doesn't force unnecessary height/background */
+.project-split .media-block {
+    background-color: transparent !important;
+    height: auto !important;
+    min-height: unset !important;
+    padding: 0 !important;
+    box-shadow: none !important; /* Remove box shadow if it makes the empty space look weird */
+}
+
+.project-split .media-block img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 500px !important; /* Prevent it from getting absurdly huge on large screens */
+    border-radius: 8px !important; /* Optional: adds a nice soft corner to the image itself */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* For smaller screens, stack them vertically */
+@media (max-width: 768px) {
+    .project-split {
+        grid-template-columns: 1fr !important;
+    }
+}
