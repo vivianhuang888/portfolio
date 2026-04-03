@@ -3,16 +3,100 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Projects | VivianHuang</title>
+    <title>Projects | VivianHuang — Data & Analytics Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
+    <style>
+      /* ── Category divider ── */
+      .project-category {
+        margin: 4rem 0 1.8rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .project-category::before {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 2px;
+        background: var(--accent);
+        flex-shrink: 0;
+      }
+      .project-category span {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
 
+      /* ── Project card: clean image, no background ── */
+      .project-card .media-block {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 12px;
+        overflow: hidden;
+        aspect-ratio: 16 / 10;
+        min-height: 0;
+      }
+      .project-card .media-block img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+      .project-card:hover .media-block img {
+        transform: scale(1.03);
+      }
+
+      /* ── Card content spacing ── */
+      .project-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .project-card h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin: 0.4rem 0 0;
+        color: var(--text);
+        line-height: 1.3;
+      }
+      .project-card p {
+        font-size: 0.9rem;
+        color: var(--muted);
+        line-height: 1.6;
+        margin: 0;
+      }
+      .project-card .link {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--accent);
+        text-decoration: none;
+        margin-top: auto;
+      }
+      .project-card .link:hover {
+        text-decoration: underline;
+      }
+
+      /* ── Page hero ── */
+      .projects-hero {
+        padding: 3.5rem 0 1rem;
+      }
+      .projects-hero h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin: 0.4rem 0 0;
+      }
+    </style>
+  </head>
   <body>
     <header class="site-header">
       <div class="container banner-shell">
         <nav class="nav-wrap">
           <a class="brand" href="index.html">VivianHuang</a>
-          <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+          <button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
           <ul class="nav-menu">
             <li><a href="about.html">about me</a></li>
             <li><a href="projects.html">projects</a></li>
@@ -24,170 +108,189 @@
     </header>
 
     <main class="container page-stack">
-      <section class="page-header reveal">
+
+      <!-- Page hero -->
+      <section class="projects-hero">
         <p class="eyebrow">selected work</p>
         <h1>Projects</h1>
       </section>
 
-      <section class="project-category reveal">
-        <h2 class="category-title">1. Healthcare Analytics &amp; Clinical Operations</h2>
-        <div class="project-cards">
-          <article class="project-card">
-            <a href="project-icu.html" class="media-block warm-a" aria-label="Forecasting Real-time ICU Demand">
-              <img src="assets/projects/01-icu-1png.png" alt="Project thumbnail" />
-            </a>
-            <h3>Forecasting Real-time ICU Demand</h3>
-            <p>Bridging the gap in capacity planning by forecasting short-term ICU patient flow and readmission risk using MIMIC-IV data.</p>
-            <div class="project-tags">
-              <span class="tags-label">SKILLS:</span>
-              <span class="project-tag">Machine Learning</span>
-              <span class="project-tag">EHR Data</span>
-            </div>
-            <a href="project-icu.html" class="link">learn more</a>
-          </article>
+      <!-- ── Category 1 ── -->
+      <div class="project-category">
+        <span>Healthcare Analytics &amp; Clinical Operations</span>
+      </div>
 
-          <article class="project-card">
-            <a href="project-ed-overcrowding.html" class="media-block warm-c" aria-label="Tackling ED Overcrowding">
-              <img src="assets/projects/02-ED-1.png" alt="Project thumbnail" />
-            </a>
-            <h3>Tackling ED Overcrowding</h3>
-            <p>Optimizing length of stay and discharge workflows in the emergency department to improve patient throughput and bed turnover.</p>
-            <div class="project-tags">
-              <span class="tags-label">SKILLS:</span>
-              <span class="project-tag">Workflow Analysis</span>
-              <span class="project-tag">Process Improvement</span>
-            </div>
-            <a href="project-ed-overcrowding.html" class="link">learn more</a>
-          </article>
+      <div class="project-cards">
 
-          <article class="project-card">
-            <a href="project-nhird.html" class="media-block warm-b" aria-label="Evaluating Health Policy Impact">
-              <img src="assets/projects/03-Health-1.png" alt="Project thumbnail" />
-            </a>
-            <h3>Evaluating Health Policy Impact</h3>
-            <p>Analyzing dementia and pay-for-performance effects on diabetes care quality using population-level NHIRD claims data.</p>
-            <div class="project-tags">
-              <span class="tags-label">SKILLS:</span>
-              <span class="project-tag">Claims Data</span>
-              <span class="project-tag">Statistical Modeling</span>
+        <div class="project-card">
+          <a href="project-icu.html">
+            <div class="media-block">
+              <img src="assets/projects/01-icu-1.png" alt="ICU demand forecasting" />
             </div>
-            <a href="project-nhird.html" class="link">learn more</a>
-          </article>
+          </a>
+          <div class="project-tags">
+            <span class="project-tag">Machine Learning</span>
+            <span class="project-tag">EHR Data</span>
+            <span class="project-tag">XGBoost</span>
+          </div>
+          <h3>Forecasting Real-time ICU Demand</h3>
+          <p>Bridging the gap in capacity planning by forecasting short-term ICU patient flow and readmission risk using MIMIC-IV data.</p>
+          <a class="link" href="project-icu.html">View Project →</a>
         </div>
-      </section>
 
-      <section class="project-category reveal">
-        <h2 class="category-title">2. Strategy, Consulting &amp; Public Impact</h2>
-        <div class="project-cards">
-          <article class="project-card">
-            <a href="project-ixl-consulting.html" class="media-block warm-b" aria-label="Digital Growth and Market Strategy">
-              <img src="assets/projects/04-SME-1.png" alt="Project thumbnail" />
-            </a>
-            <h3>Digital Growth &amp; Market Strategy</h3>
-            <p>Advised an organic F&amp;B SME through the IXL Accelerator with value chain analysis, operating improvements, and go-to-market recommendations.</p>
-            <div class="project-tags">
-              <span class="tags-label">SKILLS:</span>
-              <span class="project-tag">Management Consulting</span>
-              <span class="project-tag">Market Sizing</span>
+        <div class="project-card">
+          <a href="project-ed-overcrowding.html">
+            <div class="media-block">
+              <img src="assets/projects/02-ED-1.png" alt="ED overcrowding" />
             </div>
-            <a href="project-ixl-consulting.html" class="link">learn more</a>
-          </article>
-
-          <article class="project-card">
-            <a href="project-humana-preventive-care.html" class="media-block warm-a" aria-label="Predicting Preventive Care Engagement">
-              <img src="assets/projects/05-HUMANA-1.png" alt="Project thumbnail" />
-            </a>
-            <h3>Predicting Preventive Care Engagement</h3>
-            <p>Built a LightGBM model to identify at-risk Medicare members and prioritize outreach for preventive care interventions.</p>
-            <div class="project-tags">
-              <span class="tags-label">SKILLS:</span>
-              <span class="project-tag">LightGBM</span>
-              <span class="project-tag">Medicare Strategy</span>
-            </div>
-            <a href="project-humana-preventive-care.html" class="link">learn more</a>
-          </article>
-
-          <article class="project-card">
-            <a href="project-wgbh-medical-debt.html" class="media-block warm-c" aria-label="Exposing Medical Debt">
-              <img src="assets/projects/06-GBH-1.png" alt="Project thumbnail" />
-            </a>
-            <h3>Exposing Medical Debt (WGBH)</h3>
-            <p>Engineered a fuzzy-matching pipeline to surface predatory collection patterns across 3.7M+ court records for investigative journalism.</p>
-            <div class="project-tags">
-              <span class="tags-label">SKILLS:</span>
-              <span class="project-tag">Data Engineering</span>
-              <span class="project-tag">Fuzzy Matching</span>
-            </div>
-            <a href="project-wgbh-medical-debt.html" class="link">learn more</a>
-          </article>
+          </a>
+          <div class="project-tags">
+            <span class="project-tag">Workflow Analysis</span>
+            <span class="project-tag">Process Improvement</span>
+            <span class="project-tag">Service Blueprinting</span>
+          </div>
+          <h3>Tackling ED Overcrowding</h3>
+          <p>Optimizing length of stay and discharge workflows in the emergency department to improve patient throughput and bed turnover.</p>
+          <a class="link" href="project-ed-overcrowding.html">View Project →</a>
         </div>
-      </section>
 
-      <section class="project-category reveal">
-        <h2 class="category-title">3. Business Analytics &amp; Operations</h2>
-        <div class="project-cards">
-          <article class="project-card">
-            <a href="project-yelp-gcp.html" class="media-block warm-c" aria-label="Yelp Customer Review Analytics">
-              <img src="assets/projects/07-YELP-1.png" alt="Project thumbnail" />
-            </a>
-            <h3>Yelp Customer Review Analytics</h3>
-            <p>Used SQL, BigQuery, and Tableau to identify review and service patterns linked to restaurant engagement outcomes.</p>
-            <div class="project-tags">
-              <span class="tags-label">SKILLS:</span>
-              <span class="project-tag">SQL &amp; BigQuery</span>
-              <span class="project-tag">Tableau</span>
+        <div class="project-card">
+          <a href="project-nhird.html">
+            <div class="media-block">
+              <img src="assets/projects/03-Health-1.png" alt="Health policy impact" />
             </div>
-            <a href="project-yelp-gcp.html" class="link">learn more</a>
-          </article>
-
-          <article class="project-card">
-            <a href="project-ab-testing-ecommerce.html" class="media-block warm-a" aria-label="A/B Testing E-commerce Behavior">
-              <img src="assets/projects/08-ABTEST-1.png" alt="Project thumbnail" />
-            </a>
-            <h3>A/B Testing E-commerce Behavior</h3>
-            <p>Measured the causal impact of image reviews on conversion rates using experiment design, hypothesis testing, and decision thresholds.</p>
-            <div class="project-tags">
-              <span class="tags-label">SKILLS:</span>
-              <span class="project-tag">A/B Testing</span>
-              <span class="project-tag">Causal Inference</span>
-            </div>
-            <a href="project-ab-testing-ecommerce.html" class="link">learn more</a>
-          </article>
-
-          <article class="project-card">
-            <a href="project-bikeshare-operations.html" class="media-block warm-b" aria-label="Capital Bikeshare Operations">
-              <img src="assets/projects/09-BIKE-1.png" alt="Project thumbnail" />
-            </a>
-            <h3>Capital Bikeshare Operations</h3>
-            <p>Combined spatial-temporal analysis with weather and demand modeling to inform rebalancing strategy and station-level planning.</p>
-            <div class="project-tags">
-              <span class="tags-label">SKILLS:</span>
-              <span class="project-tag">Spatial-Temporal EDA</span>
-              <span class="project-tag">Operations</span>
-            </div>
-            <a href="project-bikeshare-operations.html" class="link">learn more</a>
-          </article>
+          </a>
+          <div class="project-tags">
+            <span class="project-tag">Claims Data</span>
+            <span class="project-tag">Statistical Modeling</span>
+            <span class="project-tag">PSM</span>
+          </div>
+          <h3>Evaluating Health Policy Impact</h3>
+          <p>Analyzing dementia and pay-for-performance effects on diabetes care quality using population-level NHIRD claims data.</p>
+          <a class="link" href="project-nhird.html">View Project →</a>
         </div>
-      </section>
+
+      </div>
+
+      <!-- ── Category 2 ── -->
+      <div class="project-category">
+        <span>Strategy, Consulting &amp; Public Impact</span>
+      </div>
+
+      <div class="project-cards">
+
+        <div class="project-card">
+          <a href="project-ixl-consulting.html">
+            <div class="media-block">
+              <img src="assets/projects/04-SME-1.png" alt="Digital growth and market strategy" />
+            </div>
+          </a>
+          <div class="project-tags">
+            <span class="project-tag">Management Consulting</span>
+            <span class="project-tag">Market Sizing</span>
+            <span class="project-tag">Value Chain</span>
+          </div>
+          <h3>Digital Growth &amp; Market Strategy</h3>
+          <p>Advised an organic F&amp;B SME through the IXL Accelerator with value chain analysis, operating improvements, and go-to-market recommendations.</p>
+          <a class="link" href="project-ixl-consulting.html">View Project →</a>
+        </div>
+
+        <div class="project-card">
+          <a href="project-humana-preventive-care.html">
+            <div class="media-block">
+              <img src="assets/projects/05-HUMANA-1.png" alt="Preventive care engagement" />
+            </div>
+          </a>
+          <div class="project-tags">
+            <span class="project-tag">LightGBM</span>
+            <span class="project-tag">Medicare Strategy</span>
+            <span class="project-tag">Bayesian Optimization</span>
+          </div>
+          <h3>Predicting Preventive Care Engagement</h3>
+          <p>Built a LightGBM model to identify at-risk Medicare members and prioritize outreach for preventive care interventions.</p>
+          <a class="link" href="project-humana-preventive-care.html">View Project →</a>
+        </div>
+
+        <div class="project-card">
+          <a href="project-wgbh-medical-debt.html">
+            <div class="media-block">
+              <img src="assets/projects/06-GBH-1.png" alt="Medical debt WGBH" />
+            </div>
+          </a>
+          <div class="project-tags">
+            <span class="project-tag">Data Engineering</span>
+            <span class="project-tag">Fuzzy Matching</span>
+            <span class="project-tag">PostgreSQL</span>
+          </div>
+          <h3>Exposing Medical Debt (WGBH)</h3>
+          <p>Engineered a fuzzy-matching pipeline to surface predatory collection patterns across 3.7M+ court records for investigative journalism.</p>
+          <a class="link" href="project-wgbh-medical-debt.html">View Project →</a>
+        </div>
+
+      </div>
+
+      <!-- ── Category 3 ── -->
+      <div class="project-category">
+        <span>Business Analytics &amp; Operations</span>
+      </div>
+
+      <div class="project-cards">
+
+        <div class="project-card">
+          <a href="project-yelp-gcp.html">
+            <div class="media-block">
+              <img src="assets/projects/07-YELP-1.png" alt="Yelp customer review analytics" />
+            </div>
+          </a>
+          <div class="project-tags">
+            <span class="project-tag">SQL &amp; BigQuery</span>
+            <span class="project-tag">Tableau</span>
+            <span class="project-tag">EDA</span>
+          </div>
+          <h3>Yelp Customer Review Analytics</h3>
+          <p>Used SQL, BigQuery, and Tableau to identify review and service patterns linked to restaurant engagement outcomes.</p>
+          <a class="link" href="project-yelp-gcp.html">View Project →</a>
+        </div>
+
+        <div class="project-card">
+          <a href="project-ab-testing-ecommerce.html">
+            <div class="media-block">
+              <img src="assets/projects/08-ABTEST-1.png" alt="A/B testing e-commerce" />
+            </div>
+          </a>
+          <div class="project-tags">
+            <span class="project-tag">A/B Testing</span>
+            <span class="project-tag">Causal Inference</span>
+            <span class="project-tag">OLS Regression</span>
+          </div>
+          <h3>A/B Testing E-commerce Behavior</h3>
+          <p>Measured the causal impact of image reviews on conversion rates using experiment design, hypothesis testing, and decision thresholds.</p>
+          <a class="link" href="project-ab-testing-ecommerce.html">View Project →</a>
+        </div>
+
+        <div class="project-card">
+          <a href="project-bikeshare-operations.html">
+            <div class="media-block">
+              <img src="assets/projects/09-BIKE-1.png" alt="Capital bikeshare operations" />
+            </div>
+          </a>
+          <div class="project-tags">
+            <span class="project-tag">Spatial-Temporal EDA</span>
+            <span class="project-tag">Operations</span>
+            <span class="project-tag">Geospatial</span>
+          </div>
+          <h3>Capital Bikeshare Operations</h3>
+          <p>Combined spatial-temporal analysis with weather and demand modeling to inform rebalancing strategy and station-level planning.</p>
+          <a class="link" href="project-bikeshare-operations.html">View Project →</a>
+        </div>
+
+      </div>
+
     </main>
 
     <footer class="site-footer">
-      <p>
-        let's connect @
-        <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 4px;">
-          <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18" stroke="currentColor" fill="none" stroke-width="1.8" style="transform: translateY(1px);">
-            <rect x="3" y="3" width="18" height="18" rx="3"/>
-            <path d="M8 10v7"/>
-            <path d="M8 7.5h.01"/>
-            <path d="M12 17v-4a2 2 0 0 1 4 0v4"/>
-            <path d="M12 10v7"/>
-          </svg>
-          VivianHuang
-        </a>
-        :))
-      </p>
+      <p>let's connect @ <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a> :))</p>
     </footer>
-
     <script src="assets/js/main.js"></script>
   </body>
 </html>
