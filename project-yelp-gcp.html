@@ -23,33 +23,34 @@
     </header>
 
     <main class="container page-stack project-detail">
-      <section class="page-header compact project-hero reveal">
+
+      <section class="project-hero-block reveal">
         <p class="eyebrow">restaurant analytics case study</p>
         <h1>Leveraging U.S. Yelp Trends to Support Restaurant Owners</h1>
-        <p class="meta">A BigQuery-driven analysis of Yelp data to turn review signals into practical business actions.</p>
+        <p class="project-subtitle">— A BigQuery-driven analysis of Yelp data to turn review signals into practical business actions.</p>
+        <div class="project-meta-stack">
+          <div class="meta-row">
+            <span class="meta-label">Duration</span>
+            <span class="meta-value">Fall 2024</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Platform</span>
+            <span class="meta-value">Yelp Open Dataset</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Skills</span>
+            <span class="meta-value">BigQuery (Google Cloud Platform), Advanced SQL (JSON Extraction, Aggregation), Data Visualization (Tableau), Exploratory Data Analysis (EDA)</span>
+          </div>
+        </div>
       </section>
 
-      <section class="panel project-meta reveal" aria-label="Project metadata">
-        <dl class="project-meta-grid">
-          <div>
-            <dt>Platform</dt>
-            <dd>Yelp Open Dataset</dd>
-          </div>
-          <div>
-            <dt>Skills</dt>
-            <dd>BigQuery (Google Cloud Platform), Advanced SQL (JSON Extraction, Aggregation), Data Visualization (Tableau), Exploratory Data Analysis (EDA)</dd>
-          </div>
-        </dl>
-      </section>
+      <figure class="project-image reveal">
+        <img src="assets/projects/07-YELP-2.png" alt="Yelp review analytics workflow" />
+      </figure>
 
-      <section class="container split-grid project-split reveal" id="overview">
-        <figure class="media-block warm-a">
-          <img src="assets/projects/07-YELP-2.png" alt="Placeholder visual for Yelp review analytics workflow" />
-        </figure>
-        <article class="text-block">
-          <h2>Overview / Description</h2>
-          <p>Restaurant owners often face data fatigue when trying to interpret large volumes of online customer feedback. Our team analyzed the Yelp Open Dataset to identify which operational areas most strongly affect ratings, customer sentiment, and digital reputation.</p>
-        </article>
+      <section class="panel reveal" id="overview">
+        <h2>Overview / Description</h2>
+        <p>Restaurant owners often face data fatigue when trying to interpret large volumes of online customer feedback. Our team analyzed the Yelp Open Dataset to identify which operational areas most strongly affect ratings, customer sentiment, and digital reputation.</p>
       </section>
 
       <section class="panel reveal" id="objective">
@@ -66,28 +67,25 @@
         </ul>
       </section>
 
-      <section class="container split-grid reverse project-split reveal" id="results">
-        <figure class="media-block warm-c">
-          <img src="assets/projects/07-YELP-3.png" alt="Placeholder visual for Yelp key findings dashboard" />
-        </figure>
-        <article class="text-block">
-          <h2>Results / Key Findings</h2>
-          <h3>1) Elite users have outsized influence</h3>
-          <ul>
-            <li>Elite users wrote an average of 396 reviews compared with 34 for non-elite users and received far more useful and cool votes.</li>
-          </ul>
+      <figure class="project-image reveal">
+        <img src="assets/projects/07-YELP-3.png" alt="Yelp key findings dashboard" />
+      </figure>
 
-          <h3>2) Long negative reviews are common</h3>
-          <ul>
-            <li>Reviews with 500+ words were strongly associated with lower ratings.</li>
-          </ul>
-
-          <h3>3) Certain business attributes strongly affect ratings</h3>
-          <ul>
-            <li>Top-rated attributes included wheelchair accessibility, outdoor seating, and bike parking.</li>
-            <li>Lower-rated attributes included restaurants delivery and HasTV.</li>
-          </ul>
-        </article>
+      <section class="panel reveal" id="results">
+        <h2>Results / Key Findings</h2>
+        <h3>1) Elite users have outsized influence</h3>
+        <ul>
+          <li>Elite users wrote an average of 396 reviews compared with 34 for non-elite users and received far more useful and cool votes.</li>
+        </ul>
+        <h3>2) Long negative reviews are common</h3>
+        <ul>
+          <li>Reviews with 500+ words were strongly associated with lower ratings.</li>
+        </ul>
+        <h3>3) Certain business attributes strongly affect ratings</h3>
+        <ul>
+          <li>Top-rated attributes included wheelchair accessibility, outdoor seating, and bike parking.</li>
+          <li>Lower-rated attributes included restaurants delivery and HasTV.</li>
+        </ul>
       </section>
 
       <section class="panel reveal" id="impact">
@@ -101,18 +99,14 @@
       </section>
 
       <section class="panel reveal" aria-label="Project navigation footer">
-        <a class="btn" href="projects.html">&larr; Back to Projects</a>
+        <a class="btn" href="projects.html">← Back to Projects</a>
       </section>
+
     </main>
 
     <footer class="site-footer">
-      <p>
-        let's connect @
-        <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a>
-        :))
-      </p>
+      <p>let's connect @ <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a> :))</p>
     </footer>
-
     <script src="assets/js/main.js"></script>
   </body>
 </html>
