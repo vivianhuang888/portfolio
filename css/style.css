@@ -43,6 +43,16 @@ body {
   align-items: center;
 }
 
+/* ⭐ 補上：HTML 實際用的是 .nav-wrap */
+.nav-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 22px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* =========================
    HERO
 ========================= */
