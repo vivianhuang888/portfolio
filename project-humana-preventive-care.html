@@ -23,40 +23,40 @@
     </header>
 
     <main class="container page-stack project-detail">
-      <section class="page-header compact project-hero reveal">
+
+      <section class="project-hero-block reveal">
         <p class="eyebrow">healthcare analytics competition case</p>
         <h1>Improving Preventive Care Engagement Among Humana's Medicare Advantage Members</h1>
-        <p class="meta">A predictive analytics project to identify unengaged members and guide higher-impact preventive care interventions.</p>
+        <p class="project-subtitle">— A predictive analytics project to identify unengaged members and guide higher-impact preventive care interventions.</p>
+        <div class="project-meta-stack">
+          <div class="meta-row">
+            <span class="meta-label">Duration</span>
+            <span class="meta-value">Fall 2024</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Competition</span>
+            <span class="meta-value">2024 Humana-Mays Healthcare Analytics Case Competition</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Skills</span>
+            <span class="meta-value">Data Preprocessing (Python), Machine Learning (LightGBM, XGBoost), Hyperparameter Tuning (Bayesian Optimization), Feature Selection (Random Forest), Strategic Planning</span>
+          </div>
+        </div>
       </section>
 
-      <section class="panel project-meta reveal" aria-label="Project metadata">
-        <dl class="project-meta-grid">
-          <div>
-            <dt>Competition</dt>
-            <dd>2024 Humana-Mays Healthcare Analytics Case Competition</dd>
-          </div>
-          <div>
-            <dt>Skills</dt>
-            <dd>Data Preprocessing (Python), Machine Learning (LightGBM, XGBoost), Hyperparameter Tuning (Bayesian Optimization), Feature Selection (Random Forest), Strategic Planning</dd>
-          </div>
-        </dl>
-      </section>
+      <figure class="project-image reveal">
+        <img src="assets/projects/05-HUMANA-2.png" alt="Humana preventive care engagement modeling workflow" />
+      </figure>
 
-      <section class="container split-grid project-split reveal" id="overview">
-        <figure class="media-block warm-a">
-          <img src="assets/projects/05-HUMANA-2.png" alt="Placeholder visual for Humana preventive care engagement modeling workflow" />
-        </figure>
-        <article class="text-block">
-          <h2>Overview / Description</h2>
-          <p>Preventive care is essential for managing chronic conditions in aging populations. In Humana's Medicare Advantage LPPO plans, members showed much higher disengagement from primary care physicians compared with HMO members.</p>
-          <p>This disengagement creates two business risks: lower Stars performance from fewer preventive screenings and incomplete risk documentation that can reduce Medicare risk adjustment payments. Our goal was to identify high-risk members and design data-driven engagement strategies.</p>
-        </article>
+      <section class="panel reveal" id="overview">
+        <h2>Overview / Description</h2>
+        <p>Preventive care is essential for managing chronic conditions in aging populations. In Humana's Medicare Advantage LPPO plans, members showed much higher disengagement from primary care physicians compared with HMO members.</p>
+        <p>This disengagement creates two business risks: lower Stars performance from fewer preventive screenings and incomplete risk documentation that can reduce Medicare risk adjustment payments. Our goal was to identify high-risk members and design data-driven engagement strategies.</p>
       </section>
 
       <section class="panel reveal" id="objective">
         <h2>Objective / Success Metrics</h2>
         <p>Build a classification model to identify unengaged members and uncover key disengagement drivers.</p>
-        <p>Primary success metrics:</p>
         <ul>
           <li>ROC-AUC</li>
           <li>PR-AUC</li>
@@ -66,42 +66,37 @@
 
       <section class="panel reveal" id="approach">
         <h2>Approach</h2>
-        <h3>Data preparation &amp; feature engineering</h3>
+        <h3>Data preparation & feature engineering</h3>
         <ul>
           <li>Processed over 1.5 million records across Demographic, Claims, Pharmacy, and Web Activity data.</li>
-          <li>Engineered features including <code>cost_trend</code>, <code>claims_trend</code>, <code>out_of_pocket_ratio</code>, <code>days_since_last_login</code>, and active-user indicators.</li>
+          <li>Engineered features including cost_trend, claims_trend, out_of_pocket_ratio, days_since_last_login, and active-user indicators.</li>
         </ul>
         <h3>Feature selection</h3>
         <ul>
           <li>Used Random Forest to rank importance and reduce noise from 256 initial columns.</li>
           <li>Identified PMPM costs and cost trends as strong predictors of disengagement.</li>
         </ul>
-        <h3>Model selection &amp; tuning</h3>
+        <h3>Model selection & tuning</h3>
         <ul>
           <li>Compared KNN, Logistic Regression, XGBoost, and LightGBM.</li>
-          <li>Selected LightGBM for strong performance on large, imbalanced data and faster execution.</li>
-          <li>Applied Bayesian Optimization (Optuna) and Randomized Search to tune parameters such as <code>learning_rate</code>, <code>num_leaves</code>, and <code>feature_fraction</code>.</li>
+          <li>Selected LightGBM for strong performance on large, imbalanced data.</li>
+          <li>Applied Bayesian Optimization (Optuna) and Randomized Search for hyperparameter tuning.</li>
         </ul>
       </section>
 
-      <section class="container split-grid reverse project-split reveal" id="results">
-        <figure class="media-block warm-c">
-          <img src="assets/projects/05-HUMANA-3.png" alt="Placeholder visual for model performance and true positive identification" />
-        </figure>
-        <article class="text-block">
-          <h2>Results / Key Findings</h2>
-          <div class="metric-grid" aria-label="Humana preventive care model metrics">
-            <p class="metric-row"><span class="metric-label">ROC-AUC</span><span class="metric-pill">0.7536</span></p>
-            <p class="metric-row"><span class="metric-label">PR-AUC</span><span class="metric-pill">0.7321</span></p>
-            <p class="metric-row"><span class="metric-label">True positives</span><span class="metric-pill">75,984</span></p>
-          </div>
-          <p>Confusion matrix analysis showed strong identification of unengaged members, supporting targeted outreach prioritization.</p>
-        </article>
+      <figure class="project-image reveal">
+        <img src="assets/projects/05-HUMANA-3.png" alt="Model performance and true positive identification" />
+      </figure>
+
+      <section class="panel reveal" id="results">
+        <h2>Results / Key Findings</h2>
+        <p><strong>ROC-AUC:</strong> 0.7536 | <strong>PR-AUC:</strong> 0.7321 | <strong>True positives:</strong> 75,984</p>
+        <p>Confusion matrix analysis showed strong identification of unengaged members, supporting targeted outreach prioritization.</p>
       </section>
 
       <section class="panel reveal" id="impact">
         <h2>Impact / Conclusion / Recommendations</h2>
-        <p>Based on the model output, we proposed an 8-step “Illness to Wellness” journey for LPPO members, including:</p>
+        <p>Based on the model output, we proposed an 8-step "Illness to Wellness" journey for LPPO members, including:</p>
         <ol>
           <li>Targeted financial assistance for members identified as financially vulnerable.</li>
           <li>AI-driven case management supported by predictive analytics dashboards.</li>
@@ -110,18 +105,14 @@
       </section>
 
       <section class="panel reveal" aria-label="Project navigation footer">
-        <a class="btn" href="projects.html">&larr; Back to Projects</a>
+        <a class="btn" href="projects.html">← Back to Projects</a>
       </section>
+
     </main>
 
     <footer class="site-footer">
-      <p>
-        let's connect @
-        <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a>
-        :))
-      </p>
+      <p>let's connect @ <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a> :))</p>
     </footer>
-
     <script src="assets/js/main.js"></script>
   </body>
 </html>
