@@ -196,3 +196,24 @@ body {
     border-radius: 14px;
   }
 }
+
+/* =========================================
+   強制專案頁面 (Project Detail) 完美置中
+   ========================================= */
+
+/* 讓包含所有卡片的最大容器置中 */
+body.project-detail main {
+  max-width: 860px !important; /* 限制與卡片相同的最大寬度 */
+  margin: 0 auto !important;   /* 關鍵魔法：左右 margin 設為 auto，自動推到正中央 */
+  padding: 0 24px !important;  /* 左右加一點留白，避免手機版時文字貼死螢幕邊緣 */
+  width: 100% !important;      /* 確保區塊能完整撐開 */
+  display: block !important;
+}
+
+/* 確保裡面的每一個卡片、圖片、標題都乖乖對齊中央 */
+body.project-detail section,
+body.project-detail figure.media-block {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
+}
