@@ -194,6 +194,31 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
 .project-card .media-block { min-height: 220px; }
 .project-card .link { font-weight: 700; text-decoration: none; color: var(--accent); }
 
+.project-tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.8rem 0 1rem;
+}
+
+.tags-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.project-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #2f3e65;
+  background: rgb(79 105 175 / 10%);
+  border-radius: 999px;
+  padding: 0.24rem 0.62rem;
+  line-height: 1.2;
+}
 
 /* About page — editorial layout */
 .about-editorial {
