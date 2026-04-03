@@ -340,13 +340,14 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
   line-height: 1.7;
 }
 
+/* Duration / Skills：上下排列，eyebrow 標籤樣式 */
 .project-meta-stack {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.8rem;
   text-align: left;
   max-width: 640px;
-  margin: 0 auto;
+  margin: 1rem auto 0;
   padding: 1.2rem 0 0.5rem;
   border-top: 1px solid var(--line);
 }
@@ -354,24 +355,25 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
 .meta-row {
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
+  gap: 0.2rem;
 }
 
+/* ⭐ eyebrow 同款樣式 */
 .meta-row .meta-label {
-  color: var(--accent);
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 0.78rem;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.78rem;
 }
 
 .meta-row .meta-value {
-  font-size: 1rem;
-  color: var(--text);
+  font-size: 0.95rem;
+  color: var(--muted);
   line-height: 1.5;
 }
 
-/* ⭐ 修正：圖片不超出容器 */
+/* ⭐ 圖片：不超出容器 */
 .project-image {
   margin: 0;
   width: 100%;
