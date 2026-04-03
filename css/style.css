@@ -369,51 +369,55 @@ body {
 }
 
 /* =========================================
-   Metrics Grid (Results 數據卡片優化)
+   Metrics Grid (Results 數據卡片優化 - 強制覆蓋版)
    ========================================= */
 
-.metric-grid {
-  display: grid;
-  /* 讓數據卡片左右並排，縮短整體高度 */
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 16px;
-  margin: 16px 0 24px;
+.project-detail .metric-grid {
+  display: grid !important;
+  /* 讓數據卡片左右並排 */
+  grid-template-columns: repeat(2, 1fr) !important; 
+  gap: 16px !important;
+  margin: 16px 0 24px !important;
+  background: transparent !important; /* 清除可能殘留的背景底色 */
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
 }
 
-.metric-row {
-  background: #fdfdfd; 
-  border: 1px solid #eaeaea;
-  border-radius: 12px;
-  padding: 16px;
-  margin: 0;
-  display: flex;
-  flex-direction: column; /* 讓標籤和分數上下排列 */
-  align-items: flex-start;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.02); /* 加上極淡的陰影提升質感 */
+.project-detail .metric-row {
+  background: #fdfdfd !important; 
+  border: 1px solid #eaeaea !important;
+  border-radius: 12px !important;
+  padding: 20px 16px !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important; /* 強制上下排列 */
+  align-items: flex-start !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03) !important;
 }
 
-.metric-label {
-  font-size: 0.85rem;
-  color: #7a7a7a;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  margin-bottom: 8px; /* 標籤和分數之間的間距 */
+.project-detail .metric-label {
+  font-size: 0.85rem !important;
+  color: #7a7a7a !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 12px !important; /* 強制拉開標籤跟分數的距離 */
 }
 
-.metric-pill {
-  font-size: 1.6rem; /* 把分數放大，作為視覺焦點 */
-  font-weight: 700;
-  color: #5e3bea; /* 呼應你的主視覺紫色 */
-  background: rgba(94, 59, 234, 0.08); /* 加上極淡的紫色底色 */
-  padding: 4px 12px;
-  border-radius: 8px;
-  line-height: 1;
+.project-detail .metric-pill {
+  font-size: 1.8rem !important; /* 分數再稍微放大一點 */
+  font-weight: 700 !important;
+  color: #5e3bea !important;
+  background: rgba(94, 59, 234, 0.08) !important; 
+  padding: 6px 14px !important;
+  border-radius: 8px !important;
+  line-height: 1 !important;
 }
 
-/* 手機版時，空間不夠，自動變回上下單排排列 */
+/* 手機版時變回上下排列 */
 @media (max-width: 650px) {
-  .metric-grid {
-    grid-template-columns: 1fr;
+  .project-detail .metric-grid {
+    grid-template-columns: 1fr !important;
   }
 }
