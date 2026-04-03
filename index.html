@@ -4,14 +4,34 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio | VivianHuang</title>
-    <meta
-      name="description"
-      content="VivianHuang portfolio — data analytics and healthcare analytics projects, experience, and contact."
-    />
+    <meta name="description" content="VivianHuang portfolio — data analytics and healthcare analytics projects, experience, and contact." />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      /* ── Section divider：跟 projects 一致 ── */
+      .section-divider {
+        margin: 3.5rem 0 1.8rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .section-divider::before {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 2px;
+        background: var(--accent);
+        flex-shrink: 0;
+      }
+      .section-divider span {
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+    </style>
   </head>
   <body>
-    <!-- Global navigation -->
     <header class="site-header">
       <div class="container banner-shell">
         <nav class="nav-wrap">
@@ -28,21 +48,21 @@
     </header>
 
     <main>
-      <!-- Hero: personal brand statement -->
+      <!-- Hero -->
       <section class="hero container reveal">
         <h1>Vivian Huang</h1>
         <p class="hero-role">Data Analyst | Healthcare Analytics Enthusiast</p>
         <p class="hero-subtitle">
-          Hi! I’m Vivian, a data analyst with a strong interest in healthcare analytics and solving real-world problems. I’m especially interested in using data to uncover insights that improve efficiency, identify opportunities, and support better decision-making.
+          Hi! I'm Vivian, a data analyst with a strong interest in healthcare analytics and solving real-world problems. I'm especially interested in using data to uncover insights that improve efficiency, identify opportunities, and support better decision-making.
         </p>
       </section>
 
-      <!-- Narrative section inspired by "me in a nutshell" -->
-      <section class="container section-intro reveal">
-        <h2>me in a nutshell</h2>
-      </section>
+      <!-- Section divider：跟 projects category 一樣風格 -->
+      <div class="container section-divider reveal">
+        <span>me in a nutshell</span>
+      </div>
 
-      <!-- Alternating image/text sections -->
+      <!-- Alternating sections -->
       <section class="container split-grid reveal">
         <div class="media-block warm-a" aria-hidden="true">
           <img src="assets/index_profile_2.jpg" alt="Vivian Huang outdoors near the water" />
@@ -50,12 +70,8 @@
         <article class="text-block">
           <p class="eyebrow">passionate about</p>
           <h3>healthcare analytics &amp; real-world impact</h3>
-          <p>
-          With a background in both business analytics and healthcare administration, I focus on bridging the gap between data and decision-making by translating complex analysis into clear, actionable insights.
-          </p>
-          <p>
-            I believe data is only as powerful as our ability to translate it into insights that people can understand and act on. I’m excited to keep learning, collaborating, and applying data to meaningful, real-world challenges.
-          </p>
+          <p>With a background in both business analytics and healthcare administration, I focus on bridging the gap between data and decision-making by translating complex analysis into clear, actionable insights.</p>
+          <p>I believe data is only as powerful as our ability to translate it into insights that people can understand and act on. I'm excited to keep learning, collaborating, and applying data to meaningful, real-world challenges.</p>
         </article>
       </section>
 
@@ -66,12 +82,8 @@
         <article class="text-block">
           <p class="eyebrow">areas of expertise</p>
           <h3>SQL, Python, Tableau</h3>
-          <p>
-            With a dual graduate background in Health Administration (MHA) and Business Analytics (MSBA), I focus on using data to support better decision-making. I have experience working with tools such as SQL, Python, SAS, Tableau, and Power BI to clean and transform data, build dashboards, and uncover trends.
-          </p>
-          <p>
-            Across healthcare and business analytics projects, I’ve worked with real-world data to analyze operations, identify inefficiencies, and support data-driven strategies. I’m particularly interested in going beyond reporting what happened to helping teams understand why it happened and what to do next.
-          </p>
+          <p>With a dual graduate background in Health Administration (MHA) and Business Analytics (MSBA), I focus on using data to support better decision-making. I have experience working with tools such as SQL, Python, SAS, Tableau, and Power BI to clean and transform data, build dashboards, and uncover trends.</p>
+          <p>Across healthcare and business analytics projects, I've worked with real-world data to analyze operations, identify inefficiencies, and support data-driven strategies. I'm particularly interested in going beyond reporting what happened to helping teams understand why it happened and what to do next.</p>
         </article>
       </section>
 
@@ -82,16 +94,12 @@
         <article class="text-block">
           <p class="eyebrow">life beyond the screen</p>
           <h3>travel, nature, and exploration</h3>
-          <p>
-            Outside of work and analytics, I enjoy traveling, being outdoors, and exploring new places. I like finding small moments to step away from the screen, whether it’s a walk by the water, a visit to a museum, or time spent at local events around the city.
-          </p>
-          <p>
-            These experiences help me recharge, stay curious, and bring a fresh perspective back to my work.
-          </p>
+          <p>Outside of work and analytics, I enjoy traveling, being outdoors, and exploring new places. I like finding small moments to step away from the screen, whether it's a walk by the water, a visit to a museum, or time spent at local events around the city.</p>
+          <p>These experiences help me recharge, stay curious, and bring a fresh perspective back to my work.</p>
         </article>
       </section>
 
-      <!-- Elegant call-to-action -->
+      <!-- CTA -->
       <section class="container cta-panel reveal">
         <p>
           <a class="btn" href="projects.html">explore my projects</a>
@@ -100,7 +108,6 @@
       </section>
     </main>
 
-    <!-- Minimal social footer -->
     <footer class="site-footer">
       <p>
         let's connect @
@@ -116,7 +123,6 @@
         :))
       </p>
     </footer>
-
     <script src="assets/js/main.js"></script>
   </body>
 </html>
