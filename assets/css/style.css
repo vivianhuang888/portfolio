@@ -761,3 +761,40 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
   white-space: nowrap;
   border: 1px solid #e2e8f0;
 }
+
+/* --- ULTIMATE FIX FOR PROJECT DETAIL IMAGES --- */
+.project-split .media-block {
+    aspect-ratio: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    display: block !important; 
+}
+
+.project-split .media-block img {
+    position: static !important; /* Removes absolute positioning if present */
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important; 
+    border-radius: 12px !important; /* Adds a nice corner to the image itself */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    display: block !important;
+    margin: 0 !important;
+}
+
+/* Fix the balance of the layout */
+.project-split {
+    display: grid !important;
+    grid-template-columns: 1.2fr 1fr !important; /* Makes image slightly larger than text */
+    gap: 2.5rem !important;
+    align-items: center !important;
+}
+
+/* Stack vertically on mobile */
+@media (max-width: 800px) {
+    .project-split {
+        grid-template-columns: 1fr !important;
+    }
+}
