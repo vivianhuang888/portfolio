@@ -367,3 +367,53 @@ body {
         gap: 24px !important;
     }
 }
+
+/* =========================================
+   Metrics Grid (Results 數據卡片優化)
+   ========================================= */
+
+.metric-grid {
+  display: grid;
+  /* 讓數據卡片左右並排，縮短整體高度 */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 16px;
+  margin: 16px 0 24px;
+}
+
+.metric-row {
+  background: #fdfdfd; 
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* 讓標籤和分數上下排列 */
+  align-items: flex-start;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02); /* 加上極淡的陰影提升質感 */
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  color: #7a7a7a;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px; /* 標籤和分數之間的間距 */
+}
+
+.metric-pill {
+  font-size: 1.6rem; /* 把分數放大，作為視覺焦點 */
+  font-weight: 700;
+  color: #5e3bea; /* 呼應你的主視覺紫色 */
+  background: rgba(94, 59, 234, 0.08); /* 加上極淡的紫色底色 */
+  padding: 4px 12px;
+  border-radius: 8px;
+  line-height: 1;
+}
+
+/* 手機版時，空間不夠，自動變回上下單排排列 */
+@media (max-width: 650px) {
+  .metric-grid {
+    grid-template-columns: 1fr;
+  }
+}
