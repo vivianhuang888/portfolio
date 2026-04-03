@@ -23,19 +23,23 @@
     </header>
 
     <main class="container page-stack project-detail">
-      
-      <!-- 1. 優化後的標題區塊 (Hero) -->
       <section class="page-header compact project-hero reveal">
         <p class="eyebrow">healthcare analytics case study</p>
         <h1>Bridging the Gap: Forecasting ICU Demand and Readmission Risk</h1>
-        <!-- 加上了斜體與破折號，增加設計感 -->
-        <p class="meta"><em>&mdash; A unified machine learning framework linking ED triage risk, ICU discharge safety, and short-term bed demand forecasting.</em></p>
+        <p class="meta">A unified machine learning framework linking ED triage risk, ICU discharge safety, and short-term bed demand forecasting.</p>
       </section>
 
-      <!-- 2. 優化後的專案資訊 (拿掉白底框、改為乾淨的上下堆疊排列) -->
-      <section class="project-meta-clean reveal" aria-label="Project metadata">
-        <p><span class="meta-label">Duration</span> Fall 2025</p>
-        <p><span class="meta-label">Skills</span> Data Preprocessing (Python), Machine Learning (XGBoost), Data Visualization, Clinical Data Analytics (MIMIC-IV)</p>
+      <section class="panel project-meta reveal" aria-label="Project metadata">
+        <dl class="project-meta-grid">
+          <div>
+            <dt>Duration</dt>
+            <dd>Fall 2025</dd>
+          </div>
+          <div>
+            <dt>Skills</dt>
+            <dd>Data Preprocessing (Python), Machine Learning (XGBoost), Data Visualization, Clinical Data Analytics (MIMIC-IV)</dd>
+          </div>
+        </dl>
       </section>
 
       <section class="container split-grid project-split reveal" id="overview">
@@ -79,41 +83,27 @@
         </ul>
       </section>
 
-      <!-- 之前已經做好的優化版 Results 雙欄數據卡片 -->
-      <section class="container reveal results-stacked" id="results">
-        <figure class="media-block">
-          <img src="assets/projects/01-icu-3.png" alt="ICU Dashboard and Model Performance" />
+      <section class="container split-grid reverse project-split reveal" id="results">
+        <figure class="media-block warm-c">
+          <img src="assets/projects/01-icu-3.png" alt="Placeholder visual for ICU model performance and dashboard concept" />
         </figure>
-        <div class="models-grid">
-          <div class="model-column">
-            <h3>Model 1: 12-Hour ICU Admission</h3>
-            <div class="model-card">
-              <div class="model-stat">
-                <span class="stat-label">AUC</span>
-                <span class="stat-pill">0.96</span>
-              </div>
-              <div class="model-stat">
-                <span class="stat-label">RECALL</span>
-                <span class="stat-pill">0.93</span>
-              </div>
-            </div>
-            <p>The model captured the large majority of patients requiring urgent intensive care using early ED data.</p>
+        <article class="text-block">
+          <h2>Results / Key Findings</h2>
+          
+          <h3>Model 1: 12-Hour ICU Admission</h3>
+          <div class="metric-grid" aria-label="12-hour ICU admission model metrics">
+            <p class="metric-row"><span class="metric-label">AUC</span><span class="metric-pill">0.96</span></p>
+            <p class="metric-row"><span class="metric-label">Recall</span><span class="metric-pill">0.93</span></p>
           </div>
-          <div class="model-column">
-            <h3>Model 2: 72-Hour ICU Readmission</h3>
-            <div class="model-card">
-              <div class="model-stat">
-                <span class="stat-label">AUC</span>
-                <span class="stat-pill">0.72</span>
-              </div>
-              <div class="model-stat">
-                <span class="stat-label">RECALL</span>
-                <span class="stat-pill">0.52</span>
-              </div>
-            </div>
-            <p>Readmission remained harder to predict, but the model still provided a useful screening signal for discharge risk.</p>
+          <p>The model captured the large majority of patients requiring urgent intensive care using early ED data.</p>
+
+          <h3>Model 2: 72-Hour ICU Readmission</h3>
+          <div class="metric-grid" aria-label="72-hour ICU readmission model metrics">
+            <p class="metric-row"><span class="metric-label">AUC</span><span class="metric-pill">0.72</span></p>
+            <p class="metric-row"><span class="metric-label">Recall</span><span class="metric-pill">0.52</span></p>
           </div>
-        </div>
+          <p>Readmission remained harder to predict, but the model still provided a useful screening signal for discharge risk.</p>
+        </article>
       </section>
 
       <section class="panel reveal" id="impact">
