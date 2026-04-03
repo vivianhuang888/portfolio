@@ -6,6 +6,7 @@
     <title>About | VivianHuang</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
+      /* ── Section divider ── */
       .section-divider {
         margin: 2.5rem 0 1.5rem;
         display: flex;
@@ -28,7 +29,7 @@
         color: var(--accent);
       }
 
-      /* ⭐ About hero：名字縮小、排緊湊 */
+      /* ── About hero ── */
       .about-hero {
         padding: 3rem 0 1rem;
       }
@@ -38,6 +39,43 @@
       .about-hero h1 {
         font-size: clamp(1.8rem, 4vw, 2.8rem);
         line-height: 1.2;
+        margin: 0;
+      }
+
+      /* ── Education：字體放大 + logo ── */
+      .education-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.2rem;
+        padding-bottom: 1.2rem;
+        border-bottom: 1px solid var(--line);
+      }
+      .education-item:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+      .edu-logo {
+        width: 52px;
+        height: 52px;
+        object-fit: contain;
+        flex-shrink: 0;
+        margin-top: 0.2rem;
+        border-radius: 8px;
+      }
+      .edu-info h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0 0 0.2rem;
+        color: var(--text);
+      }
+      .edu-info .entry-program {
+        font-size: 1rem;
+        color: var(--muted);
+        margin: 0 0 0.15rem;
+      }
+      .edu-info .entry-date {
+        font-size: 0.9rem;
+        color: var(--muted);
         margin: 0;
       }
     </style>
@@ -60,13 +98,13 @@
 
     <main>
 
-      <!-- Page hero：名字縮小，不那麼空 -->
+      <!-- Page hero -->
       <section class="container about-hero reveal">
         <p class="eyebrow">more about me</p>
         <h1>Wei-An (Vivian) Huang</h1>
       </section>
 
-      <!-- Experience divider — 包在 container 裡對齊 -->
+      <!-- Experience -->
       <div class="container">
         <div class="section-divider reveal">
           <span>Experience</span>
@@ -134,7 +172,7 @@
         </article>
       </section>
 
-      <!-- Leadership divider -->
+      <!-- Leadership -->
       <div class="container">
         <div class="section-divider reveal">
           <span>Leadership &amp; Social Impact</span>
@@ -169,7 +207,7 @@
         </article>
       </section>
 
-      <!-- Education divider -->
+      <!-- Education -->
       <div class="container">
         <div class="section-divider reveal">
           <span>Education</span>
@@ -179,21 +217,34 @@
       <section class="container education-section reveal" aria-label="Education">
         <div class="education-layout">
           <div class="education-list">
+
             <article class="education-item">
-              <h3>Boston University</h3>
-              <p class="entry-program">Master of Science in Business Analytics</p>
-              <p class="entry-date">Sep 2024 – Jan 2026</p>
+              <img class="edu-logo" src="assets/projects/1-bu-logo.png" alt="Boston University logo" />
+              <div class="edu-info">
+                <h3>Boston University</h3>
+                <p class="entry-program">Master of Science in Business Analytics</p>
+                <p class="entry-date">Sep 2024 – Jan 2026</p>
+              </div>
             </article>
+
             <article class="education-item">
-              <h3>National Yang Ming Chiao Tung University</h3>
-              <p class="entry-program">Master of Health Administration</p>
-              <p class="entry-date">Sep 2022 – Jun 2024</p>
+              <img class="edu-logo" src="assets/projects/2-nycu-logo.png" alt="NYCU logo" />
+              <div class="edu-info">
+                <h3>National Yang Ming Chiao Tung University</h3>
+                <p class="entry-program">Master of Health Administration</p>
+                <p class="entry-date">Sep 2022 – Jun 2024</p>
+              </div>
             </article>
+
             <article class="education-item">
-              <h3>Taipei Medical University</h3>
-              <p class="entry-program">Bachelor of Business Administration in Healthcare Administration</p>
-              <p class="entry-date">Sep 2018 – Jun 2022</p>
+              <img class="edu-logo" src="assets/projects/3-tmu-logo.png" alt="Taipei Medical University logo" />
+              <div class="edu-info">
+                <h3>Taipei Medical University</h3>
+                <p class="entry-program">Bachelor of Business Administration in Healthcare Administration</p>
+                <p class="entry-date">Sep 2018 – Jun 2022</p>
+              </div>
             </article>
+
           </div>
           <div class="education-image-wrap">
             <img src="assets/aboutme_education_1.jpg" alt="Boston University campus" />
