@@ -371,13 +371,16 @@ h3 { font-size: clamp(1.2rem, 3vw, 2rem); margin: 0.3rem 0 0.8rem; }
   line-height: 1.5;
 }
 
+/* ⭐ 修正：圖片不超出容器 */
 .project-image {
   margin: 0;
   width: 100%;
+  overflow: hidden;
 }
 
 .project-image img {
   width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 16px;
   display: block;
