@@ -23,34 +23,31 @@
     </header>
 
     <main class="container page-stack project-detail">
-      <section class="page-header compact project-hero reveal">
+
+      <section class="project-hero-block reveal">
         <p class="eyebrow">operations analytics case study</p>
         <h1>Demand Prediction and Optimization of Capital Bikeshare System in Washington D.C.</h1>
-        <p class="meta">Spatial-temporal demand analysis to improve rebalancing decisions and station-level fleet planning.</p>
+        <p class="project-subtitle">— Spatial-temporal demand analysis to improve rebalancing decisions and station-level fleet planning.</p>
+        <div class="project-meta-stack">
+          <div class="meta-row">
+            <span class="meta-label">Duration</span>
+            <span class="meta-value">Fall 2024</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Skills</span>
+            <span class="meta-value">Spatial-Temporal EDA, Weather Correlation Analysis, Geospatial Mapping, Fleet Optimization Strategy</span>
+          </div>
+        </div>
       </section>
 
-      <section class="panel project-meta reveal" aria-label="Project metadata">
-        <dl class="project-meta-grid">
-          <div>
-            <dt>Duration</dt>
-            <dd>2025</dd>
-          </div>
-          <div>
-            <dt>Skills</dt>
-            <dd>Spatial-Temporal EDA, Weather Correlation Analysis, Geospatial Mapping, Fleet Optimization Strategy</dd>
-          </div>
-        </dl>
-      </section>
+      <figure class="project-image reveal">
+        <img src="assets/projects/09-BIKE-2.png" alt="Bikeshare temporal and weather demand analysis" />
+      </figure>
 
-      <section class="container split-grid project-split reveal" id="overview">
-        <figure class="media-block warm-a">
-          <img src="assets/projects/09-BIKE-2.png" alt="Placeholder visual for bikeshare temporal and weather demand analysis" />
-        </figure>
-        <article class="text-block">
-          <h2>Overview / Description</h2>
-          <p>Bike-sharing is now a key part of urban transportation, but rapid system growth can create station imbalance: bikes accumulate at some stations while others run empty.</p>
-          <p>This project analyzed Capital Bikeshare usage patterns to identify the operational drivers behind demand and rebalancing needs.</p>
-        </article>
+      <section class="panel reveal" id="overview">
+        <h2>Overview / Description</h2>
+        <p>Bike-sharing is now a key part of urban transportation, but rapid system growth can create station imbalance: bikes accumulate at some stations while others run empty.</p>
+        <p>This project analyzed Capital Bikeshare usage patterns to identify the operational drivers behind demand and rebalancing needs.</p>
       </section>
 
       <section class="panel reveal" id="objective">
@@ -65,56 +62,49 @@
           <li>Identified seasonal peaks and weekday vs. weekend usage differences.</li>
           <li>Observed strong commuter peaks on weekdays and more sustained casual demand on weekends.</li>
         </ul>
-
         <h3>2) Weather analysis</h3>
         <ul>
           <li>Built a correlation heatmap to quantify the effect of weather variables on ridership.</li>
-          <li>Found that moderate temperatures, gentle breezes, and partly cloudy conditions were associated with peak daily rentals, while humidity and precipitation reduced usage.</li>
+          <li>Found that moderate temperatures, gentle breezes, and partly cloudy conditions were associated with peak daily rentals.</li>
         </ul>
-
         <h3>3) Geospatial and station imbalance analysis</h3>
         <ul>
           <li>Mapped top and bottom-performing stations.</li>
-          <li>Identified severe pick-up vs. drop-off imbalances during the night shift at major commuter hubs, while suburban stations remained underused.</li>
+          <li>Identified severe pick-up vs. drop-off imbalances during the night shift at major commuter hubs.</li>
         </ul>
       </section>
 
-      <section class="container split-grid reverse project-split reveal" id="results">
-        <figure class="media-block warm-c">
-          <img src="assets/projects/09-BIKE-3.png" alt="Placeholder visual for bikeshare station imbalance and rebalancing recommendations" />
-        </figure>
-        <article class="text-block">
-          <h2>Results / Key Findings</h2>
-          <ul>
-            <li>Demand varies significantly by season, time of day, and day type.</li>
-            <li>Weather conditions materially influence ride volume.</li>
-            <li>Central commuter stations experienced the most operational imbalance, particularly between 17:00 and 24:00.</li>
-          </ul>
-        </article>
+      <figure class="project-image reveal">
+        <img src="assets/projects/09-BIKE-3.png" alt="Bikeshare station imbalance and rebalancing recommendations" />
+      </figure>
+
+      <section class="panel reveal" id="results">
+        <h2>Results / Key Findings</h2>
+        <ul>
+          <li>Demand varies significantly by season, time of day, and day type.</li>
+          <li>Weather conditions materially influence ride volume.</li>
+          <li>Central commuter stations experienced the most operational imbalance, particularly between 17:00 and 24:00.</li>
+        </ul>
       </section>
 
       <section class="panel reveal" id="impact">
         <h2>Impact / Conclusion / Recommendations</h2>
         <ul>
-          <li>Prioritize rebalancing truck operations during the 17:00-24:00 window at central transit hubs.</li>
+          <li>Prioritize rebalancing truck operations during the 17:00–24:00 window at central transit hubs.</li>
           <li>Improve suburban station usage through targeted promotions or integration with bus/metro pass bundles.</li>
           <li>Use these findings to support more data-driven demand forecasting and fleet allocation.</li>
         </ul>
       </section>
 
       <section class="panel reveal" aria-label="Project navigation footer">
-        <a class="btn" href="projects.html">&larr; Back to Projects</a>
+        <a class="btn" href="projects.html">← Back to Projects</a>
       </section>
+
     </main>
 
     <footer class="site-footer">
-      <p>
-        let's connect @
-        <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a>
-        :))
-      </p>
+      <p>let's connect @ <a href="https://www.linkedin.com/in/weianhuang/" target="_blank" rel="noopener noreferrer">VivianHuang</a> :))</p>
     </footer>
-
     <script src="assets/js/main.js"></script>
   </body>
 </html>
